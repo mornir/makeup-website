@@ -1,0 +1,6 @@
+@import 'modern-normalize.css';
+
+.main-container {
+  display: grid;
+  grid-template-rows: 10% 1fr;
+}
