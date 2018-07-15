@@ -1,0 +1,18 @@
+.main-container {
+  background-color: #7fdbff;
+  min-height: 100vh;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.portfolio-photo {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}

@@ -1,3 +1,6 @@
+@import 'modern-normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .nav-bar {
   display: flex;
   justify-content: space-between;
