@@ -7,13 +7,11 @@
 }
 
 .main-tile {
-  margin: 0 5vw;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 95%;
+  max-width: 35rem;
 }
 
 .hidden {
@@ -21,7 +19,7 @@
 }
 
 textarea {
-  width: 100%;
+  /*  width: 100%; */
   resize: none;
 }
 
@@ -38,12 +36,13 @@ textarea:focus {
 }
 
 form {
-  height: 40vh;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 5fr;
   grid-template-areas:
-    'name         email'
+    'name         name'
+    'email        email'
     'subject      subject'
     'message      message'
     'send         send';
@@ -76,4 +75,20 @@ button {
   cursor: pointer;
   min-height: 45px;
   margin-bottom: 15px;
+}
+
+@media (min-width: 40rem) {
+  form {
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas:
+      'name         email'
+      'subject      subject'
+      'message      message'
+      'send         send';
+    grid-row-gap: 1rem;
+    grid-column-gap: 0.5rem;
+  }
 }
