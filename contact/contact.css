@@ -35,39 +35,7 @@ textarea:focus {
   border-color: var(--accent-color);
 }
 
-form {
-  height: 70vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 5fr;
-  grid-template-areas:
-    'name         name'
-    'email        email'
-    'subject      subject'
-    'message      message'
-    'send         send';
-  grid-row-gap: 1rem;
-  grid-column-gap: 0.5rem;
-}
-
-input[name='name'] {
-  grid-area: name;
-}
-
-input[name='email'] {
-  grid-area: email;
-}
-
-input[name='subject'] {
-  grid-area: subject;
-}
-
-textarea[name='message'] {
-  grid-area: message;
-}
-
 button {
-  grid-area: send;
   font-weight: bold;
   border: none;
   padding: 5px;
@@ -77,18 +45,27 @@ button {
   margin-bottom: 15px;
 }
 
+form {
+  display: grid;
+  grid-auto-rows: 2rem;
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.5rem;
+}
+
+textarea[name='message'] {
+  grid-row: span 4;
+}
+
 @media (min-width: 40rem) {
-  form {
-    height: 40vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 3fr;
-    grid-template-areas:
-      'name         email'
-      'subject      subject'
-      'message      message'
-      'send         send';
-    grid-row-gap: 1rem;
-    grid-column-gap: 0.5rem;
+  input[name='subject'] {
+    grid-column: span 2;
+  }
+
+  textarea[name='message'] {
+    grid-column: span 2;
+  }
+
+  button {
+    grid-column: span 2;
   }
 }
