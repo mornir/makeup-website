@@ -1,0 +1,30 @@
+.card-about {
+  max-width: 40rem;
+  text-align: justify;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.main-card {
+  margin: 0 5vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-title {
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  .card-about {
+    font-size: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+}

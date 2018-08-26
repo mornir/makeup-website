@@ -4,10 +4,20 @@
 :root {
   --primary-color: #85144b;
   --accent-color: #f012be;
+  --black: #22292f;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+  background: url('../img/bg.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
 }
 
 .nav-bar {
@@ -26,6 +36,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--primary-color);
+  cursor: pointer;
 }
 
 a:hover {

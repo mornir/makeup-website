@@ -1,0 +1,13 @@
+.card-price-list {
+  max-width: 40rem;
+}
+
+.main-tile {
+  margin: 0 5vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
