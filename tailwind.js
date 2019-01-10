@@ -118,13 +118,13 @@ var colors = {
   'purple-lighter': '#d6bbfc',
   'purple-lightest': '#f3ebff',
 
-  'pink-darkest': '#45051e',
-  'pink-darker': '#72173a',
+  'pink-darkest': '#620042', // USED
+  'pink-darker': '#870557',
   'pink-dark': '#eb5286',
-  'pink': '#f66d9b',
-  'pink-light': '#fa7ea8',
-  'pink-lighter': '#ffbbca',
-  'pink-lightest': '#ffebef'
+  'pink': '#E8368F',
+  'pink-light': '#F364A2', // USED
+  'pink-lighter': '#FFB8D2',
+  'pink-lightest': '#FFE3EC'
 }
 
 module.exports = {
