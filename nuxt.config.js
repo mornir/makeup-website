@@ -36,6 +36,10 @@ export default {
    */
   modules: ['nuxt-purgecss'],
 
+  purgeCSS: {
+    mode: 'postcss',
+  },
+
   /*
    ** Build configuration
    */
