@@ -1,10 +1,10 @@
 <template>
-  <nav class="flex justify-between items-baseline">
-    <nuxt-link to="/" class="no-underline">
+  <nav class="bg-pink-lightest flex justify-between items-center md:items-baseline px-8">
+    <nuxt-link to="/" class="no-underline text-pink-darkest">
       <h1>Soline Wang</h1>
     </nuxt-link>
 
-    <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 text-red"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/></svg></button>
+    <button @click="toggleSideNav"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 text-pink"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/></svg></button>
 
     <div class="hidden">
       <nuxt-link to="/about">about me</nuxt-link>
@@ -17,8 +17,23 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    toggleSideNav() {
+      this.$emit('open')
+    }
+  }
+}
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+
+h1 {
+  font-family: 'Grand Hotel', cursive;
+}
+
+nav {
+  height: 10vh;
+}
 </style>
