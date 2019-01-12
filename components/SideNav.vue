@@ -42,11 +42,13 @@ export default {
 <style scoped>
 aside {
   -webkit-clip-path: circle(0px at 98% 5px);
+  clip-path: circle(0px at 98% 5px);
   transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 
 aside.open {
   -webkit-clip-path: circle(100vw at 98% 50px);
+  clip-path: circle(0px at 98% 5px);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
