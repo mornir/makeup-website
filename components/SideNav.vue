@@ -8,7 +8,7 @@
     </nuxt-link> -->
 
     <button @click="$emit('close')"
-            class="absolute pin-t pin-r mr-4 mt-4"><svg class="fill-current text-white h-12 w-12"
+            class="absolute pin-t pin-r mr-4 mt-4 focus:outline-none"><svg class="fill-current text-white h-12 w-12"
            xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 24 24">
         <path fill-rule="evenodd"
@@ -48,7 +48,7 @@ aside {
 
 aside.open {
   -webkit-clip-path: circle(100vw at 98% 50px);
-  clip-path: circle(0px at 98% 5px);
+  clip-path: circle(100vw at 98% 50px);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
