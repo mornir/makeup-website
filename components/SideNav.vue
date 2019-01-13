@@ -2,11 +2,6 @@
   <aside class="bg-pink fixed pin-y pin-x"
          :class="{'open': open}">
 
-    <!--     <nuxt-link to="/"
-               class="no-underline text-pink-darkest">
-      <h1>Soline Wang</h1>
-    </nuxt-link> -->
-
     <button @click="$emit('close')"
             class="absolute pin-t pin-r mr-4 mt-4 focus:outline-none"><svg class="fill-current text-white h-12 w-12"
            xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
- aside {
+aside {
   -webkit-clip-path: circle(0px at 98% 5px);
   clip-path: circle(0px at 98% 5px);
   transition: all 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -52,9 +47,41 @@ aside.open {
   clip-path: circle(100vw at 98% 50px);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: all;
-} 
+}
 
 nav {
   padding-top: var(--nav-height);
+}
+
+nav a {
+  opacity: 0;
+}
+
+aside.open nav a {
+  animation: fadeIn 0.6s ease 0.3s;
+  animation-fill-mode: forwards;
+}
+
+aside.open nav a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+aside.open nav a:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+aside.open nav a:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>
