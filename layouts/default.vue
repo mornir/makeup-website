@@ -1,11 +1,12 @@
 <template>
   <!-- TODO: remove div here? -->
-  <div class="min-h-screen">
+  <div class="bg-pink-lightest">
     <div class="container mx-auto">
       <AppNavBar @open="isSideNavOpen = true" />
       <nuxt />
     </div>
-    <AppSideNav :open="isSideNavOpen" @close="isSideNavOpen = false" />
+    <AppSideNav :open="isSideNavOpen"
+                @close="isSideNavOpen = false" />
   </div>
 </template>
 
@@ -35,6 +36,29 @@ export default {
 
 body {
   font-family: 'Raleway', sans-serif;
+}
+
+.desktop-link {
+  text-decoration: none;
+  font-weight: 600; /* semibold */
+  color: #f9007d; /* pink-alt */
+  position: relative;
+}
+
+.desktop-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1.5px;
+  left: 0;
+  background-color: #f9007d;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.desktop-link:hover::before {
+  transform: scaleX(1);
 }
 </style>
 
