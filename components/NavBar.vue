@@ -1,7 +1,7 @@
 <template>
-  <nav class="flex justify-between items-center  px-8">
+  <nav class="flex justify-between items-center px-8">
     <nuxt-link to="/"
-               class="no-underline text-pink-darkest self-end">
+               class="no-underline text-pink-darkest md:self-end">
       <AppLogo />
     </nuxt-link>
 
