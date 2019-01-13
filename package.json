@@ -10,7 +10,8 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "nuxt": "^2.3.4"
+    "nuxt": "^2.3.4",
+    "nuxt-i18n": "^5.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.4",

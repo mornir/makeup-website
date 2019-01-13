@@ -10,7 +10,7 @@ export default {
   server: {
     port: 8080, // default: 3000
   },
-  
+
   head: {
     title: pkg.name,
     meta: [
@@ -39,10 +39,53 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-purgecss'],
+  modules: [
+    'nuxt-purgecss',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'fr',
+            name: 'Français',
+            iso: 'fr-FR',
+          },
+          {
+            code: 'en',
+            name: 'English',
+            iso: 'en-US',
+          },
+        ],
+        // TODO: baseUrl: 'https://www.solinewang.com',
+        defaultLocale: 'en',
+        vueI18nLoader: true,
+        vueI18n: {
+          fallbackLocale: 'fr',
+          messages: {
+            en: {
+              links: {
+                about: 'about me',
+              },
+            },
+            fr: {
+              links: {
+                about: 'à mon propos',
+              },
+            },
+          },
+        },
+      },
+    ],
+  ],
 
   purgeCSS: {
     mode: 'postcss',
+  },
+
+  vue: {
+    config: {
+      productionTip: false,
+    },
   },
 
   /*

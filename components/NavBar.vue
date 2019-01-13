@@ -1,6 +1,6 @@
 <template>
   <nav class="flex justify-between items-center px-8">
-    <nuxt-link to="/"
+    <nuxt-link :to="localePath('index')"
                class="no-underline text-pink-darkest md:self-end">
       <AppLogo />
     </nuxt-link>
@@ -13,16 +13,25 @@
               d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" /></svg></button>
 
     <div class="hidden md:block">
-      <nuxt-link to="/about"
-                 class="desktop-link mx-2">about me</nuxt-link>
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
+                 class="desktop-link mx-2">{{ $t('links.about') }}</nuxt-link>
+      <nuxt-link :to="localePath('about')"
                  class="desktop-link mx-2">portfolio</nuxt-link>
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
                  class="desktop-link mx-2">price list</nuxt-link>
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
                  class="desktop-link mx-2">contact</nuxt-link>
-      <!-- <span class="h-8 w-2 bg-pink inline-block divider" /> -->
-      <button class="pl-2 pb-4 divider">français</button>
+
+      <span class="pl-2 pb-4 divider">
+        <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
+        <nuxt-link :to="switchLocalePath('fr')"
+                   v-if="$i18n.locale === 'en'"
+                   class="desktop-link">français</nuxt-link>
+        <nuxt-link :to="switchLocalePath('en')"
+                   v-else
+                   class="desktop-link">english</nuxt-link>
+      </span>
+
     </div>
   </nav>
 </template>

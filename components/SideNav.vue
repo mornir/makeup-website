@@ -10,14 +10,20 @@
               d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" /></svg></button>
 
     <nav class="flex flex-col items-end pr-8">
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
                  class="text-white no-underline py-3 text-xl font-semibold">about me</nuxt-link>
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
                  class="text-white no-underline py-3 text-xl font-semibold">portfolio</nuxt-link>
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
                  class="text-white no-underline py-3 text-xl font-semibold">price list</nuxt-link>
-      <nuxt-link to="/about"
+      <nuxt-link :to="localePath('about')"
                  class="text-white no-underline py-3 text-xl font-semibold">contact</nuxt-link>
+      <nuxt-link :to="switchLocalePath('fr')"
+                 v-if="$i18n.locale === 'en'"
+                 class="text-white no-underline py-3 text-xl font-semibold">français</nuxt-link>
+      <nuxt-link :to="switchLocalePath('en')"
+                 v-else
+                 class="text-white no-underline py-3 text-xl font-semibold">english</nuxt-link>
     </nav>
   </aside>
 </template>
@@ -63,14 +69,18 @@ aside.open nav a {
 }
 
 aside.open nav a:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 
 aside.open nav a:nth-child(3) {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 aside.open nav a:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+aside.open nav a:nth-child(5) {
   animation-delay: 0.6s;
 }
 

@@ -1,8 +1,21 @@
+<i18n>
+{
+  "en": {
+    "hello": "Hello",
+    "name": "I'm Soline"
+  },
+  "fr": {
+    "hello": "Bonjour",
+    "name": "Je suis Soline"
+  }
+}
+</i18n>
+
 <template>
   <div class="photo-bg">
     <section class="cta flex flex-col justify-center px-8 text-pink-darkest">
-      <h3 class="text-4xl mb-4 font-medium tracking-wide">Hello,</h3>
-      <h2 class="main-title font-medium tracking-wide">I'm Soline <span id="dot" /></h2>
+      <h3 class="text-4xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
+      <h2 class="main-title font-medium tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
       <p class="hidden md:block text-2xl text-pink-light pt-8"> I make your <b>true beauty</b>
         stand out.</p>
     </section>
@@ -39,7 +52,6 @@ export default {}
 }
 
 #dot {
-  margin-left: -15px;
   display: inline-block;
   width: 10px;
   height: 10px;
