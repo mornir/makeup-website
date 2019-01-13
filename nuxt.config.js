@@ -6,6 +6,11 @@ export default {
   /*
    ** Headers of the page
    */
+
+  server: {
+    port: 8080, // default: 3000
+  },
+  
   head: {
     title: pkg.name,
     meta: [
