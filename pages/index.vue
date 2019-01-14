@@ -13,11 +13,15 @@
 
 <template>
   <div class="photo-bg bg-pink-lightest">
-    <section class="cta flex flex-col justify-center px-8 text-pink-darkest">
+    <section class="cta flex flex-col justify-center text-pink-darkest">
       <h3 class="text-4xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
       <h2 class="main-title font-medium tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
-      <p class="hidden md:block text-2xl text-pink-light pt-8"> I make your <b>true beauty</b>
+      <p class="hidden md:block text-2xl text-pink-light py-8"> I make your <b>true beauty</b>
         stand out.</p>
+      <nuxt-link :to="localePath('about')"
+                 class="text-sm uppercase self-start bg-pink text-pink-lightest px-4 py-2 rounded font-semibold tracking-wide no-underline">
+        make it happen
+      </nuxt-link>
     </section>
     <section class="flex justify-end pr-8">
       <p class="text-center w-24 text-lg text-pink-light italic md:hidden">
@@ -44,7 +48,7 @@ export default {}
 }
 
 .cta {
-  height: 50vh;
+  height: 70vh;
 }
 
 .main-title {
@@ -65,6 +69,11 @@ export default {}
     /* right: 5%; */
     left: 55%;
     bottom: 0;
+  }
+
+  .photo-bg {
+    background-position: 12% bottom;
+    background-size: 60vh;
   }
 }
 
