@@ -1,9 +1,9 @@
 <template>
   <header class="flex justify-between items-center px-8"
-          :class="[{'bg-pink-lightest' : isHome}, 'bg-pink-darker']">
+          :class="[isHome ? 'bg-pink-lightest' : 'bg-pink-darker']">
     <nuxt-link :to="localePath('index')"
                class="no-underline text-pink-darkest md:self-end">
-      <AppLogo />
+      <AppLogo :is-home="isHome" />
     </nuxt-link>
 
     <button @click="toggleSideNav"
@@ -52,9 +52,6 @@ export default {
     isHome() {
       return this.$route.name.includes('index')
     },
-  },
-  mounted() {
-    console.log(this.$route)
   },
 }
 </script>
