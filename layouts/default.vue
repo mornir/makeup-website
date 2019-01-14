@@ -2,7 +2,7 @@
   <!-- TODO: remove div here? -->
   <div>
     <AppNavBar @open="isSideNavOpen = true" />
-    <main>
+    <main @click="isSideNavOpen = false">
       <nuxt />
     </main>
     <AppSideNav :open="isSideNavOpen"

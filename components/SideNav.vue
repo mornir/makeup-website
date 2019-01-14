@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-pink fixed pin-y pin-x"
+  <aside class="bg-pink fixed pin-y pin-x flex justify-end"
          :class="{'open': open}">
 
     <button @click="$emit('close')"
@@ -9,8 +9,10 @@
         <path fill-rule="evenodd"
               d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" /></svg></button>
 
-    <nav class="flex flex-col items-end pr-8"
-         v-if="open">
+    <nav class="flex flex-col items-end mr-8"
+         v-if="open"
+         @click="$emit('close')">
+
       <nuxt-link :to="localePath('about')"
                  class="text-white no-underline py-3 text-xl font-semibold">about me</nuxt-link>
       <nuxt-link :to="localePath('about')"
