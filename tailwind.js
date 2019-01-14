@@ -121,7 +121,7 @@ let colors = {
   'purple-lightest': '#f3ebff',
 
   'pink-darkest': '#620042', // USED
-  'pink-darker': '#870557', // USED for logo
+  'pink-darker': '#870557', // USED for logo & bg
   'pink-dark': '#eb5286',
   'pink': '#E8368F', // USED
   'pink-alt': '#F9007D',

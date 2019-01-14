@@ -12,7 +12,7 @@
 </i18n>
 
 <template>
-  <div class="photo-bg">
+  <div class="photo-bg bg-pink-lightest">
     <section class="cta flex flex-col justify-center px-8 text-pink-darkest">
       <h3 class="text-4xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
       <h2 class="main-title font-medium tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
@@ -34,7 +34,7 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 .photo-bg {
   background-image: url('~assets/img/home.png');
   background-position: 0% bottom;

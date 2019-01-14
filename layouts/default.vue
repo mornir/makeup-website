@@ -1,10 +1,10 @@
 <template>
   <!-- TODO: remove div here? -->
-  <div class="bg-pink-lightest">
-    <div class="container mx-auto">
-      <AppNavBar @open="isSideNavOpen = true" />
+  <div>
+    <AppNavBar @open="isSideNavOpen = true" />
+    <main>
       <nuxt />
-    </div>
+    </main>
     <AppSideNav :open="isSideNavOpen"
                 @close="isSideNavOpen = false" />
   </div>
