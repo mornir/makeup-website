@@ -48,7 +48,7 @@ export default {}
 }
 
 .cta {
-  height: 70vh;
+  height: 40vh;
 }
 
 .main-title {
@@ -69,6 +69,7 @@ export default {}
     /* right: 5%; */
     left: 55%;
     bottom: 0;
+    height: 70vh;
   }
 
   .photo-bg {
