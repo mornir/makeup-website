@@ -1,5 +1,4 @@
 <template>
-  <!-- TODO: remove div here? -->
   <div>
     <AppNavBar @open="isSideNavOpen = true" />
     <main @click="isSideNavOpen = false">
