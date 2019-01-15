@@ -1,13 +1,19 @@
 <template>
-  <aside class="bg-pink fixed pin-y pin-x flex justify-end"
+  <aside class="bg-pink fixed pin-y pin-x flex justify-end md:hidden"
          :class="{'open': open}">
 
-    <button @click="$emit('close')"
-            class="absolute pin-t pin-r mr-4 mt-4 focus:outline-none"><svg class="fill-current text-white h-12 w-12"
+    <button @click="$emit('toggle')"
+            class="absolute pin-t pin-r mr-4 mt-4 focus:outline-none pointer-events-auto">
+
+      <svg class="fill-current text-white h-12 w-12"
            xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 24 24">
-        <path fill-rule="evenodd"
-              d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" /></svg></button>
+        <path v-if="open"
+              d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+        <path v-else
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+      </svg>
+    </button>
 
     <nav class="flex flex-col items-end mr-8"
          v-if="open"
@@ -45,14 +51,12 @@ export default {
 
 <style scoped>
 aside {
-  -webkit-clip-path: circle(0px at 98% 5px);
-  clip-path: circle(0px at 98% 5px);
+  clip-path: circle(5rem at 98% 5px);
   transition: clip-path 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   pointer-events: none;
 }
 
 aside.open {
-  -webkit-clip-path: circle(100vw at 98% 50px);
   clip-path: circle(100vw at 98% 50px);
   transition: clip-path 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: all;

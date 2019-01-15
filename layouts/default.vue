@@ -5,7 +5,8 @@
       <nuxt />
     </main>
     <AppSideNav :open="isSideNavOpen"
-                @close="isSideNavOpen = false" />
+                @close="isSideNavOpen = false"
+                @toggle="isSideNavOpen = !isSideNavOpen" />
   </div>
 </template>
 

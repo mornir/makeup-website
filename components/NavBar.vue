@@ -6,13 +6,6 @@
       <AppLogo :is-home="isHome" />
     </nuxt-link>
 
-    <button @click="toggleSideNav"
-            class="focus:outline-none md:hidden"><svg xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 24 24"
-           class="h-8 text-pink fill-current">
-        <path fill-rule="evenodd"
-              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" /></svg></button>
-
     <nav class="hidden md:block">
       <nuxt-link :to="localePath('about')"
                  class="desktop-link mx-2">{{ $t('links.about') }}</nuxt-link>
@@ -40,11 +33,6 @@
 <script>
 import Logo from './Logo'
 export default {
-  methods: {
-    toggleSideNav() {
-      this.$emit('open')
-    },
-  },
   components: {
     AppLogo: Logo,
   },
