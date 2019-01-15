@@ -5,7 +5,7 @@
     <button @click="$emit('toggle')"
             class="absolute pin-t pin-r mr-4 mt-4 focus:outline-none pointer-events-auto">
 
-      <svg class="fill-current text-white h-12 w-12"
+      <svg class="fill-current text-white h-10 w-10"
            xmlns="http://www.w3.org/2000/svg"
            viewBox="0 0 24 24">
         <path v-if="open"
