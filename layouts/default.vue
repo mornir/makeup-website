@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <AppNavBar @open="isSideNavOpen = true" />
-    <main @click="isSideNavOpen = false">
-      <nuxt />
-    </main>
+  <div :class="[isHome ? 'bg-pink-lightest' : 'bg-pink-darker']">
+    <div class="container mx-auto px-4">
+      <AppNavBar @open="isSideNavOpen = true" />
+      <main @click="isSideNavOpen = false">
+        <nuxt />
+      </main>
+    </div>
     <AppSideNav :open="isSideNavOpen"
                 @close="isSideNavOpen = false"
                 @toggle="isSideNavOpen = !isSideNavOpen" />
@@ -15,14 +17,19 @@ import NavBar from '../components/NavBar'
 import SideNav from '../components/SideNav'
 
 export default {
+  components: {
+    AppNavBar: NavBar,
+    AppSideNav: SideNav,
+  },
   data() {
     return {
       isSideNavOpen: false,
     }
   },
-  components: {
-    AppNavBar: NavBar,
-    AppSideNav: SideNav,
+  computed: {
+    isHome() {
+      return this.$route.name.includes('index')
+    },
   },
 }
 </script>
@@ -41,7 +48,7 @@ body {
 .desktop-link {
   text-decoration: none;
   font-weight: 600; /* semibold */
-  color: #f9007d; /* pink-alt */
+  color: inherit;
   position: relative;
 }
 
@@ -52,7 +59,7 @@ body {
   height: 2px;
   bottom: -1.5px;
   left: 0;
-  background-color: #f9007d;
+  background-color: currentColor;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }

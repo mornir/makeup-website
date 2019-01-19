@@ -64,11 +64,13 @@ export default {
           messages: {
             en: {
               links: {
+                home: 'home',
                 about: 'about me',
               },
             },
             fr: {
               links: {
+                home: 'accueil',
                 about: 'à mon propos',
               },
             },

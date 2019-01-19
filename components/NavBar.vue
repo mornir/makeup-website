@@ -1,12 +1,12 @@
 <template>
-  <header class="flex justify-between items-center px-8"
-          :class="[isHome ? 'bg-pink-lightest' : 'bg-pink-darker']">
+  <header class="flex justify-between items-center px-8">
     <nuxt-link :to="localePath('index')"
                class="no-underline text-pink-darkest md:self-end">
-      <AppLogo :is-home="isHome" />
+      <AppLogo />
     </nuxt-link>
 
-    <nav class="hidden md:block">
+    <nav class="hidden md:block"
+         :class="[$route.name.includes('index') ? 'text-pink-alt' : 'text-pink-lightest']">
       <nuxt-link :to="localePath('about')"
                  class="desktop-link mx-2">{{ $t('links.about') }}</nuxt-link>
       <nuxt-link :to="localePath('about')"
@@ -35,11 +35,6 @@ import Logo from './Logo'
 export default {
   components: {
     AppLogo: Logo,
-  },
-  computed: {
-    isHome() {
-      return this.$route.name.includes('index')
-    },
   },
 }
 </script>

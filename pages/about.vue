@@ -1,24 +1,24 @@
 <template>
-  <div class="bg-pink-darker">
-    <section class="photo-bg text-pink-lightest mx-8 md:flex items-end">
 
-      <img src="@/assets/img/about-mobile.png"
-           class="float-right md:hidden"
-           alt="about">
+  <section class="height-minus-nav text-pink-lightest mx-8 md:flex items-end">
 
-      <div class="pt-5 self-center">
-        <h2 class="mb-4 pl-3 border-l-8 border-pink-alt">About me</h2>
-        <p class="text-lg font-medium leading-tight">
-          Professional makeup artist, working with techniques, creativity, patience and great passion, I've thrown myself into the world of cosmetics for more than ten years, and the belief of beauty makes the change has only been stronger. I studied in Makeup school Studio B in Lausanne and acquired my diploma as a professional makeup artist. Work for all occasions.</p>
-      </div>
+    <img src="@/assets/img/about-mobile.png"
+         class="float-right md:hidden"
+         alt="about">
 
-      <img src="@/assets/img/about-desktop.png"
-           class="hidden md:inline-block"
-           alt="desktop">
-      <!-- <h2 class="py-3">Follow me on</h2>
+    <div class="pt-5 self-center max-w-md">
+      <h2 class="mb-4 pl-3 border-l-8 border-pink-alt">About me</h2>
+      <p class="text-lg font-medium leading-tight">
+        Professional makeup artist, working with techniques, creativity, patience and great passion, I've thrown myself into the world of cosmetics for more than ten years, and the belief of beauty makes the change has only been stronger. I studied in Makeup school Studio B in Lausanne and acquired my diploma as a professional makeup artist. Work for all occasions.</p>
+    </div>
+
+    <img src="@/assets/img/about-desktop.png"
+         class="hidden md:inline-block"
+         alt="desktop">
+    <!-- <h2 class="py-3">Follow me on</h2>
       <p>ion, I've thrown myself into the world of cosmetics for more than ten years, and the belief of beauty makes</p> -->
-    </section>
-  </div>
+  </section>
+
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {}
 </script>
 
 <style scoped>
-.photo-bg {
+.height-minus-nav {
   min-height: calc(100vh - var(--nav-height) + 5vh);
 }
 

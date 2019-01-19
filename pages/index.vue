@@ -6,13 +6,13 @@
   },
   "fr": {
     "hello": "Bonjour",
-    "name": "Je suis Soline"
+    "name": "Je m'appelle Soline"
   }
 }
 </i18n>
 
 <template>
-  <div class="photo-bg bg-pink-lightest">
+  <div class="photo-bg">
     <section class="cta flex flex-col justify-center text-pink-darkest mx-8">
       <h3 class="text-4xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
       <h2 class="main-title font-medium tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
