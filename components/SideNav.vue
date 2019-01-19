@@ -19,17 +19,11 @@
          v-if="open"
          @click="$emit('close')">
 
-      <nuxt-link :to="localePath('index')"
-                 class="text-white no-underline py-3 text-xl font-semibold">home</nuxt-link>
+      <nuxt-link v-for="(link, route) in $i18n.messages.en.links"
+                 :key="route"
+                 :to="localePath(route)"
+                 class="text-white no-underline py-3 text-xl font-semibold">{{ link }}</nuxt-link>
 
-      <nuxt-link :to="localePath('about')"
-                 class="text-white no-underline py-3 text-xl font-semibold">about me</nuxt-link>
-      <nuxt-link :to="localePath('about')"
-                 class="text-white no-underline py-3 text-xl font-semibold">portfolio</nuxt-link>
-      <nuxt-link :to="localePath('about')"
-                 class="text-white no-underline py-3 text-xl font-semibold">price list</nuxt-link>
-      <nuxt-link :to="localePath('about')"
-                 class="text-white no-underline py-3 text-xl font-semibold">contact</nuxt-link>
       <nuxt-link :to="switchLocalePath('fr')"
                  v-if="$i18n.locale === 'en'"
                  class="text-white no-underline py-3 text-xl font-semibold">français</nuxt-link>

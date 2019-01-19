@@ -7,14 +7,11 @@
 
     <nav class="hidden md:block"
          :class="[$route.name.includes('index') ? 'text-pink-alt' : 'text-pink-lightest']">
-      <nuxt-link :to="localePath('about')"
-                 class="desktop-link mx-2">{{ $t('links.about') }}</nuxt-link>
-      <nuxt-link :to="localePath('about')"
-                 class="desktop-link mx-2">portfolio</nuxt-link>
-      <nuxt-link :to="localePath('about')"
-                 class="desktop-link mx-2">price list</nuxt-link>
-      <nuxt-link :to="localePath('about')"
-                 class="desktop-link mx-2">contact</nuxt-link>
+
+      <nuxt-link v-for="(link, route) in $i18n.messages.en.links"
+                 :key="route"
+                 :to="localePath(route)"
+                 class="desktop-link mx-2">{{ link }}</nuxt-link>
 
       <span class="pl-2 pb-4 divider">
         <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
