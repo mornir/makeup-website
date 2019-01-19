@@ -64,14 +64,20 @@ export default {
           messages: {
             en: {
               links: {
-                home: 'home',
+                index: 'home',
                 about: 'about me',
+                makeups: 'makeups',
+                portfolio: 'portfolio',
+                contact: 'contact',
               },
             },
             fr: {
               links: {
-                home: 'accueil',
+                index: 'accueil',
                 about: 'à mon propos',
+                makeups: 'maquillages',
+                portfolio: 'portfolio',
+                contact: 'contact',
               },
             },
           },
