@@ -11,7 +11,7 @@
       <nuxt-link v-for="(link, route) in $i18n.messages.en.links"
                  :key="route"
                  :to="localePath(route)"
-                 class="desktop-link mx-2">{{ link }}</nuxt-link>
+                 class="desktop-link mx-2">{{ $t('links.' + route) }}</nuxt-link>
 
       <span class="pl-2 pb-4 divider">
         <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
