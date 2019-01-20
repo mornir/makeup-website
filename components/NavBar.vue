@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center px-8">
+  <header class="flex justify-between items-center">
     <nuxt-link :to="localePath('index')"
                class="no-underline text-pink-darkest md:self-end">
       <AppLogo />
@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 header {
-  height: var(--nav-height)
+  height: var(--nav-height);
 }
 
 .divider {
