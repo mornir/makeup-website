@@ -1,5 +1,6 @@
 <template>
-  <div :class="[$route.name.includes('index') ? 'bg-pink-lightest' : 'bg-pink-darker']" class="min-h-screen">
+  <div :class="[$route.name.includes('index') ? 'bg-pink-lightest' : 'bg-pink-darker']"
+       class="min-h-screen">
     <div class="container mx-auto px-4">
       <AppNavBar @open="isSideNavOpen = true" />
       <main @click="isSideNavOpen = false">
