@@ -49,7 +49,7 @@ export default {}
   background-image: url('~assets/img/home.png');
   background-position: 0% bottom;
   background-repeat: no-repeat;
-  background-size: 40vh;
+  background-size: 15rem;
   min-height: calc(100vh - var(--nav-height));
 }
 
@@ -58,7 +58,7 @@ export default {}
 }
 
 .main-title {
-  font-size: 10vw;
+  font-size: 2.5rem;
 }
 
 #dot {
@@ -69,18 +69,30 @@ export default {}
   background-color: #f9007d;
 }
 
+@media (max-width: 350px) {
+  .photo-bg {
+    background-size: 10rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
 @media (min-width: 768px) {
   .cta {
     position: absolute;
-    /* right: 5%; */
     left: 55%;
     bottom: 0;
     height: 70vh;
   }
 
   .photo-bg {
-    background-position: 12% bottom;
-    background-size: 60vh;
+    background-size: 25rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
   }
 }
 
