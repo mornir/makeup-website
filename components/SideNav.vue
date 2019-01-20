@@ -73,23 +73,23 @@ aside.open nav a {
 }
 
 aside.open nav a:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 
 aside.open nav a:nth-child(3) {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 aside.open nav a:nth-child(4) {
-  animation-delay: 0.6s;
+  animation-delay: 0.5s;
 }
 
 aside.open nav a:nth-child(5) {
-  animation-delay: 0.7s;
+  animation-delay: 0.6s;
 }
 
 aside.open nav a:nth-child(6) {
-  animation-delay: 0.8s;
+  animation-delay: 0.7s;
 }
 
 @keyframes fadeIn {
