@@ -6,15 +6,7 @@
     </section>
     <section>
       <article class="max-w-sm">
-        <header class="bg-pink-lighter pl-3 py-1 rounded-t-lg">
-
-          <!--        <svg xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 24 24"
-               class="h-8">
-            <path class="primary"
-                  d="M22 8.62V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.62l9.55 4.77a1 1 0 0 0 .9 0L22 8.62z" />
-            <path class="secondary"
-                  d="M12 11.38l-10-5V6c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v.38l-10 5z" /></svg> -->
+        <header class="bg-pink-lighter pl-5 py-1 rounded-t-lg">
 
           <svg width="30"
                height="30"
@@ -40,26 +32,26 @@
 
         </header>
         <form class="bg-pink-light  bg-pink-lightest rounded-b-lg">
-          <section class="font-semibold px-6 pt-6 pb-2 border-b-2 border-dotted border-pink-lighter">
-            <div class="mb-2 contact-form">
-              <label for="email"
-                     class="text-pink-darkest">From:</label>
-              <input type="email"
-                     class="bg-transparent focus:outline-none text-pink-alt font-semibold"
-                     name="email"
-                     placeholder="your@email.com">
-            </div>
-            <div class="mb-2 contact-form">
-              <span class="text-pink-darkest">To:</span><span class="text-pink-alt font-semibold">Soline Wang</span>
-            </div>
-            <div class="mb-2 contact-form">
-              <label for="subject"
-                     class="text-pink-darkest">Subject:</label>
-              <input type="text"
-                     class="bg-transparent focus:outline-none text-pink-alt font-semibold"
-                     name="subject"
-                     placeholder="your subject">
-            </div>
+          <section class="font-semibold px-6 pt-6 pb-3 border-b-2 border-dotted border-pink-lighter contact-form">
+
+            <label for="email"
+                   class="text-pink-darkest">From:</label>
+
+            <input type="email"
+                   class="bg-transparent focus:outline-none text-pink-alt font-semibold"
+                   name="email"
+                   placeholder="your@email.com">
+
+            <span class="text-pink-darkest">To:</span>
+            <span class="text-pink-alt font-semibold">Soline Wang</span>
+            <label for="subject"
+                   class="text-pink-darkest">Subject:</label>
+
+            <input type="text"
+                   class="bg-transparent focus:outline-none text-pink-alt font-semibold"
+                   name="subject"
+                   placeholder="your subject">
+
           </section>
           <section class="px-6 pt-3">
             <textarea name="body"
@@ -102,9 +94,10 @@ export default {
 .contact-form {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  row-gap: 0.5rem;
 }
 
 input {
-  caret-color: magenta !important;
+  caret-color: magenta;
 }
 </style>
