@@ -27,7 +27,7 @@ export default {}
 
 <style scoped>
 .height-minus-nav {
-  min-height: calc(100vh - var(--nav-height) + 5vh);
+  min-height: calc(100vh - var(--nav-height));
 }
 
 img[alt='about'] {

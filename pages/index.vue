@@ -6,7 +6,7 @@
   },
   "fr": {
     "hello": "Bonjour",
-    "name": "Je m'appelle Soline"
+    "name": "Je m'appelle\n Soline"
   }
 }
 </i18n>
@@ -14,12 +14,12 @@
 <template>
   <div class="photo-bg">
     <section class="cta flex flex-col justify-center text-pink-darkest mx-8">
-      <h3 class="text-4xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
-      <h2 class="main-title font-medium tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
+      <h3 class="text-3xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
+      <h2 class="main-title font-semibold tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
       <div class="hidden md:block">
         <p class="text-2xl text-pink-light py-8"> I make your <b>true beauty</b>
           stand out.</p>
-        <nuxt-link :to="localePath('about')"
+        <nuxt-link :to="localePath('makeups')"
                    class="text-sm uppercase self-start bg-pink text-pink-lightest px-4 py-2 rounded font-semibold tracking-wide no-underline">
           make it happen
         </nuxt-link>
@@ -30,7 +30,7 @@
         I make your <b>true beauty</b>
         stand out.
       </p>
-      <nuxt-link :to="localePath('about')"
+      <nuxt-link :to="localePath('makeups')"
                  class="text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md">
         make it happen
       </nuxt-link>
@@ -50,7 +50,7 @@ export default {}
   background-position: 0% bottom;
   background-repeat: no-repeat;
   background-size: 40vh;
-  min-height: calc(100vh - var(--nav-height) + 5vh);
+  min-height: calc(100vh - var(--nav-height));
 }
 
 .cta {
@@ -58,7 +58,7 @@ export default {}
 }
 
 .main-title {
-  font-size: 3.5rem;
+  font-size: 10vw;
 }
 
 #dot {

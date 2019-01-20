@@ -1,5 +1,5 @@
 <template>
-  <div :class="[isHome ? 'bg-pink-lightest' : 'bg-pink-darker']">
+  <div :class="[$route.name.includes('index') ? 'bg-pink-lightest' : 'bg-pink-darker']" class="min-h-screen">
     <div class="container mx-auto px-4">
       <AppNavBar @open="isSideNavOpen = true" />
       <main @click="isSideNavOpen = false">
@@ -26,11 +26,6 @@ export default {
       isSideNavOpen: false,
     }
   },
-  computed: {
-    isHome() {
-      return this.$route.name.includes('index')
-    },
-  },
 }
 </script>
 
@@ -38,7 +33,7 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700');
 
 :root {
-  --nav-height: 15vh;
+  --nav-height: 5rem;
 }
 
 body {

@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 header {
-  height: 10vh;
+  height: var(--nav-height)
 }
 
 .divider {
