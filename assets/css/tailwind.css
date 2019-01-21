@@ -27,7 +27,6 @@
  *
  * Example:
  *
- * .btn { ... }
  * .form-input { ... }
  *
  * Or if using a preprocessor or `postcss-import`:
@@ -35,6 +34,10 @@
  * @import "components/buttons";
  * @import "components/forms";
  */
+
+ .btn { 
+   @apply text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md;
+  }
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
