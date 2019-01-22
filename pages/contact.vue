@@ -50,7 +50,8 @@
             <input type="text"
                    class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    name="subject"
-                   placeholder="your subject">
+                   placeholder="your subject"
+                   v-model="subject">
 
           </section>
           <section class="px-6 pt-3">
@@ -85,7 +86,26 @@ export default {
       email: '',
       subject: '',
       body: '',
+      templates: [
+        {
+          title: 'Bridal Makeup',
+          slug: 'bridal-makeup',
+          msg:
+            'Hey there! Me and my husband are planning a wedding and are looking for makeup artist. Could we get in touch?',
+        },
+      ],
     }
+  },
+  mounted() {
+    const slug = this.$route.query.makeup
+    if (!slug) return
+
+    const template = this.templates.find(template => template.slug === slug)
+    if (!template) return
+    // TODO: send error to logrocket in case of wrong slug
+
+    this.subject = template.title
+    this.body = template.msg
   },
 }
 </script>

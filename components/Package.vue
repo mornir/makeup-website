@@ -22,8 +22,9 @@
       </ul>
     </section>
     <footer class="bg-pink-lightest text-center py-4 rounded-b-lg">
-      <p class="text-3xl mb-4">{{ makeup.price }} <span class="chf text-xs">CHF</span></p>
-      <a class="text-sm uppercase bg-pink text-pink-lightest px-4 py-2 rounded font-semibold tracking-wide no-underline">select</a>
+      <p class="text-3xl mb-6">{{ makeup.price }} <span class="chf text-xs">CHF</span></p>
+      <nuxt-link :to="{ path: '/contact', query: { makeup: makeup.slug } }"
+                 class="tracking-wide text-lg bg-pink text-pink-lightest px-4 py-2 rounded font-semibold tracking-wide no-underline">select</nuxt-link>
     </footer>
   </article>
 </template>
