@@ -69,7 +69,7 @@
              class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    placeholder="Your name">
                    </div>
-            <button class="self-end btn">email me</button>
+            <button class="self-end text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md">email me</button>
           </footer>
         </form>
       </article>
