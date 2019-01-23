@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="m-6">
     <header class="bg-pink-lighter text-center px-4 pt-8 pb-6 border-t-8 border-pink-alt rounded-t-lg">
       <h3 class="mb-2 text-2xl">{{ makeup.title }}</h3>
       <p class="italic">{{ makeup.desc }}</p>
@@ -41,6 +41,10 @@ export default {
 </script>
 
 <style scoped>
+article {
+  width: 30rem;
+}
+
 .chf {
   vertical-align: super;
 }

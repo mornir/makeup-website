@@ -1,19 +1,19 @@
 <template>
   <div class="pb-8">
     <section>
-      <h1 class="text-center text-pink-lightest my-8">Makeups</h1>
-      <div class="makeups-grid">
+      <h1 class="text-center text-pink-lightest mt-8">Makeups</h1>
+      <div class="flex justify-center flex-wrap">
         <AppPackage v-for="makeup in makeups"
-                    :key="makeup.title"
+                    :key="makeup.slug"
                     :makeup="makeup" />
       </div>
     </section>
 
     <section>
-      <h1 class="text-center text-pink-lightest my-8">Courses</h1>
-      <div class="makeups-grid">
+      <h1 class="text-center text-pink-lightest mt-8">Courses</h1>
+      <div class="flex justify-center flex-wrap">
         <AppPackage v-for="course in courses"
-                    :key="course.title"
+                    :key="course.slug"
                     :makeup="course" />
       </div>
     </section>
@@ -48,14 +48,22 @@ export default {
         {
           title: 'Private Course',
           slug: 'private-course',
-          desc: 'lorem ipsum',
-          features: ['Choose your own theme (base makeup, eye makeup, etc.)'],
+          desc: 'Get better a particular area',
+          features: [
+            'Choose your own theme (base makeup, eye makeup, etc.)',
+            'Learn tips and tricks',
+          ],
+          price: 99,
         },
         {
           title: 'Comprehensive Course',
           slug: 'comprehensive-makeup-course',
-          desc: 'lorem ipsum',
-          features: ['Choose your own theme (base makeup, eye makeup, etc.)'],
+          desc: 'Master the arts of making up',
+          features: [
+            'No prior knowledge required',
+            'Learn how to choose the best products',
+          ],
+          price: 500,
         },
       ],
     }
@@ -67,11 +75,11 @@ export default {
 </script>
 
 <style>
-.makeups-grid {
+/* .makeups-grid {
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
   justify-content: center;
-  /*grid-template-columns: repeat(2, minmax(1fr, 10rem));*/
-}
+ 
+} */
 </style>
