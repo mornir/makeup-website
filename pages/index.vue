@@ -2,11 +2,15 @@
 {
   "en": {
     "hello": "Hello",
-    "name": "I'm Soline"
+    "name": "I'm Soline",
+    "catchPhrase": "I make your <b>true beauty</b> stand out.",
+    "cta": "make it happen"
   },
   "fr": {
     "hello": "Bonjour",
-    "name": "Je m'appelle\n Soline"
+    "name": "Je m'appelle\n Soline",
+    "catchPhrase": "Je fais <b>ressortir votre beauté</b> intérieure.",
+    "cta": "voir mes services"
   }
 }
 </i18n>
@@ -17,22 +21,19 @@
       <h3 class="text-3xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
       <h2 class="main-title font-semibold tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
       <div class="hidden md:block">
-        <p class="text-2xl text-pink-light py-8"> I make your <b>true beauty</b>
-          stand out.</p>
+        <p class="text-2xl text-pink-light py-8"
+           v-html="$t('catchPhrase')" />
         <nuxt-link :to="localePath('makeups')"
                    class="text-sm uppercase self-start bg-pink text-pink-lightest px-4 py-2 rounded font-semibold tracking-wide no-underline">
-          make it happen
+          {{ $t('cta') }}
         </nuxt-link>
       </div>
     </section>
     <section class="flex flex-col items-end pr-8 md:hidden">
-      <p class="text-center w-24 text-lg text-pink-light italic mb-8">
-        I make your <b>true beauty</b>
-        stand out.
-      </p>
+      <p class="text-center w-32 text-lg text-pink-light italic mb-8"
+         v-html="$t('catchPhrase')" />
       <nuxt-link :to="localePath('makeups')"
-                 class="text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md">
-        make it happen
+                 class="text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md"> {{ $t('cta') }}
       </nuxt-link>
     </section>
     <div id="divider"
