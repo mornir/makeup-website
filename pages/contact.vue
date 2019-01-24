@@ -106,22 +106,6 @@ export default {
       ],
     }
   },
-  methods: {
-    /*     async formSubmit() {
-      const formData = new FormData(this.$refs.contact)
-
-      formData.append('form-name', this.$refs.contact.name)
-      try {
-        fetch(this.$refs.contact.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-      } catch (e) {
-        console.log(e)
-      }
-    }, */
-  },
   mounted() {
     const slug = this.$route.query.makeup
     if (!slug) return
