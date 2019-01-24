@@ -31,7 +31,12 @@
           </svg>
 
         </header>
-        <form class="bg-pink-light  bg-pink-lightest rounded-b-lg">
+        <form @submit.prevent="formSubmit"
+              name="contact"
+              ref="contact"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+              class="bg-pink-light  bg-pink-lightest rounded-b-lg">
           <section class="font-semibold px-6 pt-6 pb-3 border-b-2 border-dotted border-pink-lighter contact-form">
 
             <label for="email"
@@ -66,11 +71,16 @@
             <div>
             <p class="text-pink-alt font-semibold">Best regards,
             </p>
+            <p class="hidden">
+          <label>Don’t fill this out if you're human:
+            <input name="bot-field">
+          </label>
+        </p>
             <input type="text"
              class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    placeholder="Your name">
-                   </div>
-            <button class="self-end text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md">email me</button>
+            </div>
+            <button type="submit" class="self-end text-sm bg-pink text-pink-lightest px-2 py-1 rounded font-semibold  no-underline shadow-md">email me</button>
           </footer>
         </form>
       </article>
@@ -95,6 +105,19 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    formSubmit() {
+      const formData = new FormData(this.$refs.contact)
+
+      formData.append('form-name', this.$refs.contact.name)
+
+      fetch(this.$refs.contact.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      })
+    },
   },
   mounted() {
     const slug = this.$route.query.makeup
