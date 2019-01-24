@@ -21,6 +21,10 @@ export default {
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   },
 
+  router: {
+    linkExactActiveClass: 'active-link',
+  },
+
   /*
    ** Customize the progress-bar color
    */

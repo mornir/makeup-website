@@ -46,4 +46,38 @@ header {
   border-left-width: 1.8px;
   padding-top: 2.6rem;
 }
+
+.desktop-link {
+  text-decoration: none;
+  font-weight: 600; /* semibold */
+  color: inherit;
+  position: relative;
+}
+
+.desktop-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1.5px;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.desktop-link:hover::before {
+  transform: scaleX(1);
+}
+
+.active-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -1.5px;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(1);
+}
 </style>
