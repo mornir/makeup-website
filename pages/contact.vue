@@ -31,9 +31,8 @@
           </svg>
 
         </header>
-        <form @submit.prevent="formSubmit"
+        <form method="POST"
               name="contact"
-              ref="contact"
               netlify-honeypot="bot-field"
               data-netlify="true"
               class="bg-pink-light  bg-pink-lightest rounded-b-lg">
@@ -74,6 +73,7 @@
             <p class="hidden">
           <label>Don’t fill this out if you're human:
             <input name="bot-field">
+            <input type="hidden" name="form-name" value="contact">
           </label>
         </p>
             <input type="text"
@@ -107,7 +107,7 @@ export default {
     }
   },
   methods: {
-    async formSubmit() {
+    /*     async formSubmit() {
       const formData = new FormData(this.$refs.contact)
 
       formData.append('form-name', this.$refs.contact.name)
@@ -120,7 +120,7 @@ export default {
       } catch (e) {
         console.log(e)
       }
-    },
+    }, */
   },
   mounted() {
     const slug = this.$route.query.makeup
