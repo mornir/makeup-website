@@ -1,5 +1,5 @@
 <template>
-  <h1>Portfolio</h1>
+  <h1 class="italic text-pink-lightest">Coming Soon~~~</h1>
 </template>
 
 <script>
