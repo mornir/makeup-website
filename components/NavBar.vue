@@ -1,7 +1,8 @@
 <template>
   <header class="flex justify-between items-center">
+
     <nuxt-link :to="localePath('index')"
-               class="no-underline text-pink-darkest md:self-end">
+               class="no-underline text-pink-darkest">
       <AppLogo />
     </nuxt-link>
 
