@@ -1,7 +1,8 @@
 <template>
   <div class="pb-8">
     <section>
-      <h1 class="text-center text-pink-lightest mt-8">Makeups</h1>
+      <h1 class="text-center text-pink-lightest mt-8 mb-2">Makeups</h1>
+      <div class="divider w-48 bg-pink-lightest mx-auto" />
       <div class="flex justify-center flex-wrap">
         <AppPackage v-for="makeup in makeups"
                     :key="makeup.slug"
@@ -10,7 +11,8 @@
     </section>
 
     <section>
-      <h1 class="text-center text-pink-lightest mt-8">Courses</h1>
+      <h1 class="text-center text-pink-lightest mt-8 mb-2">Courses</h1>
+      <div class="divider w-48 bg-pink-lightest mx-auto" />
       <div class="flex justify-center flex-wrap">
         <AppPackage v-for="course in courses"
                     :key="course.slug"
@@ -74,7 +76,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* .makeups-grid {
   display: grid;
   gap: 3rem;
@@ -82,4 +84,7 @@ export default {
   justify-content: center;
  
 } */
+.divider {
+  height: 0.15rem;
+}
 </style>
