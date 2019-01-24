@@ -19,7 +19,8 @@
   <div class="photo-bg">
     <section class="cta flex flex-col justify-center text-pink-darkest mx-8">
       <h3 class="text-3xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
-      <h2 class="main-title font-semibold tracking-wide">{{ $t('name') }}<span id="dot" /></h2>
+      <h2 class="main-title font-semibold tracking-wide">{{ $t('name') }}<span id="dot"
+              class="bg-pink-alt" /></h2>
       <div class="hidden md:block">
         <p class="text-2xl text-pink-light py-8"
            v-html="$t('catchPhrase')" />
@@ -37,7 +38,7 @@
       </nuxt-link>
     </section>
     <div id="divider"
-         class="hidden md:block" />
+         class="hidden md:block bg-pink-alt" />
   </div>
 </template>
 
@@ -67,7 +68,6 @@ export default {}
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #f9007d;
 }
 
 @media (max-width: 350px) {
@@ -101,7 +101,6 @@ export default {}
   position: absolute;
   height: 118px;
   width: 1.8px;
-  background-color: #f9007d;
   bottom: 0;
   left: calc(50% - 1.5px);
 }

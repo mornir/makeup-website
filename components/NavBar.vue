@@ -14,7 +14,7 @@
                  :to="localePath(route)"
                  class="desktop-link mx-2">{{ $t('links.' + route) }}</nuxt-link>
 
-      <span class="pl-2 pb-4 divider">
+      <span class="pl-2 pb-4 divider border-pink-alt">
         <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
         <nuxt-link :to="switchLocalePath('fr')"
                    v-if="$i18n.locale === 'en'"
@@ -43,7 +43,7 @@ header {
 }
 
 .divider {
-  border-left: #f9007d 1.8px solid;
+  border-left-width: 1.8px;
   padding-top: 2.6rem;
 }
 </style>
