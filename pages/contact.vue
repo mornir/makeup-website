@@ -44,6 +44,7 @@
             <input type="email"
                    class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    name="email"
+                   required
                    placeholder="your@email.com">
 
             <span class="text-pink-darkest">To:</span>
@@ -54,17 +55,19 @@
             <input type="text"
                    class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    name="subject"
+                   required
                    placeholder="your subject"
                    v-model="subject">
 
           </section>
           <section class="px-6 pt-3">
-            <textarea name="body"
+            <textarea name="message"
+                      required
                       cols="30"
                       rows="10"
                       placeholder="Enter your message here"
                       class="text-pink-alt font-semibold w-full bg-transparent resize-none focus:outline-none"
-                      v-model="body" />
+                      v-model="message" />
             </section>
           <footer class="px-6 pb-6 flex flex-col">
             <div>
@@ -77,6 +80,8 @@
           </label>
         </p>
             <input type="text"
+            name="name"
+            required
              class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    placeholder="Your name">
             </div>
@@ -95,13 +100,13 @@ export default {
     return {
       email: '',
       subject: '',
-      body: '',
+      message: '',
       templates: [
         {
           title: 'Bridal Makeup',
           slug: 'bridal-makeup',
           msg:
-            'Hey there! Me and my husband are planning a wedding and are looking for makeup artist. Could we get in touch?',
+            'Hey there! Me and my husband are planning a wedding and are looking for a makeup artist. Could we get in touch?',
         },
       ],
     }
@@ -115,7 +120,7 @@ export default {
     // TODO: send error to logrocket in case of wrong slug
 
     this.subject = template.title
-    this.body = template.msg
+    this.message = template.msg
   },
 }
 </script>
