@@ -14,26 +14,12 @@
 </i18n>
 
 <template>
-  <div class="absolute pin-l pin-b bg-pink-darker my-purple-circle">
+  <div class="absolute pin-l pin-b w-full md:w-auto bg-pink-darker my-purple-circle">
 
-    <div class="">
-      <h3 class="text-4xl mb-4 font-medium tracking-wide text-white">{{ $t('hello') }},</h3>
-      <h2 class="main-title  font-semibold tracking-wide text-white">{{ $t('name') }}</h2>
-      <p class="text-3xl text-pink-lighter py-8"
-         v-html="$t('catchPhrase')" />
-    </div>
-    <!--     <section class="cta flex flex-col justify-center text-pink-darkest mx-8">
-      <h3 class="text-3xl mb-4 font-medium tracking-wide">{{ $t('hello') }},</h3>
-      <h2 class="main-title font-semibold tracking-wide">{{ $t('name') }}</h2>
-      <div class="hidden md:block">
-        <p class="text-2xl text-pink-light py-8"
-           v-html="$t('catchPhrase')" />
-      </div>
-    </section>
-    <section class="flex flex-col items-end pr-8 md:hidden">
-      <p class="text-center w-32 text-lg text-pink-light italic mb-8"
-         v-html="$t('catchPhrase')" />
-    </section> -->
+    <h3 class="text-xl md:text-4xl mb-4 font-medium tracking-wide text-white inline-block md:block">{{ $t('hello') }},</h3>
+    <h2 class="main-title  font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>
+    <p class="text-xl md:text-3xl text-pink-lighter "
+       v-html="$t('catchPhrase')" />
 
   </div>
 </template>
@@ -43,27 +29,21 @@ export default {}
 </script>
 
 <style scoped>
-/* .my-purple-circle {
-  border-radius: 50%;
-  width: 50rem;
-  height: 50rem;
-  left: -25rem;
-  bottom: -25rem;
-}
- */
-/* .my-purple-circle {
-  border-radius: 50% 150% 0 0;
-
-  width: 32rem;
-  height: 28rem;
-  left: -5rem;
-  bottom: 0;
-} */
-.main-title {
-  font-size: 3.5rem;
-}
 .my-purple-circle {
-  border-top-right-radius: 100%;
-  padding: 8rem 4rem 4rem;
+  padding: 1rem 2rem;
+}
+
+.main-title {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 3.5rem;
+  }
+  .my-purple-circle {
+    border-top-right-radius: 100%;
+    padding: 8rem 2rem 4rem;
+  }
 }
 </style>

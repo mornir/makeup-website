@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-pink fixed pin-y pin-x flex justify-end md:hidden"
+  <aside class="bg-pink-darker fixed pin-y pin-x flex justify-end md:hidden"
          :class="{'open': open}">
 
     <button @click="$emit('toggle')"
@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 aside {
-  clip-path: circle(5rem at 98% 5px);
+  clip-path: circle(4rem at 98% 5px);
   transition: clip-path 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   pointer-events: none;
 }

@@ -1,11 +1,11 @@
 <template>
   <div class="min-h-screen my-bg">
-    <div class="container mx-auto">
-      <AppNavBar @open="isSideNavOpen = true" />
-      <main @click="isSideNavOpen = false">
-        <nuxt />
-      </main>
-    </div>
+
+    <AppNavBar @open="isSideNavOpen = true" />
+    <main @click="isSideNavOpen = false">
+      <nuxt />
+    </main>
+
     <AppSideNav :open="isSideNavOpen"
                 @close="isSideNavOpen = false"
                 @toggle="isSideNavOpen = !isSideNavOpen" />
@@ -43,6 +43,7 @@ body {
 .my-bg {
   background-image: url('~assets/img/bg-home.jpeg');
   background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 </style>
