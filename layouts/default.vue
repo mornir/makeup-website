@@ -1,7 +1,6 @@
 <template>
-  <div :class="[$route.name.includes('index') ? 'bg-pink-lightest' : 'bg-pink-darker']"
-       class="min-h-screen">
-    <div class="container mx-auto px-4">
+  <div class="min-h-screen my-bg">
+    <div class="container mx-auto">
       <AppNavBar @open="isSideNavOpen = true" />
       <main @click="isSideNavOpen = false">
         <nuxt />
@@ -31,14 +30,20 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,500,600,700');
 
 :root {
   --nav-height: 5rem;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.my-bg {
+  background-image: url('~assets/img/bg-home.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
 
