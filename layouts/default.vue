@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen my-bg">
+  <div>
 
     <AppNavBar @open="isSideNavOpen = true" />
     <main @click="isSideNavOpen = false">
@@ -38,13 +38,6 @@ export default {
 
 body {
   font-family: 'Barlow Condensed', sans-serif;
-}
-
-.my-bg {
-  background-image: url('~assets/img/bg-home.jpeg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 </style>
 

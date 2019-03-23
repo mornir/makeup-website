@@ -70,7 +70,6 @@ export default {
               links: {
                 index: 'home',
                 about: 'about me',
-                makeups: 'makeups',
                 portfolio: 'portfolio',
                 contact: 'contact',
               },
@@ -79,7 +78,6 @@ export default {
               links: {
                 index: 'accueil',
                 about: 'à mon propos',
-                makeups: 'maquillages',
                 portfolio: 'portfolio',
                 contact: 'contact',
               },

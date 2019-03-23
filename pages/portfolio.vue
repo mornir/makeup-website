@@ -10,8 +10,13 @@
 </i18n>
 
 <template>
-  <div class="height-minus-nav flex justify-center items-center">
-    <h1 class="italic text-pink-lightest">{{ $t('title') }}</h1>
+  <div class="w-screen bg-pink-lightest flex overflow-x-auto h-screen scroll-container ">
+    <img src="@/assets/photos/photo-1.jpg"
+         alt="photo">
+    <img src="@/assets/photos/photo-2.jpg"
+         alt="photo">
+    <img src="@/assets/photos/photo-3.jpg"
+         alt="photo">
   </div>
 </template>
 
@@ -22,5 +27,14 @@ export default {}
 <style>
 .height-minus-nav {
   min-height: calc(100vh - var(--nav-height));
+}
+
+img {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.scroll-container {
+  scroll-snap-type: x mandatory;
 }
 </style>
