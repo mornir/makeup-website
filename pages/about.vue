@@ -13,16 +13,13 @@
 
 <template>
 
-  <section class="height-minus-nav text-pink-lightest mx-8 md:flex items-end">
+  <section class="height-minus-nav my-bg text-pink-lightest mx-8 md:flex items-end">
 
-    <div class="pt-5 self-center max-w-md">
-      <h2 class="mb-4 pl-3 border-l-8 border-pink-alt">{{ $t('title') }}</h2>
-      <p class="text-lg font-medium leading-tight">
+    <div class="p-5  mb-8 max-w-md bg-pink-darker  rounded-lg">
+      <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">{{ $t('title') }}</h2>
+      <p class="text-lg text-xl leading-tight">
         {{ $t('text') }}</p>
     </div>
-
-    <!-- <h2 class="py-3">Follow me on</h2>
-      <p>ion, I've thrown myself into the world of cosmetics for more than ten years, and the belief of beauty makes</p> -->
   </section>
 
 </template>
@@ -35,12 +32,10 @@ export default {}
 .height-minus-nav {
   min-height: calc(100vh - var(--nav-height));
 }
-
-#dot {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 5px;
-  background-color: #f9007d;
+.my-bg {
+  background-image: url('~assets/img/bg-home.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 </style>

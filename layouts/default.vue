@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-pink-darker">
+  <div>
 
     <AppNavBar @open="isSideNavOpen = true" />
     <main @click="isSideNavOpen = false">

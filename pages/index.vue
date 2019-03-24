@@ -14,14 +14,17 @@
 </i18n>
 
 <template>
-  <div class="my-bg height-minus-nav">
+
+  <section class="my-bg height-minus-nav">
     <div class="absolute pin-l pin-b w-full md:w-auto bg-pink-darker my-purple-circle">
+
       <h3 class="text-xl md:text-4xl mb-4 font-medium tracking-wide text-white inline-block md:block">{{ $t('hello') }},</h3>
-      <h2 class="main-title  font-semibold tracking-wide text-white inline-block md:block md:mb-4 pr-5">{{ $t('name') }}</h2>
+      <h2 class="main-title  font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>
       <p class="text-xl md:text-3xl text-pink-lighter "
          v-html="$t('catchPhrase')" />
+
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -56,5 +59,16 @@ export default {}
     border-top-right-radius: 100%;
     padding: 8rem 2rem 4rem;
   }
+}
+
+.height-minus-nav {
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.my-bg {
+  background-image: url('~assets/img/bg-home.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 </style>
