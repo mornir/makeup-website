@@ -18,7 +18,16 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        integrity:
+          'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
+        href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css',
+        crossorigin: 'anonymous',
+      },
+    ],
   },
 
   router: {
