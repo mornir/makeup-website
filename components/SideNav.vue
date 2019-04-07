@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-pink-darker fixed pin-y pin-x flex justify-end md:hidden"
+  <aside class="bg-pink-darker fixed pin-y pin-x flex flex-col md:hidden"
          :class="{'open': open}">
 
     <button @click="$emit('toggle')"
@@ -15,6 +15,12 @@
       </svg>
     </button>
 
+    <div class="pt-6 pl-4 text-pink-lightest font-semibold">
+      <span class="mr-4">EN</span>
+      <span class="mr-4">FR</span>
+      <span>中文</span>
+    </div>
+
     <nav class="flex flex-col items-end mr-8"
          v-if="open"
          @click="$emit('close')">
@@ -24,12 +30,12 @@
                  :to="localePath(route)"
                  class="text-white no-underline py-3 text-xl font-semibold">{{ link }}</nuxt-link>
 
-      <nuxt-link :to="switchLocalePath('fr')"
+      <!-- <nuxt-link :to="switchLocalePath('fr')"
                  v-if="$i18n.locale === 'en'"
                  class="text-white no-underline py-3 text-xl font-semibold">français</nuxt-link>
       <nuxt-link :to="switchLocalePath('en')"
                  v-else
-                 class="text-white no-underline py-3 text-xl font-semibold">english</nuxt-link>
+                 class="text-white no-underline py-3 text-xl font-semibold">english</nuxt-link> -->
     </nav>
   </aside>
 </template>

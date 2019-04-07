@@ -1,8 +1,9 @@
+
 <template>
   <div class="text-pink-lightest bg-pink-darkest height-minus-nav">
     <div class="max-w-sm mx-auto">
-      <section class="py-8">
-        <h2 class="mb-4 pl-3 border-l-8 border-pink-alt">Contact</h2>
+      <section class="py-8 mx-4">
+        <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Contact</h2>
         <p class="text-xl">Don’t hesitate to contact me. You can also find my creations on instragam, on my portfolio and on youtube.</p>
       </section>
       <section class="flex justify-around">
@@ -29,9 +30,8 @@
       <EmailModal />
 
       <modal name="qr-code"
-             adaptive
              height="auto"
-             width="350">
+             width="300">
 
         <img src="@/assets/img/weixin_qr_code.jpg"
              alt="Weixin QR Code">

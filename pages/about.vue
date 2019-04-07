@@ -13,9 +13,9 @@
 
 <template>
 
-  <section class="height-minus-nav my-bg text-pink-lightest px-8 md:flex items-end">
+  <section class="height-minus-nav my-bg bg-pink-darkest text-pink-lightest md:px-8 md:flex items-end">
 
-    <div class="p-5  mb-8 max-w-md bg-pink-darker  rounded-lg">
+    <div class="p-5  mb-8 max-w-md bg-pink-darkest md:bg-pink-darker md:rounded-lg">
       <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">{{ $t('title') }}</h2>
       <p class="text-lg text-xl leading-tight">
         {{ $t('text') }}</p>
@@ -29,11 +29,12 @@ export default {}
 </script>
 
 <style scoped>
-
-.my-bg {
-  background-image: url('~assets/img/bg-home.jpeg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+@screen sm {
+  .my-bg {
+    background-image: url('~assets/img/bg-home.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 </style>
