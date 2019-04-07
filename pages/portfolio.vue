@@ -19,9 +19,9 @@
       <i class="fas fa-arrow-left text-white fa-2x" />
     </button>
 
-    <img src="@/assets/photos/photo-1.jpg"
+    <img src="@/assets/photos/web_Mariage_ jeremie_carron.jpg"
          alt="photo">
-    <img src="@/assets/photos/photo-2.jpg"
+    <img src="@/assets/photos/web_Mariage_ jeremie_carron-24.jpg"
          alt="photo">
     <img src="@/assets/photos/photo-3.jpg"
          alt="photo">
