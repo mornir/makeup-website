@@ -15,12 +15,12 @@
                  class="desktop-link nav-element mx-2 uppercase text-xl">{{ $t('links.' + route) }}</nuxt-link>
 
       <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
-      <nuxt-link :to="switchLocalePath('fr')"
+      <!--    <nuxt-link :to="switchLocalePath('fr')"
                  v-if="$i18n.locale === 'en'"
                  class="nav-element">FR</nuxt-link>
       <nuxt-link :to="switchLocalePath('en')"
                  v-else
-                 class="nav-element">EN</nuxt-link>
+                 class="nav-element">EN</nuxt-link> -->
 
     </nav>
   </header>
