@@ -40,10 +40,6 @@ export default {}
   font-size: 2rem;
 }
 
-.height-minus-nav {
-  height: calc(100vh - var(--nav-height));
-}
-
 .my-bg {
   background-image: url('~assets/img/bg-home.jpeg');
   background-size: cover;
@@ -59,10 +55,6 @@ export default {}
     border-top-right-radius: 100%;
     padding: 8rem 2rem 4rem;
   }
-}
-
-.height-minus-nav {
-  min-height: calc(100vh - var(--nav-height));
 }
 
 .my-bg {

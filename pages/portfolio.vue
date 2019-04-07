@@ -10,10 +10,10 @@
 </i18n>
 
 <template>
-  <div class="w-screen bg-pink-lightest flex overflow-x-auto h-screen scroll-container "
+  <div class="bg-pink-lightest flex overflow-x-auto scroll-container height-minus-nav"
        ref="container">
 
-    <button class="absolute pin-l  p-8"
+    <button class="absolute pin-l p-8 focus:outline-none"
             id="previous"
             @click="scrollLeft">
       <i class="fas fa-arrow-left text-white fa-2x" />
@@ -26,7 +26,7 @@
     <img src="@/assets/photos/photo-3.jpg"
          alt="photo">
 
-    <button class="absolute pin-r p-8"
+    <button class="absolute pin-r p-8 focus:outline-none"
             id="next"
             @click="scrollRight">
       <i class="fas fa-arrow-right text-white fa-2x" />
@@ -54,10 +54,6 @@ export default {
 </script>
 
 <style scoped>
-.height-minus-nav {
-  min-height: calc(100vh - var(--nav-height));
-}
-
 img {
   flex: 0 0 auto;
   scroll-snap-align: center;

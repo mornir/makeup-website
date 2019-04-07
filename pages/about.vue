@@ -13,7 +13,7 @@
 
 <template>
 
-  <section class="height-minus-nav my-bg text-pink-lightest mx-8 md:flex items-end">
+  <section class="height-minus-nav my-bg text-pink-lightest px-8 md:flex items-end">
 
     <div class="p-5  mb-8 max-w-md bg-pink-darker  rounded-lg">
       <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">{{ $t('title') }}</h2>
@@ -29,9 +29,7 @@ export default {}
 </script>
 
 <style scoped>
-.height-minus-nav {
-  min-height: calc(100vh - var(--nav-height));
-}
+
 .my-bg {
   background-image: url('~assets/img/bg-home.jpeg');
   background-size: cover;

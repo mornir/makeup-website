@@ -47,7 +47,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~plugins/vue-js-modal'],
 
   /*
    ** Nuxt.js modules
@@ -95,11 +95,13 @@ export default {
         },
       },
     ],
+    [
+      'svg-to-vue-component/nuxt',
+      {
+        // ...
+      },
+    ],
   ],
-
-  purgeCSS: {
-    mode: 'postcss',
-  },
 
   vue: {
     config: {
@@ -114,6 +116,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    extractCSS: true,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

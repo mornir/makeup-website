@@ -36,6 +36,10 @@ export default {
   --nav-height: 5rem;
 }
 
+.height-minus-nav {
+  height: calc(100vh - var(--nav-height));
+}
+
 body {
   font-family: 'Barlow Condensed', sans-serif;
 }
