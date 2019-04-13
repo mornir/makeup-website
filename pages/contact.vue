@@ -10,7 +10,7 @@
         <button @click="show('qr-code')">
           <Weixin class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
         </button>
-        <a href="https://www.instagram.com/solinewang_makeup"
+        <a href="https://www.instagram.com/solinewangmua/"
            target="_blank"
            rel="noopener">
           <Instagram class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />

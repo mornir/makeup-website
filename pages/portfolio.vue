@@ -23,7 +23,19 @@
          alt="photo">
     <img src="@/assets/photos/web_Mariage_ jeremie_carron-24.jpg"
          alt="photo">
-    <img src="@/assets/photos/photo-3.jpg"
+    <img src="@/assets/photos/impression_Mariage_E&V_ jeremie_carron-158.jpg"
+         alt="photo">
+
+    <img src="@/assets/photos/L1180277.jpg"
+         alt="photo">
+
+    <img src="@/assets/photos/L1180150.jpg"
+         alt="photo">
+
+    <img src="@/assets/photos/L1180240.jpg"
+         alt="photo">
+
+    <img src="@/assets/photos/L1070389.jpg"
          alt="photo">
 
     <button class="absolute pin-r p-8 focus:outline-none"
@@ -57,7 +69,7 @@ export default {
 img {
   flex: 0 0 auto;
   scroll-snap-align: center;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 
