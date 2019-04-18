@@ -13,7 +13,8 @@
   <div class="bg-pink-lightest flex overflow-x-auto scroll-container height-minus-nav"
        ref="container">
 
-    <button class="absolute pin-l p-8 focus:outline-none"
+    <button v-if="index !== 0"
+            class="absolute pin-l p-6 focus:outline-none"
             id="previous"
             @click="scrollLeft">
       <i class="fas fa-arrow-left text-white fa-2x" />
@@ -24,7 +25,8 @@
                   :src="`https://res.cloudinary.com/infonuagique/image/upload/${photo.public_id}.${photo.format}`"
                   alt="photo" />
 
-    <button class="absolute pin-r p-8 focus:outline-none"
+    <button v-if="index < photos.length - 1"
+            class="absolute pin-r p-6 focus:outline-none"
             id="next"
             @click="scrollRight">
       <i class="fas fa-arrow-right text-white fa-2x" />
@@ -37,6 +39,8 @@ export default {
   data() {
     return {
       photos: [],
+      index: 0,
+      currentIndex: 0,
     }
   },
   async asyncData({ $axios }) {
@@ -55,12 +59,14 @@ export default {
         left: window.innerWidth,
         behavior: 'smooth',
       })
+      this.index++
     },
     scrollLeft() {
       this.$refs.container.scrollBy({
         left: -window.innerWidth,
         behavior: 'smooth',
       })
+      this.index--
     },
   },
 }
@@ -80,12 +86,14 @@ img {
 
 #next {
   top: 50%;
+  right: 1%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
 
 #previous {
   top: 50%;
+  left: 1%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
