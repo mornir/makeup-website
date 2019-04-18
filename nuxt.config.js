@@ -47,12 +47,13 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-js-modal'],
+  plugins: ['~plugins/vue-js-modal', '~plugins/v-lazy-image'],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/axios',
     'nuxt-purgecss',
     [
       'nuxt-i18n',
