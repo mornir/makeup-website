@@ -23,7 +23,7 @@
          alt="photo">
     <img src="@/assets/photos/web_Mariage_ jeremie_carron-24.jpg"
          alt="photo">
-    <img src="@/assets/photos/impression_Mariage_E&V_ jeremie_carron-158.jpg"
+    <img src="@/assets/photos/web_Mariage_E&V_ jeremie_carron-158.jpg"
          alt="photo">
 
     <img src="@/assets/photos/L1180277.jpg"
