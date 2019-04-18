@@ -19,24 +19,10 @@
       <i class="fas fa-arrow-left text-white fa-2x" />
     </button>
 
-    <img src="@/assets/photos/web_Mariage_ jeremie_carron.jpg"
-         alt="photo">
-    <img src="@/assets/photos/web_Mariage_ jeremie_carron-24.jpg"
-         alt="photo">
-    <img src="@/assets/photos/impression_Mariage_E&V_ jeremie_carron-158.jpg"
-         alt="photo">
-
-    <img src="@/assets/photos/L1180277.jpg"
-         alt="photo">
-
-    <img src="@/assets/photos/L1180150.jpg"
-         alt="photo">
-
-    <img src="@/assets/photos/L1180240.jpg"
-         alt="photo">
-
-    <img src="@/assets/photos/L1070389.jpg"
-         alt="photo">
+    <v-lazy-image :key="photo.public_id"
+                  v-for="photo in photos"
+                  :src="`https://res.cloudinary.com/infonuagique/image/upload/${photo.public_id}.${photo.format}`"
+                  alt="photo" />
 
     <button class="absolute pin-r p-8 focus:outline-none"
             id="next"
@@ -48,6 +34,21 @@
 
 <script>
 export default {
+  data() {
+    return {
+      photos: [],
+    }
+  },
+  async asyncData({ $axios }) {
+    try {
+      const photos = await $axios.$get(
+        'https://res.cloudinary.com/infonuagique/image/list/soline-portfolio.json'
+      )
+      return { photos: photos.resources }
+    } catch (e) {
+      console.log(e)
+    }
+  },
   methods: {
     scrollRight() {
       this.$refs.container.scrollBy({
