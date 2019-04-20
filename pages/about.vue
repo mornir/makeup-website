@@ -28,7 +28,7 @@
 export default {}
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 @screen sm {
   .my-bg {
     background-image: url('~assets/img/bg-home.jpeg');
