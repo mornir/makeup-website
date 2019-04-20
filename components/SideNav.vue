@@ -15,11 +15,11 @@
       </svg>
     </button>
 
-    <div class="pt-6 pl-4 text-pink-lightest font-semibold">
+    <!-- <div class="pt-6 pl-4 text-pink-lightest font-semibold">
       <span class="mr-4">EN</span>
       <span class="mr-4">FR</span>
       <span>中文</span>
-    </div>
+    </div> -->
 
     <nav class="flex flex-col items-end mr-8"
          v-if="open"
@@ -60,6 +60,7 @@ aside {
 }
 
 aside.open {
+  -webkit-clip-path: circle(4rem at 98% 5px);
   clip-path: circle(100vw at 98% 50px);
   transition: clip-path 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: all;

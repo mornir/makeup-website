@@ -16,11 +16,13 @@
 <template>
 
   <section class="my-bg height-minus-nav">
-    <div class="absolute pin-l pin-b w-full md:w-auto bg-pink-darker my-purple-circle">
+    <div class="absolute pin-l pin-b w-full md:w-auto bg-pink-darker my-purple-circle ">
 
       <h3 class="text-xl md:text-4xl mb-4 font-medium tracking-wide text-white inline-block md:block">{{ $t('hello') }},</h3>
+
       <h2 class="main-title  font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>
-      <p class="text-xl md:text-3xl text-pink-lighter "
+
+      <p class="text-xl md:text-3xl pb-12 md:pb-0 text-pink-lighter "
          v-html="$t('catchPhrase')" />
 
     </div>
