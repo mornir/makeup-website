@@ -34,9 +34,15 @@
 export default {}
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .index-height-minus-nav {
   height: calc(70vh);
+}
+
+@screen md {
+  .index-height-minus-nav {
+    height: calc(100vh - var(--nav-height));
+  }
 }
 
 .my-purple-circle {
