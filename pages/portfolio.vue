@@ -72,7 +72,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 img {
   flex: 0 0 auto;
   scroll-snap-align: center;

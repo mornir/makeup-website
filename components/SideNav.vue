@@ -1,5 +1,5 @@
 <template>
-  <aside class="bg-pink-darker fixed pin-y pin-x flex flex-col md:hidden"
+  <aside class="bg-pink-darker absolute pin-y pin-x flex flex-col md:hidden"
          :class="{'open': open}">
 
     <button @click="$emit('toggle')"
@@ -15,11 +15,11 @@
       </svg>
     </button>
 
-    <div class="pt-6 pl-4 text-pink-lightest font-semibold">
+    <!-- <div class="pt-6 pl-4 text-pink-lightest font-semibold">
       <span class="mr-4">EN</span>
       <span class="mr-4">FR</span>
       <span>中文</span>
-    </div>
+    </div> -->
 
     <nav class="flex flex-col items-end mr-8"
          v-if="open"
@@ -54,12 +54,14 @@ export default {
 
 <style scoped>
 aside {
+  -webkit-clip-path: circle(4rem at 98% 5px);
   clip-path: circle(4rem at 98% 5px);
   transition: clip-path 0.6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
   pointer-events: none;
 }
 
 aside.open {
+  -webkit-clip-path: circle(100vw at 98% 50px);
   clip-path: circle(100vw at 98% 50px);
   transition: clip-path 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   pointer-events: all;
