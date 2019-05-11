@@ -1,34 +1,36 @@
 
 <template>
-  <div class="text-pink-lightest bg-pink-darkest height-minus-nav">
-    <div class="max-w-sm mx-auto">
-      <section class="py-8 mx-4">
-        <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Contact</h2>
-        <p class="text-xl">Don’t hesitate to contact me. You can also find my creations on instragam, on my portfolio and on youtube.</p>
-      </section>
-      <section class="flex justify-around">
-        <button @click="show('qr-code')">
-          <Weixin class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
-        </button>
-        <a href="https://www.instagram.com/solinewangmua/"
-           target="_blank"
-           rel="noopener">
-          <Instagram class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
-        </a>
-        <a href="https://www.youtube.com/channel/UCVeQ_Od2gp9OVRowSFJKPJw"
-           target="_blank"
-           rel="noopener">
-          <YouTube class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
-        </a>
+  <div>
+    <div class="text-pink-lightest bg-pink-darkest height-minus-nav">
+      <div class="max-w-sm mx-auto">
+        <section class="py-8 mx-4">
+          <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Contact</h2>
+          <p class="text-xl">Don’t hesitate to contact me. You can also find my creations on instragam, on my portfolio and on youtube.</p>
+        </section>
+        <section class="flex justify-around">
+          <button @click="show('qr-code')">
+            <Weixin class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
+          </button>
+          <a href="https://www.instagram.com/solinewangmua/"
+             target="_blank"
+             rel="noopener">
+            <Instagram class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCVeQ_Od2gp9OVRowSFJKPJw"
+             target="_blank"
+             rel="noopener">
+            <YouTube class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
+          </a>
 
-        <button @click="show('email')">
-          <EmailIcon class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
-        </button>
+          <button @click="show('email')">
+            <EmailIcon class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
+          </button>
 
-      </section>
+        </section>
+
+      </div>
 
     </div>
-
     <EmailModal />
 
     <modal name="qr-code"
