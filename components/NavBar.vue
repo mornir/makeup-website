@@ -38,12 +38,6 @@ header {
   max-height: 4rem;
 }
 
-/* .divider {
-  border-left-width: 1.8px;
-  padding-top: 3rem;
-  width: 4rem;
-} */
-
 .nav-element {
   text-decoration: none;
   font-weight: 600; /* semibold */

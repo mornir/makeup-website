@@ -12,21 +12,14 @@ export default {
   },
 
   head: {
-    title: pkg.name,
+    title: 'Soline Wang',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description },
+      /*  { hid: 'description', name: 'description', content: pkg.description }, */
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        integrity:
-          'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
-        href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css',
-        crossorigin: 'anonymous',
-      },
+      /*  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, */
     ],
   },
 
@@ -70,13 +63,16 @@ export default {
             iso: 'en-US',
           },
         ],
-        // TODO: baseUrl: 'https://www.solinewang.com',
+        baseUrl: 'https://www.solinewang.com',
         defaultLocale: 'en',
         vueI18nLoader: true,
         vueI18n: {
-          fallbackLocale: 'fr',
+          fallbackLocale: 'en',
           messages: {
             en: {
+              meta: {
+                description: 'Professional makeup artist in Switzerland',
+              },
               links: {
                 index: 'home',
                 about: 'about me',
@@ -85,6 +81,10 @@ export default {
               },
             },
             fr: {
+              meta: {
+                description:
+                  'Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occasion.',
+              },
               links: {
                 index: 'accueil',
                 about: 'à mon propos',
