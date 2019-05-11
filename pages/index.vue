@@ -3,12 +3,18 @@
   "en": {
     "hello": "Hello",
     "name": "I'm Soline",
-    "catchPhrase": "I make your <b>true beauty</b> stand out."
+    "catchPhrase": "I make your <b>true beauty</b> stand out.",
+    "meta": {
+      "description": "Professional makeup artist in Switzerland"
+    }
   },
   "fr": {
     "hello": "Bonjour",
     "name": "Je m'appelle\n Soline",
-    "catchPhrase": "Je fais <b>ressortir votre beauté</b> intérieure."
+    "catchPhrase": "Je fais <b>ressortir votre beauté</b> intérieure.",
+    "meta": {
+      "description": "Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occasion."
+    }
   }
 }
 </i18n>
@@ -31,7 +37,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      meta: [
+        {
+          name: 'description',
+          content: this.$t('meta.description'),
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped lang="postcss">
