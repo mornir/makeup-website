@@ -2,7 +2,7 @@
 {
   "en": {
     "title": "About me",
-    "text": "Professional makeup artist, working with techniques, creativity, patience and great passion, I've thrown myself into the world of cosmetics for more than ten years, and the belief of beauty makes the change has only been stronger. I studied in Makeup school Studio B in Lausanne and acquired my diploma as a professional makeup artist. Work for all occasions."
+    "text": "I am an Chinese makeup artist based in Switzerland. I master various techniques, show creativity and great passion. I've thrown myself into the world of cosmetics for more than ten years, and the belief of beauty makes the change has only been stronger. I studied in Makeup school Studio B in Lausanne and acquired my diploma as a professional makeup artist. I work for all occasions, but focus on wedding makeup and pre-marriage shooting."
   },
   "fr": {
     "title": "À mon propos",
