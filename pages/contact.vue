@@ -27,17 +27,17 @@
 
       </section>
 
-      <EmailModal />
-
-      <modal name="qr-code"
-             height="auto"
-             width="300">
-
-        <img src="@/assets/img/weixin_qr_code.jpg"
-             alt="Weixin QR Code">
-      </modal>
-
     </div>
+
+    <EmailModal />
+
+    <modal name="qr-code"
+           height="auto"
+           width="300">
+
+      <img src="@/assets/img/weixin_qr_code.jpg"
+           alt="Weixin QR Code">
+    </modal>
   </div>
 </template>
 
