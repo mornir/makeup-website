@@ -8,10 +8,10 @@
           <p class="text-xl">Don’t hesitate to contact me. You can also find my creations on instragam, on my portfolio and on youtube.</p>
         </section>
         <section class="flex justify-around">
-          <button @click="showEmail = false; showQR = true"
+          <button @click="showQRcode"
                   class="focus:outline-none">
             <Weixin class="h-10 fill-current hover:text-pink-alt"
-                    :class="showQR ? 'text-pink-alt' : 'text-pink-lighter'" />
+                    :class="isQRcodeVisible ? 'text-pink-alt' : 'text-pink-lighter'" />
           </button>
           <a href="https://www.instagram.com/solinewangmua/"
              target="_blank"
@@ -26,21 +26,23 @@
             <YouTube class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
           </a>
 
-          <button @click="showEmail = true; showQR = false"
+          <button @click="showEmail"
                   class="focus:outline-none">
             <EmailIcon class="h-10 fill-current hover:text-pink-alt "
-                       :class="showEmail ? 'text-pink-alt' : 'text-pink-lighter'" />
+                       :class="isEmailVisible ? 'text-pink-alt' : 'text-pink-lighter'" />
           </button>
 
         </section>
 
         <section class="mt-8 pb-8 text-center">
-          <EmailForm v-if="showEmail" />
+
+          <EmailForm v-show="isEmailVisible"
+                     ref="form" />
 
           <img src="@/assets/img/weixin_qr_code.jpg"
                class="h-64"
                alt="Weixin QR Code"
-               v-if="showQR">
+               v-if="isQRcodeVisible">
         </section>
 
       </div>
@@ -69,9 +71,30 @@ export default {
 
   data() {
     return {
-      showEmail: false,
-      showQR: false,
+      isEmailVisible: false,
+      isQRcodeVisible: false,
     }
+  },
+  methods: {
+    closeAll() {
+      this.isEmailVisible = false
+      this.isQRcodeVisible = false
+    },
+    showEmail() {
+      this.closeAll()
+      this.isEmailVisible = true
+      //TODO: find more a more elegant solution
+
+      if (!this.$refs.form.$el.scrollIntoView) return
+
+      setTimeout(() => {
+        this.$refs.form.$el.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    },
+    showQRcode() {
+      this.closeAll()
+      this.isQRcodeVisible = true
+    },
   },
 }
 </script>
