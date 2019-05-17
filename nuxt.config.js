@@ -6,11 +6,6 @@ export default {
   /*
    ** Headers of the page
    */
-
-  server: {
-    port: 8080, // default: 3000
-  },
-
   head: {
     title: 'Soline Wang',
     meta: [
@@ -103,6 +98,13 @@ export default {
       },
     ],
   ],
+
+  /*
+   ** Axios config
+   */
+  axios: {
+    baseURL: '/',
+  },
 
   vue: {
     config: {
