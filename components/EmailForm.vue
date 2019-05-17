@@ -68,7 +68,7 @@
         <section v-else class="bg-pink-lightest text-black rounded-b-lg py-8">
           <div v-if="!isSubmitError">
           <h3 class="text-3xl">Thank You!</h3>
-          <p class="text-xl">I'll get back to you as soon as possible 🙋‍♀️</p>
+          <p class="text-xl">I'll get back to you as soon as possible 🙋🏻‍♀️</p>
           </div>
           <div v-else>
             <h3 class="text-3xl mb-2">Oops! Something went wrong. Sorry!</h3>
