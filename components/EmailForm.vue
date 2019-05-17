@@ -4,11 +4,12 @@
 
       <EmailIcon class="h-8 text-black fill-current" />
     </header>
-    <form method="POST"
-          name="contact"
+    <form v-if="!submitted"
+          @submit.prevent.once="submit"
+          :name="form['form-name']"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          class="bg-pink-light  bg-pink-lightest rounded-b-lg">
+          class="bg-pink-lightest rounded-b-lg">
       <section class="font-semibold px-6 pt-6 pb-3 border-b-2 border-dotted border-pink-lighter contact-form text-left">
 
         <label for="email"
@@ -17,6 +18,7 @@
         <input type="email"
                class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                name="email"
+               v-model="form.email"
                required
                placeholder="your@email.com">
 
@@ -30,7 +32,7 @@
                name="subject"
                required
                placeholder="your subject"
-               v-model="subject">
+               v-model="form.subject">
 
       </section>
       <section class="px-6 pt-3">
@@ -40,7 +42,7 @@
                   rows="10"
                   placeholder="Enter your message here"
                   class="text-pink-alt font-semibold w-full bg-transparent resize-none focus:outline-none"
-                  v-model="message" />
+                  v-model="form.message" />
         </section>
           <footer class="px-6 pb-6 flex flex-col text-left">
             <div>
@@ -61,6 +63,19 @@
             <button type="submit" class="self-end text-sm bg-pink text-pink-lightest px-3 py-2 rounded font-semibold  no-underline shadow-md">email me</button>
           </footer>
         </form>
+
+        <section v-else class="bg-pink-lightest text-black rounded-b-lg py-8">
+          <div v-if="!isSubmitError">
+          <h3 class="text-3xl">Thank You!</h3>
+          <p class="text-xl">I'll get back to you as soon as possible 🙋‍♀️</p>
+          </div>
+          <div v-else>
+            <h3 class="text-3xl">Oops! Something went wrong. Sorry!</h3>
+            <p class="text-xl">Just send me your message to solinefang@hotmail.com</p>
+            <h4 class="mt-2" v-if="form.message">Here's copy of your message:</h4>
+            <p class="text-left p-2">{{ form.message }}</p>
+          </div>
+        </section>
       </article>
 </template>
 
@@ -73,10 +88,40 @@ export default {
   },
   data() {
     return {
-      email: '',
-      subject: '',
-      message: '',
+      form: {
+        email: '',
+        subject: '',
+        message: '',
+        'form-name': 'contact',
+      },
+      submitted: false,
+      isSubmitError: false,
     }
+  },
+  methods: {
+    async submit() {
+      const URLparams = new URLSearchParams(Object.entries(this.form))
+
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      }
+      // Axios automatically stringifies URLparams
+      try {
+        await this.$axios.$post('/', URLparams, axiosConfig)
+        this.submitted = true
+
+        this.form = {
+          email: '',
+          subject: '',
+          message: '',
+          'form-name': 'contact',
+        }
+      } catch (e) {
+        console.log(e)
+        // TODO: logrocket
+        this.isSubmitError = true
+      }
+    },
   },
 }
 </script>
