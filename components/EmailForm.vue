@@ -67,6 +67,7 @@
 <script>
 import EmailIcon from '@/assets/svg/email.svg'
 export default {
+  name: 'EmailForm',
   components: {
     EmailIcon,
   },
