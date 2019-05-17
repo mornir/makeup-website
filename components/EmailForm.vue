@@ -5,6 +5,7 @@
       <EmailIcon class="h-8 text-black fill-current" />
     </header>
     <form v-if="!submitted"
+          method="POST"
           @submit.prevent.once="submit"
           :name="form['form-name']"
           netlify-honeypot="bot-field"
@@ -70,8 +71,8 @@
           <p class="text-xl">I'll get back to you as soon as possible 🙋‍♀️</p>
           </div>
           <div v-else>
-            <h3 class="text-3xl">Oops! Something went wrong. Sorry!</h3>
-            <p class="text-xl">Just send me your message to solinefang@hotmail.com</p>
+            <h3 class="text-3xl mb-2">Oops! Something went wrong. Sorry!</h3>
+            <p class="text-xl">Just send me your message to <span class="text-pink-alt">solinefang@hotmail.com</span></p>
             <h4 class="mt-2" v-if="form.message">Here's copy of your message:</h4>
             <p class="text-left p-2">{{ form.message }}</p>
           </div>
@@ -119,6 +120,7 @@ export default {
       } catch (e) {
         console.log(e)
         // TODO: logrocket
+        this.submitted = true
         this.isSubmitError = true
       }
     },
