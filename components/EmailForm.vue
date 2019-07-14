@@ -1,16 +1,12 @@
 <template>
-  <article>
-    <header class="bg-pink-lighter pl-5 py-1 rounded-t-lg text-left">
-
-      <EmailIcon class="h-8 text-black fill-current" />
-    </header>
+  <div>
     <form v-if="!submitted"
           method="POST"
           @submit.prevent.once="submit"
           :name="form['form-name']"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          class="bg-pink-lightest rounded-b-lg">
+          class="bg-pink-100 rounded-lg">
       <section class="font-semibold px-6 pt-6 pb-3 border-b-2 border-dotted border-pink-lighter contact-form text-left">
 
         <label for="email"
@@ -61,7 +57,7 @@
              class="bg-transparent focus:outline-none text-pink-alt font-semibold"
                    placeholder="Your name">
             </div>
-            <button type="submit" class="self-end text-sm bg-pink text-pink-lightest px-3 py-2 rounded font-semibold  no-underline shadow-md">email me</button>
+            <button type="submit" class="self-end text-sm bg-pink-alt text-pink-100 px-3 py-2 rounded font-semibold  no-underline shadow-md">email me</button>
           </footer>
         </form>
 
@@ -77,16 +73,12 @@
             <p class="text-left p-2">{{ form.message }}</p>
           </div>
         </section>
-      </article>
+</div>
 </template>
 
 <script>
-import EmailIcon from '@/assets/svg/email.svg'
 export default {
   name: 'EmailForm',
-  components: {
-    EmailIcon,
-  },
   data() {
     return {
       form: {
