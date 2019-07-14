@@ -14,4 +14,8 @@
   .justify-self-end {
     justify-self: end;
   }
+
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
 }
