@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <div class="text-pink-lightest bg-pink-darkest height-contact-page">
+    <div class="text-pink-lightest bg-pink-200 height-contact-page">
       <div class="max-w-sm mx-auto">
         <section class="py-8 mx-4">
           <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Contact</h2>

@@ -1,13 +1,12 @@
 <template>
-  <header class="flex justify-between items-center bg-pink-darker px-8 shadow-md">
+  <header class="flex justify-between items-center bg-pink-800 px-8 shadow-md ">
 
     <nuxt-link :to="localePath('index')"
                class="no-underline text-pink-darkest ">
-      <h1 class="font-medium tracking-normal text-white">Soline Wang</h1>
-
+      <h1 class="font-medium tracking-normal text-white text-4xl">Soline Wang</h1>
     </nuxt-link>
 
-    <nav class="hidden md:block text-pink-lightest">
+    <nav class="hidden md:block text-pink-100">
 
       <nuxt-link v-for="(link, route) in $i18n.messages.en.links"
                  :key="route"
@@ -26,8 +25,6 @@
   </header>
 </template>
 
-<script>
-</script>
 
 <style scoped>
 header {
