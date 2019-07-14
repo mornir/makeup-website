@@ -2,7 +2,7 @@
   <div>
 
     <AppNavBar @open="isSideNavOpen = true" />
-    <main @click="isSideNavOpen = false">
+    <main @click="isSideNavOpen = false" class="height-minus-nav">
       <nuxt />
     </main>
 
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,500,600,700&display=swap');
 
 :root {
   --nav-height: 5rem;

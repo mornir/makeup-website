@@ -20,7 +20,7 @@
 </i18n>
 
 <template>
-  <div class="height-minus-nav bg-pink-darker">
+  <div class=" bg-pink-darker">
     <section class="my-bg index-height-minus-nav">
       <div class="absolute left-0 bottom-0 w-full md:w-auto bg-pink-800 my-purple-circle ">
 
@@ -52,14 +52,9 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-.index-height-minus-nav {
-  height: calc(70vh);
-}
 
-@screen md {
-  .index-height-minus-nav {
-    height: calc(100vh - var(--nav-height));
-  }
+.index-height-minus-nav {
+  height: calc(100vh - var(--nav-height));
 }
 
 .my-purple-circle {
