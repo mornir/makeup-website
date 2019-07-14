@@ -1,51 +1,59 @@
 
 <template>
-  <div>
-    <div class="text-pink-lightest bg-pink-darkest height-contact-page">
-      <div class="max-w-sm mx-auto">
-        <section class="py-8 mx-4">
-          <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Contact</h2>
-          <p class="text-xl">Don’t hesitate to contact me. You can also find my creations on instragam, on my portfolio and on youtube.</p>
-        </section>
-        <section class="flex justify-around">
-          <button @click="showQRcode"
-                  class="focus:outline-none">
-            <Weixin class="h-10 fill-current hover:text-pink-alt"
-                    :class="isQRcodeVisible ? 'text-pink-alt' : 'text-pink-lighter'" />
-          </button>
+  <div class="text-pink-lightest bg-pink-200 h-full">
+    <div class="max-w-sm mx-auto">
+
+      <section class="py-8 mx-4">
+
+        <h1 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Follow me</h1>
+        <p class="text-xl">I regularly share my work on Instagram and I have a YouTube channel where I make makeup tutorial videos (in Chinese).</p>
+        <div class="flex justify-evenly mt-4">
+
           <a href="https://www.instagram.com/solinewangmua/"
              target="_blank"
              rel="noopener"
              class="focus:outline-none">
-            <Instagram class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
+            <Instagram class="h-10 text-pink-900 fill-current hover:text-pink-alt" />
           </a>
           <a href="https://www.youtube.com/channel/UCVeQ_Od2gp9OVRowSFJKPJw"
              target="_blank"
              rel="noopener"
              class="focus:outline-none">
-            <YouTube class="h-10 text-pink-lighter fill-current hover:text-pink-alt" />
+            <YouTube class="h-10 text-pink-900 fill-current hover:text-pink-alt" />
           </a>
+        </div>
 
+      </section>
+      <section class="py-8 mx-4">
+        <h1 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl">Contact me</h1>
+        <p class="text-xl">Don’t hesitate to contact me. You can text me on Wechat and Whatsapp, or send me an email.</p>
+        <div class="flex justify-evenly mt-4">
+
+          <a href="https://www.wechat.com/ECtmVhXr_IQ-OaG8r6GKGN8"
+             target="_blank"
+             rel="noopener nofollow"
+             class="focus:outline-none">
+            <Weixin class="h-10 fill-current hover:text-pink-alt text-pink-900" />
+          </a>
+          <a href="https://wa.me/410787498068"
+             target="_blank"
+             rel="noopener nofollow"
+             class="focus:outline-none">
+            <Whatsapp class="h-10 fill-current hover:text-pink-alt text-pink-900" />
+          </a>
           <button @click="showEmail"
                   class="focus:outline-none">
-            <EmailIcon class="h-10 fill-current hover:text-pink-alt "
-                       :class="isEmailVisible ? 'text-pink-alt' : 'text-pink-lighter'" />
+            <EmailIcon class="h-10 fill-current hover:text-pink-alt"
+                       :class="isEmailVisible ? 'text-pink-alt' : 'text-pink-900'" />
           </button>
+        </div>
 
-        </section>
-
-        <section class="mt-8 pb-8 text-center">
-
+        <div class="mt-8 pb-8 ">
           <EmailForm v-show="isEmailVisible"
                      ref="form" />
 
-          <img src="@/assets/img/weixin_qr_code.jpg"
-               class="h-64"
-               alt="Weixin QR Code"
-               v-if="isQRcodeVisible">
-        </section>
-
-      </div>
+        </div>
+      </section>
 
     </div>
 
@@ -57,6 +65,7 @@ import EmailIcon from '@/assets/svg/email.svg'
 import Weixin from '@/assets/svg/weixin-brands.svg'
 import Instagram from '@/assets/svg/instagram-brands.svg'
 import YouTube from '@/assets/svg/youtube-brands.svg'
+import Whatsapp from '@/assets/svg/whatsapp-brands.svg'
 
 import EmailForm from '@/components/EmailForm'
 
@@ -67,43 +76,27 @@ export default {
     EmailIcon,
     YouTube,
     EmailForm,
+    Whatsapp,
   },
-
   data() {
     return {
       isEmailVisible: false,
-      isQRcodeVisible: false,
     }
   },
   methods: {
-    closeAll() {
-      this.isEmailVisible = false
-      this.isQRcodeVisible = false
-    },
     showEmail() {
-      this.closeAll()
       this.isEmailVisible = true
       //TODO: find more a more elegant solution
-
       if (!this.$refs.form.$el.scrollIntoView) return
-
       setTimeout(() => {
         this.$refs.form.$el.scrollIntoView({ behavior: 'smooth' })
       }, 100)
-    },
-    showQRcode() {
-      this.closeAll()
-      this.isQRcodeVisible = true
     },
   },
 }
 </script>
 
 <style scoped lang="postcss">
-.height-contact-page {
-  min-height: calc(100vh - var(--nav-height));
-}
-
 button:focus svg,
 a:focus svg {
   @apply text-pink-alt;

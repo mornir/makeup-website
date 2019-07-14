@@ -1,9 +1,9 @@
 <template>
-  <aside class="bg-pink-darker absolute pin-y pin-x flex flex-col md:hidden"
+  <aside class="bg-pink-800 absolute inset-0 flex flex-col md:hidden"
          :class="{'open': open}">
 
     <button @click="$emit('toggle')"
-            class="absolute pin-t pin-r mr-4 mt-4 focus:outline-none pointer-events-auto">
+            class="absolute top-0 right-0 mr-4 mt-4 focus:outline-none pointer-events-auto">
 
       <svg class="fill-current text-white h-10 w-10"
            xmlns="http://www.w3.org/2000/svg"

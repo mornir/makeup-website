@@ -30,19 +30,20 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/tailwind.css'],
+  css: [],
 
   /*
    ** Plugins to load before mounting the App
    */
   plugins: ['~plugins/vue-js-modal', '~plugins/v-lazy-image'],
 
+  devModules: ['@nuxtjs/tailwindcss'],
+
   /*
    ** Nuxt.js modules
    */
   modules: [
     '@nuxtjs/axios',
-    'nuxt-purgecss',
     [
       'nuxt-i18n',
       {
