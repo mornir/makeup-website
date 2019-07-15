@@ -2,7 +2,7 @@
   <div>
 
     <AppNavBar @open="isSideNavOpen = true" />
-    <main @click="isSideNavOpen = false" class="height-minus-nav">
+    <main @click="isSideNavOpen = false">
       <nuxt />
     </main>
 
@@ -37,11 +37,18 @@ export default {
 }
 
 .height-minus-nav {
-  height: calc(100vh - var(--nav-height));
+  min-height: calc(100vh - var(--nav-height));
 }
 
 body {
   font-family: 'Barlow Condensed', sans-serif;
+}
+
+.my-bg {
+  background-image: url('~assets/img/bg-home.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 </style>
 

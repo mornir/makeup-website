@@ -1,100 +1,45 @@
-<i18n>
-{
-  "en": {
-    "title": "Coming soon."
-  },
-  "fr": {
-    "title": "En construction."
-  }
-}
-</i18n>
-
 <template>
-  <div class="bg-pink-lightest flex overflow-x-auto scroll-container height-minus-nav"
-       ref="container">
-
-    <button v-if="index !== 0"
-            class="absolute pin-l p-6 focus:outline-none"
-            id="previous"
-            @click="scrollLeft">
-      <i class="fas fa-arrow-left text-white fa-2x" />
-    </button>
+  <section id="gallery-grid"
+           class="bg-pink-200 md:p-2">
 
     <v-lazy-image :key="photo.public_id"
                   v-for="photo in photos"
-                  :src="`https://res.cloudinary.com/infonuagique/image/upload/${photo.public_id}.${photo.format}`"
-                  alt="photo" />
-
-    <button v-if="index < photos.length - 1"
-            class="absolute pin-r p-6 focus:outline-none"
-            id="next"
-            @click="scrollRight">
-      <i class="fas fa-arrow-right text-white fa-2x" />
-    </button>
-  </div>
+                  :src="urlFor(photo.photo).width(426).height(426).url()"
+                  alt="Soline Wang Swiss Makeup Artist" />
+  </section>
 </template>
 
 <script>
+import sanity from '@/sanity/sanityClient'
+import urlFor from '@/sanity/imgBuilder'
+
 export default {
+  name: 'Portfolio',
   data() {
     return {
       photos: [],
-      index: 0,
-      currentIndex: 0,
-    }
-  },
-  async asyncData({ $axios }) {
-    try {
-      const photos = await $axios.$get(
-        'https://res.cloudinary.com/infonuagique/image/list/soline-portfolio.json'
-      )
-      return { photos: photos.resources }
-    } catch (e) {
-      console.log(e)
     }
   },
   methods: {
-    scrollRight() {
-      this.$refs.container.scrollBy({
-        left: window.innerWidth,
-        behavior: 'smooth',
-      })
-      this.index++
+    urlFor(src) {
+      return urlFor(src)
     },
-    scrollLeft() {
-      this.$refs.container.scrollBy({
-        left: -window.innerWidth,
-        behavior: 'smooth',
-      })
-      this.index--
-    },
+  },
+  async asyncData() {
+    try {
+      const photos = await sanity.fetch('*[_type == "photo"]')
+      return { photos }
+    } catch (error) {
+      console.log(error)
+    }
   },
 }
 </script>
 
 <style scoped lang="postcss">
-img {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  object-fit: contain;
-  object-position: center center;
-}
-
-.scroll-container {
-  scroll-snap-type: x mandatory;
-}
-
-#next {
-  top: 50%;
-  right: 1%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-#previous {
-  top: 50%;
-  left: 1%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5rem;
 }
 </style>
