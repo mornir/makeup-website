@@ -1,7 +1,7 @@
 
 <template>
   <div class="text-pink-lightest bg-pink-200 height-minus-nav">
-    <div class="max-w-sm mx-auto">
+    <div class="max-w-md mx-auto">
 
       <section class="py-8 mx-4">
 
