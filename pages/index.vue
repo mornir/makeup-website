@@ -18,7 +18,7 @@
 </i18n>
 
 <template>
-  <section class="bg-pink-200 my-bg index-height-minus-nav flex items-end ">
+  <section class="bg-pink-200 my-bg height-minus-nav flex items-end ">
     <div class="w-full md:w-auto bg-pink-800 my-purple-circle">
 
       <h2 class="text-5xl font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>

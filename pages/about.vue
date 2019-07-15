@@ -12,12 +12,14 @@
 </i18n>
 
 <template>
-  <section class=" bg-pink-200 height-minus-nav md:px-8 md:flex ">
-    <div class="p-5   max-w-md  md:rounded-lg">
-      <h2 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl font-semibold">{{ $t('title') }}</h2>
-      <p class="text-2xl pb-6 leading-tight">
-        {{ $t('text') }}</p>
+  <div class=" bg-pink-200 height-minus-nav">
+    <div class="max-w-md mx-auto">
+      <section class="p-5   max-w-md  md:rounded-lg">
+        <h1 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl font-semibold">{{ $t('title') }}</h1>
+        <p class="text-2xl pb-6 leading-tight">
+          {{ $t('text') }}</p>
+      </section>
     </div>
-  </section>
+  </div>
 
 </template>
