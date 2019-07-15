@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
+    "@sanity/client": "^0.141.6",
+    "@sanity/image-url": "^0.140.12",
     "nuxt": "^2.6.1",
     "nuxt-i18n": "^5.8.5",
     "svg-to-vue-component": "^0.3.7",
