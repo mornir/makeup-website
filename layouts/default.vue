@@ -3,7 +3,7 @@
 
     <AppNavBar @open="isSideNavOpen = true" />
     <main @click="isSideNavOpen = false">
-      <nuxt class="height-minus-nav" />
+      <nuxt />
     </main>
 
     <AppSideNav :open="isSideNavOpen"
@@ -38,10 +38,6 @@ export default {
 
 .height-minus-nav {
   min-height: calc(100vh - var(--nav-height));
-}
-
-.height-minus-nav {
-  min-height: 100vh;
 }
 
 body {

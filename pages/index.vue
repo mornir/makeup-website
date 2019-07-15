@@ -18,12 +18,12 @@
 </i18n>
 
 <template>
-  <section class="bg-pink-200 my-bg h-full flex items-end ">
+  <section class="bg-pink-200 my-bg index-height-minus-nav flex items-end ">
     <div class="w-full md:w-auto bg-pink-800 my-purple-circle">
 
       <h2 class="text-5xl font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>
 
-      <p class="pb-12 text-2xl md:text-3xl text-pink-200"
+      <p class="pb-12 md:pb-0 text-2xl md:text-3xl text-pink-200"
          v-html="$t('catchPhrase')" />
 
     </div>
@@ -46,10 +46,6 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-.index-height-minus-nav {
-  min-height: calc(100vh - var(--nav-height));
-}
-
 .my-purple-circle {
   padding: 1rem 2rem;
 }
