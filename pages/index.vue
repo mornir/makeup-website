@@ -32,6 +32,7 @@
 
 <script>
 export default {
+  /*
   head() {
     return {
       meta: [
@@ -41,7 +42,7 @@ export default {
         },
       ],
     }
-  },
+  },*/
 }
 </script>
 
