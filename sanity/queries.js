@@ -1,5 +1,6 @@
-const getPhotos = `*[_type == "photo"] {
-  "palette": photo.asset->{
+/* const getPhotos = `*[_type == "photo"] {
+  "asset": photo,
+  "photo": photo.asset->{
     url,
     metadata {
       location,
@@ -13,4 +14,5 @@ const getPhotos = `*[_type == "photo"] {
   }
 }`
 
-export default { getPhotos }
+export { getPhotos }
+ */
