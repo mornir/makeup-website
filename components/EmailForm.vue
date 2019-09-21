@@ -1,7 +1,7 @@
 <template>
   <div>
     <form v-if="!submitted"
-          method="POST"
+          @submit.prevent
           @submit.prevent.once="submit"
           :name="form['form-name']"
           netlify-honeypot="bot-field"
@@ -92,29 +92,31 @@ export default {
     }
   },
   methods: {
-    async submit() {
-      const URLparams = new URLSearchParams(Object.entries(this.form))
+    submit() {
+      setTimeout(async () => {
+        const URLparams = new URLSearchParams(Object.entries(this.form))
 
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      }
-      // Axios automatically stringifies URLparams
-      try {
-        await this.$axios.$post('/', URLparams, axiosConfig)
-        this.submitted = true
-
-        this.form = {
-          email: '',
-          subject: '',
-          message: '',
-          'form-name': 'contact',
+        const axiosConfig = {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
         }
-      } catch (e) {
-        console.log(e)
-        // TODO: logrocket
-        this.submitted = true
-        this.isSubmitError = true
-      }
+        // Axios automatically stringifies URLparams
+        try {
+          await this.$axios.$post('/', URLparams, axiosConfig)
+          this.submitted = true
+
+          this.form = {
+            email: '',
+            subject: '',
+            message: '',
+            'form-name': 'contact',
+          }
+        } catch (e) {
+          console.log(e)
+          // TODO: logrocket
+          this.submitted = true
+          this.isSubmitError = true
+        }
+      }, 2000)
     },
   },
 }
