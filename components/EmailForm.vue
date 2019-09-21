@@ -92,31 +92,29 @@ export default {
     }
   },
   methods: {
-    submit() {
-      setTimeout(async () => {
-        const URLparams = new URLSearchParams(Object.entries(this.form))
+    async submit() {
+      const URLparams = new URLSearchParams(Object.entries(this.form))
 
-        const axiosConfig = {
-          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        }
-        // Axios automatically stringifies URLparams
-        try {
-          await this.$axios.$post('/', URLparams, axiosConfig)
-          this.submitted = true
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      }
+      // Axios automatically stringifies URLparams
+      try {
+        await this.$axios.$post('/', URLparams, axiosConfig)
+        this.submitted = true
 
-          this.form = {
-            email: '',
-            subject: '',
-            message: '',
-            'form-name': 'contact',
-          }
-        } catch (e) {
-          console.log(e)
-          // TODO: logrocket
-          this.submitted = true
-          this.isSubmitError = true
+        this.form = {
+          email: '',
+          subject: '',
+          message: '',
+          'form-name': 'contact',
         }
-      }, 2000)
+      } catch (e) {
+        console.log(e)
+        // TODO: logrocket
+        this.submitted = true
+        this.isSubmitError = true
+      }
     },
   },
 }
