@@ -1,7 +1,7 @@
 <template>
   <div>
     <form v-if="!submitted"
-          method="POST"
+          @submit.prevent
           @submit.prevent.once="submit"
           :name="form['form-name']"
           netlify-honeypot="bot-field"
