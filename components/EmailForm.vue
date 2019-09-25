@@ -77,6 +77,8 @@
 </template>
 
 <script>
+import URLSearchParams from '@ungap/url-search-params'
+
 export default {
   name: 'EmailForm',
   data() {
