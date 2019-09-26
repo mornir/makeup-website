@@ -52,6 +52,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    'nuxt-polyfill',
     '@nuxtjs/axios',
     [
       'nuxt-i18n',
@@ -120,6 +121,15 @@ export default {
     config: {
       productionTip: false,
     },
+  },
+
+  polyfill: {
+    features: [
+      {
+        require: 'url-search-params-polyfill',
+        detect: () => 'URLSearchParams ' in window,
+      },
+    ],
   },
 
   /*
