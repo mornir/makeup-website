@@ -77,8 +77,6 @@
 </template>
 
 <script>
-import URLSearchParams from '@ungap/url-search-params'
-
 export default {
   name: 'EmailForm',
   data() {
@@ -95,13 +93,14 @@ export default {
   },
   methods: {
     async submit() {
-      const URLparams = new URLSearchParams(Object.entries(this.form))
-
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      }
-      // Axios automatically stringifies URLparams
       try {
+        const URLparams = new URLSearchParams(Object.entries(this.form))
+
+        const axiosConfig = {
+          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        }
+
+        // Axios automatically stringifies URLparams
         await this.$axios.$post('/', URLparams, axiosConfig)
         this.submitted = true
 
@@ -113,7 +112,6 @@ export default {
         }
       } catch (e) {
         console.log(e)
-        // TODO: logrocket
         this.submitted = true
         this.isSubmitError = true
       }
