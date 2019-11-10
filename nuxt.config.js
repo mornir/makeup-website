@@ -44,7 +44,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-js-modal', '~plugins/v-lazy-image'],
+  plugins: [
+    '~plugins/vue-js-modal',
+    '~plugins/v-lazy-image',
+    '~plugins/vue-gallery.client.js',
+  ],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 
