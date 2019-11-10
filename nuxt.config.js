@@ -46,7 +46,7 @@ export default {
    */
   plugins: ['~plugins/vue-js-modal', '~plugins/v-lazy-image'],
 
-  devModules: ['@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 
   /*
    ** Nuxt.js modules
@@ -100,12 +100,6 @@ export default {
             },
           },
         },
-      },
-    ],
-    [
-      'svg-to-vue-component/nuxt',
-      {
-        // ...
       },
     ],
   ],
