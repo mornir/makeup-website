@@ -1,9 +1,9 @@
 <template>
   <section class="gallery-grid p-2">
 
-    <gallery :images="photoUrls"
-             :index="index"
-             @close="index = null" />
+    <v-gallery :images="photoUrls"
+               :index="index"
+               @close="index = null" />
 
     <v-lazy-image v-for="(photo, imageIndex) in photos"
                   :key="photo.id"
