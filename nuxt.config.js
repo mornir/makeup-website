@@ -42,8 +42,7 @@ export default {
   css: [],
 
   purgeCSS: {
-    whitelist: ['toggle', 'prev', 'next', 'close', 'play-pause'],
-    whitelistPatterns: [/^blueimp.+/, /^slide?.+/],
+    whitelistPatternsChildren: [/^blueimp.+/],
   },
 
   /*
