@@ -2,5 +2,5 @@
 # will take these settings and override their
 # current ones.
 [context.dev]
-  command = "yarn generate"
+  command = "yarn prod"
   publish = "dist"

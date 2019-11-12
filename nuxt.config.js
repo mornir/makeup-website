@@ -41,12 +41,26 @@ export default {
    */
   css: [],
 
+  purgeCSS: {
+    whitelist: [
+      'blueimp-gallery',
+      'blueimp-gallery-controls',
+      'blueimp-gallery-display',
+      'slides',
+      'slide',
+    ],
+  },
+
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-js-modal', '~plugins/v-lazy-image'],
+  plugins: [
+    '~plugins/vue-js-modal',
+    '~plugins/v-lazy-image',
+    '~plugins/vue-gallery.client.js',
+  ],
 
-  devModules: ['@nuxtjs/tailwindcss'],
+  buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 
   /*
    ** Nuxt.js modules
@@ -100,12 +114,6 @@ export default {
             },
           },
         },
-      },
-    ],
-    [
-      'svg-to-vue-component/nuxt',
-      {
-        // ...
       },
     ],
   ],
