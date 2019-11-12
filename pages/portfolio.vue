@@ -41,15 +41,6 @@ export default {
       return urlFor(src).auto('format')
     },
   },
-  computed: {
-    orientation() {
-      if (photo.orientation === 'horizontal') {
-        return 'horizontal'
-      } else {
-        return 'vertical'
-      }
-    },
-  },
   async asyncData() {
     try {
       const photos = await sanity.fetch(query)
