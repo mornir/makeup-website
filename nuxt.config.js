@@ -42,13 +42,7 @@ export default {
   css: [],
 
   purgeCSS: {
-    whitelist: [
-      'blueimp-gallery',
-      'blueimp-gallery-controls',
-      'blueimp-gallery-display',
-      'slides',
-      'slide',
-    ],
+    whitelistPatternsChildren: [/^blueimp.+/],
   },
 
   /*
