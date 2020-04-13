@@ -1,17 +1,25 @@
 <template>
-  <header class="flex justify-between items-center bg-pink-800 px-8 shadow-md ">
+  <header class="flex items-center justify-between px-2 md:px-24">
+    <n-link :to="localePath('index')" class="no-underline text-pink-darkest ">
+      <h1 class="text-5xl font-medium tracking-normal md:text-6xl">
+        Soline Wang
+      </h1>
+    </n-link>
 
-    <nuxt-link :to="localePath('index')"
-               class="no-underline text-pink-darkest ">
-      <h1 class="font-medium tracking-normal text-white text-4xl">Soline Wang</h1>
-    </nuxt-link>
+    <nav class="hidden md:block">
+      <n-link
+        v-for="(link, route) in $i18n.messages.en.links"
+        :key="route"
+        :to="localePath(route)"
+        class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
+        >{{ $t('links.' + route) }}</n-link
+      >
 
-    <nav class="hidden md:block text-pink-100">
-
-      <nuxt-link v-for="(link, route) in $i18n.messages.en.links"
-                 :key="route"
-                 :to="localePath(route)"
-                 class="desktop-link nav-element mx-2 uppercase text-xl">{{ $t('links.' + route) }}</nuxt-link>
+      <n-link
+        class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase bg-black"
+        to="/contact"
+        >Contact</n-link
+      >
 
       <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
       <!--    <nuxt-link :to="switchLocalePath('fr')"
@@ -20,15 +28,17 @@
       <nuxt-link :to="switchLocalePath('en')"
                  v-else
                  class="nav-element">EN</nuxt-link> -->
-
     </nav>
   </header>
 </template>
 
-
 <style scoped>
-header {
+/* header {
   height: var(--nav-height);
+} */
+
+h1 {
+  font-family: 'Grand Hotel', cursive;
 }
 
 .my-logo {
@@ -37,7 +47,6 @@ header {
 
 .nav-element {
   text-decoration: none;
-  font-weight: 600; /* semibold */
   color: inherit;
   position: relative;
 }

@@ -24,6 +24,16 @@ export default {
     ],
     link: [
       /*  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, */
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Grand+Hotel&text=SolineWang',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap',
+      },
     ],
   },
 
@@ -88,10 +98,8 @@ export default {
                 description: 'Professional makeup artist in Switzerland',
               },
               links: {
-                index: 'home',
                 about: 'about me',
                 portfolio: 'portfolio',
-                contact: 'contact',
               },
             },
             fr: {
@@ -100,10 +108,8 @@ export default {
                   'Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occasion.',
               },
               links: {
-                index: 'accueil',
                 about: 'à mon propos',
                 portfolio: 'portfolio',
-                contact: 'contact',
               },
             },
           },

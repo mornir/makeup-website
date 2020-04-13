@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'pink-alt': '#F9007D',
+        primary: '#C49C56',
+      },
+      height: {
+        mobile: '87vh',
       },
     },
   },

@@ -18,16 +18,7 @@
 </i18n>
 
 <template>
-  <section class="bg-pink-200 my-bg height-minus-nav flex items-end ">
-    <div class="w-full md:w-auto bg-pink-800 my-purple-circle">
-
-      <h2 class="text-5xl font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>
-
-      <p class="pb-12 md:pb-0 text-2xl md:text-3xl text-pink-200"
-         v-html="$t('catchPhrase')" />
-
-    </div>
-  </section>
+  <section class="flex items-end my-bg h-mobile md:h-screen" />
 </template>
 
 <script>
@@ -46,16 +37,23 @@ export default {
   },*/
 }
 </script>
-
-<style scoped lang="postcss">
-.my-purple-circle {
-  padding: 1rem 2rem;
+// rgba(255, 255, 255, 0.8)
+<style lang="postcss" scoped>
+.my-bg {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4) 10%,
+      17%,
+      transparent 90%
+    ),
+    url('~assets/img/homepage_bg.jpg');
+  background-size: cover;
+  background-position: 31% bottom;
+  background-repeat: no-repeat;
 }
 
-@media (min-width: 768px) {
-  .my-purple-circle {
-    border-top-right-radius: 100%;
-    padding: 8rem 2rem 4rem;
+@screen md {
+  .my-bg {
+    background-position: center 75%;
   }
 }
 </style>

@@ -1,25 +1,24 @@
 <template>
   <div>
-
-    <AppNavBar @open="isSideNavOpen = true" />
+    <div class="fixed top-0 w-full">
+      <AppNavBar @open="isSideNavOpen = true" />
+    </div>
     <main @click="isSideNavOpen = false">
       <nuxt />
     </main>
 
-    <AppSideNav :open="isSideNavOpen"
-                @close="isSideNavOpen = false"
-                @toggle="isSideNavOpen = !isSideNavOpen" />
+    <MobileNav class="md:hidden" />
   </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
-import SideNav from '../components/SideNav'
+import MobileNav from '../components/MobileNav'
 
 export default {
   components: {
     AppNavBar: NavBar,
-    AppSideNav: SideNav,
+    MobileNav,
   },
   data() {
     return {
@@ -29,26 +28,9 @@ export default {
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,500,600,700&display=swap');
-
-:root {
-  --nav-height: 5rem;
-}
-
-.height-minus-nav {
-  min-height: calc(100vh - var(--nav-height));
-}
-
+<style lang="postcss">
 body {
-  font-family: 'Barlow Condensed', sans-serif;
-}
-
-.my-bg {
-  background-image: url('~assets/img/bg-home.jpeg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
 }
 
 .v-lazy-image {
@@ -60,5 +42,3 @@ body {
   filter: blur(0);
 }
 </style>
-
-
