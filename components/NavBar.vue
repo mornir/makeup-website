@@ -1,5 +1,7 @@
 <template>
-  <header class="items-center justify-between hidden px-2 md:flex md:px-24">
+  <header
+    class="items-center justify-between hidden px-2 md:flex md:16px lg:px-24"
+  >
     <n-link to="/" class="no-underline text-pink-darkest ">
       <h1 class="text-5xl font-medium tracking-normal md:text-6xl">
         Soline Wang

@@ -1,48 +1,45 @@
 <template>
-  <div>
-    <div class="max-w-lg mx-auto">
-      <section class="py-8 mx-4">
+  <div class="h-screen bg-secondary">
+    <div class="max-w-lg pt-32 mx-auto">
+      <section class="pb-8 mx-4">
         <TextHeading>Contact me</TextHeading>
         <p class="text-lg leading-relaxed lg:text-xl">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
           sunt.
         </p>
-        <div></div>
-        <div class="flex mt-4 justify-evenly">
-          <a
-            href="https://www.instagram.com/solinewangmua/"
-            target="_blank"
-            rel="noopener"
-            class="focus:outline-none"
-          >
-            <Instagram
-              class="h-10 text-pink-900 fill-current hover:text-pink-alt"
-            />
-          </a>
-        </div>
       </section>
-      <div class="flex mt-4 justify-evenly">
+      <section class="justify-center h-full c-subgrid">
+        <a
+          href="https://www.instagram.com/solinewangmua/"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center justify-center focus:outline-none bg-primary"
+        >
+          <Instagram class="h-16 fill-current" />
+        </a>
+
         <a
           href="https://www.wechat.com/ECtmVhXr_IQ-OaG8r6GKGN8"
           target="_blank"
           rel="noopener nofollow"
-          class="focus:outline-none"
+          class="flex items-center justify-center col-start-2 row-start-2 focus:outline-none bg-primary"
         >
-          <Weixin class="h-10 text-pink-900 fill-current hover:text-pink-alt" />
+          <Weixin class="h-16 fill-current" />
         </a>
         <a
           href="https://wa.me/410787498068"
           target="_blank"
           rel="noopener nofollow"
-          class="focus:outline-none"
+          class="flex items-center justify-center col-start-1 row-start-3 md:col-start-3 md:row-start-1 focus:outline-none bg-primary"
         >
-          <Whatsapp
-            class="h-10 text-pink-900 fill-current hover:text-pink-alt"
-          />
+          <Whatsapp class="h-16 fill-current" />
         </a>
-
-        <EmailIcon class="h-10 fill-current hover:text-pink-alt" />
-      </div>
+        <button
+          class="flex items-center justify-center col-start-2 row-start-4 md:col-start-4 md:row-start-2 bg-primary"
+        >
+          <EmailIcon class="h-12 fill-current" />
+        </button>
+      </section>
     </div>
   </div>
 </template>
@@ -62,3 +59,21 @@ export default {
   },
 }
 </script>
+
+<style  lang="postcss" scoped>
+.c-subgrid {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-auto-rows: 100px;
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.5rem;
+}
+
+@screen md {
+  .c-subgrid {
+    grid-template-columns: repeat(4, 100px);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1rem;
+  }
+}
+</style>

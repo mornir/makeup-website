@@ -3,7 +3,7 @@
     <div class="c-grid">
       <section class="self-center px-4 py-8 lg:pl-24">
         <TextHeading>About me</TextHeading>
-        <p class="pb-6 text-lg leading-relaxed lg:text-xl">
+        <p class="text-lg leading-relaxed lg:text-xl">
           I am a Chinese makeup artist based in Switzerland. I master various
           techniques, show creativity and great passion. I immersed myself into
           the world of cosmetics ten years ago and I have kept the same passion.
@@ -13,7 +13,7 @@
         </p>
       </section>
       <section style="justify-self: end">
-        <img src="~assets/img/image 2.jpg" alt="makeup" class="h-screen " />
+        <img src="~assets/img/image 2.jpg" alt="makeup" class="lg:h-screen" />
       </section>
     </div>
   </div>
