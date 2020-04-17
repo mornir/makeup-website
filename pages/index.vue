@@ -44,15 +44,9 @@ export default {
   },*/
 }
 </script>
-// rgba(255, 255, 255, 0.8)
 <style lang="postcss" scoped>
 .my-bg {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.4) 10%,
-      17%,
-      transparent 90%
-    ),
-    url('~assets/img/homepage_bg.jpg');
+  background-image: url('~assets/img/homepage_bg.jpg');
   background-size: cover;
   background-position: 31% bottom;
   background-repeat: no-repeat;

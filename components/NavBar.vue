@@ -25,6 +25,10 @@
 </template>
 
 <style scoped>
+header {
+  background: linear-gradient(rgba(255, 255, 255, 0.4) 60%, transparent);
+}
+
 h1 {
   font-family: 'Grand Hotel', cursive;
 }
