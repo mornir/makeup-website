@@ -12,14 +12,26 @@
 </i18n>
 
 <template>
-  <div class=" bg-pink-200 height-minus-nav">
-    <div class="max-w-md mx-auto">
-      <section class="p-5   max-w-md  md:rounded-lg">
-        <h1 class="mb-4 pl-3 border-l-8 border-pink-alt text-3xl font-semibold">{{ $t('title') }}</h1>
-        <p class="text-2xl pb-6 leading-tight">
-          {{ $t('text') }}</p>
+  <div class="h-screen bg-secondary">
+    <div class="c-grid">
+      <section class="self-center pl-24">
+        <h1 class="pl-3 mb-4 text-3xl font-semibold border-l-8 border-primary">
+          {{ $t('title') }}
+        </h1>
+        <p class="pb-6 text-2xl leading-tight">
+          {{ $t('text') }}
+        </p>
+      </section>
+      <section style="justify-self: end">
+        <img src="~assets/img/image 2.jpg" alt="makeup" class="h-screen " />
       </section>
     </div>
   </div>
-
 </template>
+
+<style scoped>
+.c-grid {
+  display: grid;
+  grid-template-columns: 2fr minmax(40rem, 1fr);
+}
+</style>

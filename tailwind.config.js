@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#C49C56',
+        secondary: '#E5E5E5',
       },
       height: {
         mobile: '87vh',
