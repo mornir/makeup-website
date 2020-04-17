@@ -3,7 +3,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#C49C56',
-        seconsdary: '#E5E5E5',
+        secondary: '#E5E5E5',
         'primary-alt': '#d1a66d',
       },
       height: {
