@@ -14,11 +14,11 @@
 <template>
   <div class="h-screen bg-secondary">
     <div class="c-grid">
-      <section class="self-center pl-24">
-        <h1 class="pl-3 mb-4 text-3xl font-semibold border-l-8 border-primary">
+      <section class="self-center px-4 py-8 lg:pl-24">
+        <h1 class="pl-3 mb-4 text-2xl border-l-8 lg:text-3xl border-primary">
           {{ $t('title') }}
         </h1>
-        <p class="pb-6 text-2xl leading-tight">
+        <p class="pb-6 text-lg leading-relaxed lg:text-xl">
           {{ $t('text') }}
         </p>
       </section>
@@ -29,9 +29,11 @@
   </div>
 </template>
 
-<style scoped>
-.c-grid {
-  display: grid;
-  grid-template-columns: 2fr minmax(40rem, 1fr);
+<style lang="postcss" scoped>
+@screen lg {
+  .c-grid {
+    display: grid;
+    grid-template-columns: 2fr minmax(40rem, 1fr);
+  }
 }
 </style>

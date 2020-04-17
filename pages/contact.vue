@@ -1,12 +1,16 @@
 <template>
-  <div class="bg-pink-200 text-pink-lightest height-minus-nav">
-    <div class="max-w-md mx-auto">
+  <div>
+    <div class="max-w-lg mx-auto">
       <section class="py-8 mx-4">
-        <h1 class="pl-3 mb-4 text-3xl border-l-8 border-pink-alt">Follow me</h1>
-        <p class="text-xl">
-          I regularly share my work on Instagram and I have a YouTube channel
-          where I make makeup tutorial videos (in Chinese).
+        <h1 class="pl-3 mb-4 text-3xl border-l-8 border-primary">
+          Contact me
+        </h1>
+        <p class="text-lg leading-relaxed lg:text-xl">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sunt
+          possimus nulla adipisci, non rerum. Ratione vitae dolor cupiditate sed
+          ipsa asperiores vel excepturi tenetur, in rerum odio sequi nesciunt.
         </p>
+        <div></div>
         <div class="flex mt-4 justify-evenly">
           <a
             href="https://www.instagram.com/solinewangmua/"
@@ -30,47 +34,28 @@
           </a>
         </div>
       </section>
-      <section class="py-8 mx-4">
-        <h1 class="pl-3 mb-4 text-3xl border-l-8 border-pink-alt">
-          Contact me
-        </h1>
-        <p class="text-xl">
-          Don’t hesitate to contact me. You can text me on Wechat and Whatsapp,
-          or send me an email.
-        </p>
-        <div class="flex mt-4 justify-evenly">
-          <a
-            href="https://www.wechat.com/ECtmVhXr_IQ-OaG8r6GKGN8"
-            target="_blank"
-            rel="noopener nofollow"
-            class="focus:outline-none"
-          >
-            <Weixin
-              class="h-10 text-pink-900 fill-current hover:text-pink-alt"
-            />
-          </a>
-          <a
-            href="https://wa.me/410787498068"
-            target="_blank"
-            rel="noopener nofollow"
-            class="focus:outline-none"
-          >
-            <Whatsapp
-              class="h-10 text-pink-900 fill-current hover:text-pink-alt"
-            />
-          </a>
-          <button @click="showEmail" class="focus:outline-none">
-            <EmailIcon
-              class="h-10 fill-current hover:text-pink-alt"
-              :class="isEmailVisible ? 'text-pink-alt' : 'text-pink-900'"
-            />
-          </button>
-        </div>
+      <div class="flex mt-4 justify-evenly">
+        <a
+          href="https://www.wechat.com/ECtmVhXr_IQ-OaG8r6GKGN8"
+          target="_blank"
+          rel="noopener nofollow"
+          class="focus:outline-none"
+        >
+          <Weixin class="h-10 text-pink-900 fill-current hover:text-pink-alt" />
+        </a>
+        <a
+          href="https://wa.me/410787498068"
+          target="_blank"
+          rel="noopener nofollow"
+          class="focus:outline-none"
+        >
+          <Whatsapp
+            class="h-10 text-pink-900 fill-current hover:text-pink-alt"
+          />
+        </a>
 
-        <div class="pb-8 mt-8 ">
-          <EmailForm v-show="isEmailVisible" ref="form" />
-        </div>
-      </section>
+        <EmailIcon class="h-10 fill-current hover:text-pink-alt" />
+      </div>
     </div>
   </div>
 </template>
@@ -79,18 +64,13 @@
 import EmailIcon from '@/assets/svg/email.svg'
 import Weixin from '@/assets/svg/weixin-brands.svg'
 import Instagram from '@/assets/svg/instagram-brands.svg'
-import YouTube from '@/assets/svg/youtube-brands.svg'
 import Whatsapp from '@/assets/svg/whatsapp-brands.svg'
-
-import EmailForm from '@/components/EmailForm'
 
 export default {
   components: {
     Weixin,
     Instagram,
     EmailIcon,
-    YouTube,
-    EmailForm,
     Whatsapp,
   },
   data() {

@@ -1,12 +1,12 @@
 <template>
-  <header class="flex items-center justify-between px-2 md:px-24">
-    <n-link :to="localePath('index')" class="no-underline text-pink-darkest ">
+  <header class="items-center justify-between hidden px-2 md:flex md:px-24">
+    <n-link to="/" class="no-underline text-pink-darkest ">
       <h1 class="text-5xl font-medium tracking-normal md:text-6xl">
         Soline Wang
       </h1>
     </n-link>
 
-    <nav class="hidden md:block">
+    <nav>
       <n-link
         v-for="(link, route) in $i18n.messages.en.links"
         :key="route"
@@ -20,29 +20,13 @@
         to="/contact"
         >Contact</n-link
       >
-
-      <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
-      <!--    <nuxt-link :to="switchLocalePath('fr')"
-                 v-if="$i18n.locale === 'en'"
-                 class="nav-element">FR</nuxt-link>
-      <nuxt-link :to="switchLocalePath('en')"
-                 v-else
-                 class="nav-element">EN</nuxt-link> -->
     </nav>
   </header>
 </template>
 
 <style scoped>
-/* header {
-  height: var(--nav-height);
-} */
-
 h1 {
   font-family: 'Grand Hotel', cursive;
-}
-
-.my-logo {
-  max-height: 4rem;
 }
 
 .nav-element {

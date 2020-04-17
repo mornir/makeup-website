@@ -7,18 +7,18 @@
       <nuxt />
     </main>
 
-    <MobileNav class="md:hidden" />
+    <BottomNav class="md:hidden" />
   </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
-import MobileNav from '../components/MobileNav'
+import BottomNav from '../components/BottomNav'
 
 export default {
   components: {
     AppNavBar: NavBar,
-    MobileNav,
+    BottomNav,
   },
   data() {
     return {
@@ -40,5 +40,15 @@ body {
 
 .v-lazy-image-loaded {
   filter: blur(0);
+}
+
+nav .router-link-exact-active {
+  @apply bg-red-500;
+}
+
+@screen lg {
+  nav .router-link-exact-active {
+    @apply underline;
+  }
 }
 </style>

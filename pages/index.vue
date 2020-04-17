@@ -18,7 +18,14 @@
 </i18n>
 
 <template>
-  <section class="flex items-end my-bg h-mobile md:h-screen" />
+  <div>
+    <h1
+      class="absolute top-0 pl-4 text-5xl font-medium tracking-normal md:hidden"
+    >
+      Soline Wang
+    </h1>
+    <section class="flex items-end my-bg h-mobile md:h-screen" />
+  </div>
 </template>
 
 <script>
@@ -55,5 +62,9 @@ export default {
   .my-bg {
     background-position: center 75%;
   }
+}
+
+h1 {
+  font-family: 'Grand Hotel', cursive;
 }
 </style>
