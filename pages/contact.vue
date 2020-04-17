@@ -2,13 +2,10 @@
   <div>
     <div class="max-w-lg mx-auto">
       <section class="py-8 mx-4">
-        <h1 class="pl-3 mb-4 text-3xl border-l-8 border-primary">
-          Contact me
-        </h1>
+        <TextHeading>Contact me</TextHeading>
         <p class="text-lg leading-relaxed lg:text-xl">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sunt
-          possimus nulla adipisci, non rerum. Ratione vitae dolor cupiditate sed
-          ipsa asperiores vel excepturi tenetur, in rerum odio sequi nesciunt.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+          sunt.
         </p>
         <div></div>
         <div class="flex mt-4 justify-evenly">
@@ -19,16 +16,6 @@
             class="focus:outline-none"
           >
             <Instagram
-              class="h-10 text-pink-900 fill-current hover:text-pink-alt"
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCVeQ_Od2gp9OVRowSFJKPJw"
-            target="_blank"
-            rel="noopener"
-            class="focus:outline-none"
-          >
-            <YouTube
               class="h-10 text-pink-900 fill-current hover:text-pink-alt"
             />
           </a>
@@ -72,21 +59,6 @@ export default {
     Instagram,
     EmailIcon,
     Whatsapp,
-  },
-  data() {
-    return {
-      isEmailVisible: false,
-    }
-  },
-  methods: {
-    showEmail() {
-      this.isEmailVisible = true
-      //TODO: find more a more elegant solution
-      if (!this.$refs.form.$el.scrollIntoView) return
-      setTimeout(() => {
-        this.$refs.form.$el.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
-    },
   },
 }
 </script>

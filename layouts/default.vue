@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="fixed top-0 w-full">
-      <AppNavBar @open="isSideNavOpen = true" />
+      <AppNavBar />
     </div>
-    <main @click="isSideNavOpen = false">
+    <main>
       <nuxt />
     </main>
 
@@ -19,11 +19,6 @@ export default {
   components: {
     AppNavBar: NavBar,
     BottomNav,
-  },
-  data() {
-    return {
-      isSideNavOpen: false,
-    }
   },
 }
 </script>

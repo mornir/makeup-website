@@ -1,22 +1,18 @@
-# makeup-website
+# solinewang.com
 
-> Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occassion.
+> Website of my dearly wife, Soline Wang, professional freelance makeup artist.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
-$ npm install
+$ yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
+$ yarn dev
 
 # generate static project
-$ npm run generate
+$ yarn prod
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

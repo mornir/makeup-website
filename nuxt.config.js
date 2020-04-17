@@ -62,6 +62,7 @@ export default {
     '~plugins/vue-js-modal',
     '~plugins/v-lazy-image',
     '~plugins/vue-gallery.client.js',
+    '~plugins/global.js',
   ],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
@@ -70,8 +71,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    'nuxt-polyfill',
-    '@nuxtjs/axios',
     [
       'nuxt-i18n',
       {
@@ -129,15 +128,6 @@ export default {
     config: {
       productionTip: false,
     },
-  },
-
-  polyfill: {
-    features: [
-      {
-        require: 'url-search-params-polyfill',
-        detect: () => 'URLSearchParams ' in window,
-      },
-    ],
   },
 
   /*
