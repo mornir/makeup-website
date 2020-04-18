@@ -77,52 +77,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    [
-      'nuxt-i18n',
-      {
-        locales: [
-          {
-            code: 'fr',
-            name: 'Français',
-            iso: 'fr-FR',
-          },
-          {
-            code: 'en',
-            name: 'English',
-            iso: 'en-US',
-          },
-        ],
-        baseUrl: 'https://www.solinewang.com',
-        defaultLocale: 'en',
-        vueI18nLoader: true,
-        vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            en: {
-              meta: {
-                description: 'Professional makeup artist in Switzerland',
-              },
-              links: {
-                about: 'about me',
-                portfolio: 'portfolio',
-              },
-            },
-            fr: {
-              meta: {
-                description:
-                  'Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occasion.',
-              },
-              links: {
-                about: 'à mon propos',
-                portfolio: 'portfolio',
-              },
-            },
-          },
-        },
-      },
-    ],
-  ],
+  modules: [],
 
   /*
    ** Axios config

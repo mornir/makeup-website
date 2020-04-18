@@ -10,12 +10,18 @@
 
     <nav>
       <n-link
-        v-for="(link, route) in $i18n.messages.en.links"
-        :key="route"
-        :to="localePath(route)"
+        to="/about"
         class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
-        >{{ $t('links.' + route) }}</n-link
       >
+        about me
+      </n-link>
+
+      <n-link
+        to="/portfolio"
+        class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
+      >
+        portfolio
+      </n-link>
 
       <n-link
         class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase bg-black"
