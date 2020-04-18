@@ -1,5 +1,10 @@
 <template>
-  <n-link :to="linkPath" class="py-2 text-center border-r border-black">
+  <n-link
+    :to="linkPath"
+    class="py-2 text-center border-r border-black "
+    active-class="bg-gray-400"
+    exact
+  >
     <svg
       fill="none"
       stroke="currentColor"

@@ -16,7 +16,7 @@
         <img
           src="~assets/img/image 2.jpg"
           alt="makeup"
-          class="max-w-xs lg:max-w-none lg:h-screen"
+          class="max-w-xs mx-auto lg:max-w-none lg:h-screen"
         />
       </section>
     </div>

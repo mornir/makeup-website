@@ -37,7 +37,7 @@ body {
   filter: blur(0);
 }
 
-nav .router-link-exact-active {
+/* nav .router-link-exact-active {
   @apply bg-red-500;
 }
 
@@ -45,5 +45,5 @@ nav .router-link-exact-active {
   nav .router-link-exact-active {
     @apply underline;
   }
-}
+} */
 </style>

@@ -24,7 +24,7 @@
       >
 
       <n-link
-        class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase bg-black"
+        class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase transition-colors duration-200 bg-black hover:bg-primary hover:text-black"
         to="/contact"
         >Contact</n-link
       >
@@ -32,7 +32,7 @@
   </header>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 header {
   background: linear-gradient(rgba(255, 255, 255, 0.4) 60%, transparent);
 }
