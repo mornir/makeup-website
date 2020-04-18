@@ -1,6 +1,6 @@
 <template>
   <section class="p-2 md:pt-32">
-    <div class="md:ml-24">
+    <div class="lg:ml-24">
       <TextHeading>Portfolio</TextHeading>
     </div>
     <div class="gallery-grid">

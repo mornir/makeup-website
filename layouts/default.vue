@@ -3,7 +3,7 @@
     <div class="absolute top-0 w-full">
       <AppNavBar />
     </div>
-    <main>
+    <main class="min-h-screen pb-20 md:pb-0 bg-secondary">
       <nuxt />
     </main>
 
