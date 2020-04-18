@@ -1,54 +1,31 @@
 <template>
   <div>
-
-    <AppNavBar @open="isSideNavOpen = true" />
-    <main @click="isSideNavOpen = false">
+    <div class="absolute top-0 w-full">
+      <AppNavBar />
+    </div>
+    <main class="min-h-screen pb-20 md:pb-0 bg-secondary">
       <nuxt />
     </main>
 
-    <AppSideNav :open="isSideNavOpen"
-                @close="isSideNavOpen = false"
-                @toggle="isSideNavOpen = !isSideNavOpen" />
+    <BottomNav class="md:hidden" />
   </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar'
-import SideNav from '../components/SideNav'
+import BottomNav from '../components/BottomNav'
 
 export default {
   components: {
     AppNavBar: NavBar,
-    AppSideNav: SideNav,
-  },
-  data() {
-    return {
-      isSideNavOpen: false,
-    }
+    BottomNav,
   },
 }
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,500,600,700&display=swap');
-
-:root {
-  --nav-height: 5rem;
-}
-
-.height-minus-nav {
-  min-height: calc(100vh - var(--nav-height));
-}
-
+<style lang="postcss">
 body {
-  font-family: 'Barlow Condensed', sans-serif;
-}
-
-.my-bg {
-  background-image: url('~assets/img/bg-home.jpeg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
 }
 
 .v-lazy-image {
@@ -60,5 +37,3 @@ body {
   filter: blur(0);
 }
 </style>
-
-

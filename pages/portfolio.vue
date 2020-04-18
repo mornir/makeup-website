@@ -1,17 +1,28 @@
 <template>
-  <section class="gallery-grid p-2">
+  <section class="p-2 md:pt-32">
+    <div class="lg:ml-24">
+      <TextHeading>Portfolio</TextHeading>
+    </div>
+    <div class="gallery-grid">
+      <ClientOnly>
+        <v-gallery :images="photoUrls" :index="index" @close="index = null" />
+      </ClientOnly>
 
-    <v-gallery :images="photoUrls"
-               :index="index"
-               @close="index = null" />
-
-    <v-lazy-image v-for="(photo, imageIndex) in photos"
-                  :key="photo.id"
-                  @click.native="index = imageIndex"
-                  :src="urlFor(photo.asset).width(426).height(426).url()"
-                  :src-placeholder="photo.lqip"
-                  class="w-full object-cover rounded-lg shadow-md horizontal"
-                  alt="Soline Wang Swiss Makeup Artist" />
+      <v-lazy-image
+        v-for="(photo, imageIndex) in photos"
+        :key="photo.id"
+        @click.native="index = imageIndex"
+        :src="
+          urlFor(photo.asset)
+            .width(426)
+            .height(426)
+            .url()
+        "
+        :src-placeholder="photo.lqip"
+        class="object-cover w-full rounded-lg shadow-md cursor-pointer horizontal"
+        alt="Soline Wang Swiss Makeup Artist"
+      />
+    </div>
   </section>
 </template>
 

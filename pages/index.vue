@@ -1,61 +1,34 @@
-<i18n>
-{
-  "en": {
-    "name": "I'm Soline",
-    "catchPhrase": "I make your <b>true beauty</b> stand out.",
-    "meta": {
-      "description": "Professional makeup artist in Switzerland"
-    }
-  },
-  "fr": {
-    "name": "Je m'appelle\n Soline",
-    "catchPhrase": "Je fais <b>ressortir votre beauté</b> intérieure.",
-    "meta": {
-      "description": "Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occasion."
-    }
-  }
-}
-</i18n>
-
 <template>
-  <section class="bg-pink-200 my-bg height-minus-nav flex items-end ">
-    <div class="w-full md:w-auto bg-pink-800 my-purple-circle">
-
-      <h2 class="text-5xl font-semibold tracking-wide text-white inline-block md:block md:mb-4">{{ $t('name') }}</h2>
-
-      <p class="pb-12 md:pb-0 text-2xl md:text-3xl text-pink-200"
-         v-html="$t('catchPhrase')" />
-
-    </div>
-  </section>
+  <div>
+    <h1
+      class="absolute top-0 pl-4 text-5xl font-medium tracking-normal md:hidden"
+    >
+      Soline Wang
+    </h1>
+    <section class="flex items-end my-bg h-mobile md:h-screen" />
+  </div>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  /*
-  head() {
-    return {
-      meta: [
-        {
-          name: 'description',
-          content: this.$t('meta.description'),
-        },
-      ],
-    }
-  },*/
 }
 </script>
-
-<style scoped lang="postcss">
-.my-purple-circle {
-  padding: 1rem 2rem;
+<style lang="postcss" scoped>
+.my-bg {
+  background-image: url('~assets/img/homepage_bg.jpg');
+  background-size: cover;
+  background-position: 31% bottom;
+  background-repeat: no-repeat;
 }
 
-@media (min-width: 768px) {
-  .my-purple-circle {
-    border-top-right-radius: 100%;
-    padding: 8rem 2rem 4rem;
+@screen md {
+  .my-bg {
+    background-position: center 75%;
   }
+}
+
+h1 {
+  font-family: 'Grand Hotel', cursive;
 }
 </style>

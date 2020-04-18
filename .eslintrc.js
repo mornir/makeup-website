@@ -23,5 +23,6 @@ module.exports = {
     'vue/html-closing-bracket-newline': 'off',
     'vue/html-indent': 'off',
     'no-console': 'off',
+    'vue/html-self-closing': 0,
   },
 }

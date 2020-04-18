@@ -1,4 +1,10 @@
-import pkg from './package'
+const SEO = {
+  title: 'Soline Wang',
+  description: 'Freelance Makeup Artist based in Switzerland',
+  keywords:
+    'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
+  url: 'https://www.solinewang.com',
+}
 
 export default {
   mode: 'universal',
@@ -7,23 +13,59 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Soline Wang',
+    title: SEO.title,
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
         name: 'description',
-        content: 'Professional Asian Makeup Artist in Switzerland',
+        content: SEO.description,
       },
       {
         name: 'keywords',
-        content:
-          'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
+        content: SEO.keywords,
+      },
+      {
+        name: 'theme-color',
+        content: '#C49C56',
+      },
+      {
+        property: 'og:title',
+        content: SEO.title,
+      },
+      {
+        property: 'og:description',
+        content: SEO.description,
+      },
+      {
+        property: 'og:image',
+        content: SEO.url + '/social-share.jpg',
+      },
+      {
+        property: 'og:url',
+        content: SEO.url,
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
       },
     ],
     link: [
-      /*  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, */
+      { rel: 'icon', sizes: '192x192', href: '/favicon.png' },
+      { rel: 'apple-touch-icon', href: '/favicon.png' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Grand+Hotel&text=SolineWang',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap',
+      },
     ],
   },
 
@@ -34,7 +76,9 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: false,
+  loading: {
+    color: '#d1a66d',
+  },
 
   /*
    ** Global CSS
@@ -49,9 +93,9 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~plugins/vue-js-modal',
     '~plugins/v-lazy-image',
     '~plugins/vue-gallery.client.js',
+    '~plugins/global.js',
   ],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
@@ -59,65 +103,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    'nuxt-polyfill',
-    '@nuxtjs/axios',
-    [
-      'nuxt-i18n',
-      {
-        locales: [
-          {
-            code: 'fr',
-            name: 'Français',
-            iso: 'fr-FR',
-          },
-          {
-            code: 'en',
-            name: 'English',
-            iso: 'en-US',
-          },
-        ],
-        baseUrl: 'https://www.solinewang.com',
-        defaultLocale: 'en',
-        vueI18nLoader: true,
-        vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            en: {
-              meta: {
-                description: 'Professional makeup artist in Switzerland',
-              },
-              links: {
-                index: 'home',
-                about: 'about me',
-                portfolio: 'portfolio',
-                contact: 'contact',
-              },
-            },
-            fr: {
-              meta: {
-                description:
-                  'Maquilleuse professionnelle suisse offre ses services de maquillage pour toute occasion.',
-              },
-              links: {
-                index: 'accueil',
-                about: 'à mon propos',
-                portfolio: 'portfolio',
-                contact: 'contact',
-              },
-            },
-          },
-        },
-      },
-    ],
-  ],
-
-  /*
-   ** Axios config
-   */
-  axios: {
-    baseURL: '/',
-  },
+  modules: ['@nuxtjs/sitemap'],
 
   vue: {
     config: {
@@ -125,15 +111,9 @@ export default {
     },
   },
 
-  polyfill: {
-    features: [
-      {
-        require: 'url-search-params-polyfill',
-        detect: () => 'URLSearchParams ' in window,
-      },
-    ],
+  sitemap: {
+    hostname: SEO.url,
   },
-
   /*
    ** Build configuration
    */
@@ -141,7 +121,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extractCSS: true,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

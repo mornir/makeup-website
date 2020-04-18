@@ -1,43 +1,48 @@
 <template>
-  <header class="flex justify-between items-center bg-pink-800 px-8 shadow-md ">
+  <header
+    class="items-center justify-between hidden px-2 md:flex md:16px lg:px-24"
+  >
+    <n-link to="/" class="no-underline text-pink-darkest ">
+      <h1 class="text-5xl font-medium tracking-normal md:text-6xl">
+        Soline Wang
+      </h1>
+    </n-link>
 
-    <nuxt-link :to="localePath('index')"
-               class="no-underline text-pink-darkest ">
-      <h1 class="font-medium tracking-normal text-white text-4xl">Soline Wang</h1>
-    </nuxt-link>
+    <nav>
+      <n-link
+        to="/about"
+        class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
+      >
+        about me
+      </n-link>
 
-    <nav class="hidden md:block text-pink-100">
+      <n-link
+        to="/portfolio"
+        class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
+      >
+        portfolio</n-link
+      >
 
-      <nuxt-link v-for="(link, route) in $i18n.messages.en.links"
-                 :key="route"
-                 :to="localePath(route)"
-                 class="desktop-link nav-element mx-2 uppercase text-xl">{{ $t('links.' + route) }}</nuxt-link>
-
-      <!-- https://nuxt-community.github.io/nuxt-i18n/lang-switcher.html -->
-      <!--    <nuxt-link :to="switchLocalePath('fr')"
-                 v-if="$i18n.locale === 'en'"
-                 class="nav-element">FR</nuxt-link>
-      <nuxt-link :to="switchLocalePath('en')"
-                 v-else
-                 class="nav-element">EN</nuxt-link> -->
-
+      <n-link
+        class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase transition-colors duration-200 bg-black hover:bg-primary hover:text-black"
+        to="/contact"
+        >Contact</n-link
+      >
     </nav>
   </header>
 </template>
 
-
-<style scoped>
+<style lang="postcss" scoped>
 header {
-  height: var(--nav-height);
+  background: linear-gradient(rgba(255, 255, 255, 0.4) 60%, transparent);
 }
 
-.my-logo {
-  max-height: 4rem;
+h1 {
+  font-family: 'Grand Hotel', cursive;
 }
 
 .nav-element {
   text-decoration: none;
-  font-weight: 600; /* semibold */
   color: inherit;
   position: relative;
 }
