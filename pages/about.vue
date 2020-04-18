@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-secondary">
-    <div class="c-grid">
+    <div class="c-grid md:pt-32 lg:pt-0">
       <section class="self-center px-4 py-8 lg:pl-24">
         <TextHeading>About me</TextHeading>
         <p class="text-lg leading-relaxed lg:text-xl">
