@@ -81,9 +81,6 @@ export default {
    */
   css: [],
 
-  tailwindcss: {
-    exposeConfig: true,
-  },
   purgeCSS: {
     whitelistPatternsChildren: [/^blueimp.+/],
   },
@@ -98,11 +95,7 @@ export default {
     '~plugins/global.js',
   ],
 
-  buildModules: [
-    '@nuxtjs/tailwindcss',
-    '@teamnovu/nuxt-breaky',
-    'svg-to-vue-component/nuxt',
-  ],
+  buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 
   /*
    ** Nuxt.js modules
