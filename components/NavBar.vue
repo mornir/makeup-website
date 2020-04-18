@@ -20,8 +20,8 @@
         to="/portfolio"
         class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
       >
-        portfolio
-      </n-link>
+        portfolio</n-link
+      >
 
       <n-link
         class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase bg-black"
