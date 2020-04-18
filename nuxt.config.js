@@ -3,7 +3,7 @@ const SEO = {
   description: 'Freelance Makeup Artist based in Switzerland',
   keywords:
     'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
-  url: 'www.solinewang.com',
+  url: 'https://www.solinewang.com',
 }
 
 export default {
@@ -100,14 +100,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
-
-  /*
-   ** Axios config
-   */
-  axios: {
-    baseURL: '/',
-  },
+  modules: ['@nuxtjs/sitemap'],
 
   vue: {
     config: {
@@ -115,6 +108,9 @@ export default {
     },
   },
 
+  sitemap: {
+    hostname: SEO.url,
+  },
   /*
    ** Build configuration
    */
