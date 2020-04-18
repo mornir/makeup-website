@@ -13,7 +13,7 @@
     </section>
     <section style="justify-self: end">
       <img
-        src="~assets/img/contact_bg.jpg"
+        src="@/assets/img/contact_bg.jpg"
         alt="makeup"
         class="max-w-xs mx-auto lg:max-w-none lg:h-screen"
       />

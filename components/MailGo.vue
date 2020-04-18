@@ -44,8 +44,7 @@ export default {
   },
   methods: {
     close() {
-      console.log('close')
-      this.$emit('closeMailGo')
+      this.$emit('close')
     },
     openDefault() {
       const mailUrl = `mailto:${this.MailGoEmail}?subject=${this.MailGoSubject}`
