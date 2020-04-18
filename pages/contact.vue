@@ -1,14 +1,10 @@
 <template>
   <div class="min-h-screen bg-secondary">
-    <div class="max-w-lg pt-8 mx-auto md:pt-32">
-      <section class="pb-8 mx-4">
+    <section class="max-w-lg pt-8 mx-auto md:pt-32">
+      <div class="pb-8 mx-4">
         <TextHeading>Contact me</TextHeading>
-        <p class="text-lg leading-relaxed lg:text-xl">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
-          sunt.
-        </p>
-      </section>
-      <section class="justify-center h-full c-subgrid">
+      </div>
+      <div class="justify-center h-full c-subgrid">
         <a
           href="https://www.instagram.com/solinewangmua/"
           target="_blank"
@@ -40,8 +36,8 @@
         >
           <EmailIcon class="h-12 fill-current" />
         </button>
-      </section>
-    </div>
+      </div>
+    </section>
     <MailGo v-if="showMailGo" @closeMailGo="showMailGo = false" />
   </div>
 </template>
