@@ -14,12 +14,16 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Professional Asian Makeup Artist in Switzerland',
+        content: 'Freelance Makeup Artist based in Switzerland',
       },
       {
         name: 'keywords',
         content:
           'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
+      },
+      {
+        name: 'theme-color',
+        content: '#C49C56',
       },
     ],
     link: [
