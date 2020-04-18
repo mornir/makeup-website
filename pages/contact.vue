@@ -13,14 +13,12 @@
         <Instagram class="h-16 fill-current" />
       </a>
 
-      <a
-        href="https://www.wechat.com/ECtmVhXr_IQ-OaG8r6GKGN8"
-        target="_blank"
-        rel="noopener"
+      <button
         class="col-start-2 row-start-2 c-social-share"
+        @click="showQRModal = true"
       >
         <Weixin class="h-16 fill-current" />
-      </a>
+      </button>
       <a
         href="https://wa.me/410787498068"
         target="_blank"
@@ -36,7 +34,8 @@
         <EmailIcon class="h-12 fill-current" />
       </button>
     </div>
-    <MailGo v-if="showMailGo" @closeMailGo="showMailGo = false" />
+    <MailGo v-if="showMailGo" @close="showMailGo = false" />
+    <QRModal v-if="showQRModal" @close="showQRModal = false" />
   </section>
 </template>
 
@@ -46,6 +45,7 @@ import Weixin from '@/assets/svg/weixin-brands.svg'
 import Instagram from '@/assets/svg/instagram-brands.svg'
 import Whatsapp from '@/assets/svg/whatsapp-brands.svg'
 import MailGo from '@/components/MailGo'
+import QRModal from '@/components/QRModal'
 
 export default {
   components: {
@@ -54,10 +54,12 @@ export default {
     EmailIcon,
     Whatsapp,
     MailGo,
+    QRModal,
   },
   data() {
     return {
       showMailGo: false,
+      showQRModal: false,
     }
   },
 }
