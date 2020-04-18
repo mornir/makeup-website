@@ -1,4 +1,10 @@
-import pkg from './package'
+const SEO = {
+  title: 'Soline Wang',
+  description: 'Freelance Makeup Artist based in Switzerland',
+  keywords:
+    'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
+  url: 'www.solinewang.com',
+}
 
 export default {
   mode: 'universal',
@@ -7,27 +13,47 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Soline Wang',
+    title: SEO.title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Freelance Makeup Artist based in Switzerland',
+        content: SEO.description,
       },
       {
         name: 'keywords',
-        content:
-          'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
+        content: SEO.keywords,
       },
       {
         name: 'theme-color',
         content: '#C49C56',
       },
+      {
+        property: 'og:title',
+        content: SEO.title,
+      },
+      {
+        property: 'og:title',
+        content: SEO.description,
+      },
+      {
+        property: 'og:image',
+        content: SEO.url + '/social-share.jpg',
+      },
+      {
+        property: 'og:url',
+        content: SEO.url,
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
     ],
     link: [
-      /*  { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, */
+      { rel: 'icon', sizes: '192x192', href: '/favicon.png' },
+      { rel: 'apple-touch-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
         href:
