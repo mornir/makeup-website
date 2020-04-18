@@ -1,8 +1,12 @@
 <template>
   <section class="p-2 md:pt-32">
-    <TextHeading class="md:ml-24">Portfolio</TextHeading>
+    <div class="md:ml-24">
+      <TextHeading>Portfolio</TextHeading>
+    </div>
     <div class="gallery-grid">
-      <v-gallery :images="photoUrls" :index="index" @close="index = null" />
+      <ClientOnly>
+        <v-gallery :images="photoUrls" :index="index" @close="index = null" />
+      </ClientOnly>
 
       <v-lazy-image
         v-for="(photo, imageIndex) in photos"
