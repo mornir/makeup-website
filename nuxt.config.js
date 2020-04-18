@@ -14,11 +14,13 @@ export default {
    */
   head: {
     title: SEO.title,
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
         name: 'description',
         content: SEO.description,
       },
@@ -35,7 +37,7 @@ export default {
         content: SEO.title,
       },
       {
-        property: 'og:title',
+        property: 'og:description',
         content: SEO.description,
       },
       {
@@ -74,7 +76,9 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: false,
+  loading: {
+    color: '#d1a66d',
+  },
 
   /*
    ** Global CSS
@@ -89,7 +93,6 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~plugins/vue-js-modal',
     '~plugins/v-lazy-image',
     '~plugins/vue-gallery.client.js',
     '~plugins/global.js',
@@ -118,7 +121,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extractCSS: true,
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

@@ -36,14 +36,4 @@ body {
 .v-lazy-image-loaded {
   filter: blur(0);
 }
-
-/* nav .router-link-exact-active {
-  @apply bg-red-500;
-}
-
-@screen lg {
-  nav .router-link-exact-active {
-    @apply underline;
-  }
-} */
 </style>
