@@ -13,7 +13,7 @@
           href="https://www.instagram.com/solinewangmua/"
           target="_blank"
           rel="noopener"
-          class="flex items-center justify-center focus:outline-none bg-primary"
+          class="c-social-share"
         >
           <Instagram class="h-16 fill-current" />
         </a>
@@ -21,26 +21,28 @@
         <a
           href="https://www.wechat.com/ECtmVhXr_IQ-OaG8r6GKGN8"
           target="_blank"
-          rel="noopener nofollow"
-          class="flex items-center justify-center col-start-2 row-start-2 focus:outline-none bg-primary"
+          rel="noopener"
+          class="col-start-2 row-start-2 c-social-share"
         >
           <Weixin class="h-16 fill-current" />
         </a>
         <a
           href="https://wa.me/410787498068"
           target="_blank"
-          rel="noopener nofollow"
-          class="flex items-center justify-center col-start-1 row-start-3 md:col-start-3 md:row-start-1 focus:outline-none bg-primary"
+          rel="noopener"
+          class="col-start-1 row-start-3 c-social-share md:col-start-3 md:row-start-1"
         >
           <Whatsapp class="h-16 fill-current" />
         </a>
         <button
-          class="flex items-center justify-center col-start-2 row-start-4 md:col-start-4 md:row-start-2 bg-primary"
+          class="col-start-2 row-start-4 c-social-share md:col-start-4 md:row-start-2"
+          @click="showMailGo = true"
         >
           <EmailIcon class="h-12 fill-current" />
         </button>
       </section>
     </div>
+    <MailGo v-if="showMailGo" @closeMailGo="showMailGo = false" />
   </div>
 </template>
 
@@ -49,6 +51,7 @@ import EmailIcon from '@/assets/svg/email.svg'
 import Weixin from '@/assets/svg/weixin-brands.svg'
 import Instagram from '@/assets/svg/instagram-brands.svg'
 import Whatsapp from '@/assets/svg/whatsapp-brands.svg'
+import MailGo from '@/components/MailGo'
 
 export default {
   components: {
@@ -56,6 +59,12 @@ export default {
     Instagram,
     EmailIcon,
     Whatsapp,
+    MailGo,
+  },
+  data() {
+    return {
+      showMailGo: false,
+    }
   },
 }
 </script>
@@ -75,5 +84,13 @@ export default {
     grid-column-gap: 1.5rem;
     grid-row-gap: 1rem;
   }
+}
+
+.c-social-share {
+  @apply flex items-center justify-center bg-primary transition-colors duration-200 border-4 border-primary;
+}
+
+.c-social-share:hover {
+  @apply text-primary bg-secondary;
 }
 </style>
