@@ -1,6 +1,6 @@
 <template>
-  <div class="h-screen bg-secondary">
-    <div class="max-w-lg pt-32 mx-auto">
+  <div class="min-h-screen bg-secondary">
+    <div class="max-w-lg pt-8 mx-auto md:pt-32">
       <section class="pb-8 mx-4">
         <TextHeading>Contact me</TextHeading>
         <p class="text-lg leading-relaxed lg:text-xl">
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style  lang="postcss" scoped>
+<style lang="postcss" scoped>
 .c-subgrid {
   display: grid;
   grid-template-columns: 100px 100px;

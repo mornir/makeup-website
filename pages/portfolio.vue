@@ -1,5 +1,5 @@
 <template>
-  <section class="p-2 ">
+  <section class="p-2 md:pt-32">
     <TextHeading>Portfolio</TextHeading>
     <div class="gallery-grid">
       <v-gallery :images="photoUrls" :index="index" @close="index = null" />

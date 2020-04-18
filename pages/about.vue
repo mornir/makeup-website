@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-secondary">
+  <div class="min-h-screen bg-secondary">
     <div class="c-grid">
       <section class="self-center px-4 py-8 lg:pl-24">
         <TextHeading>About me</TextHeading>
@@ -13,7 +13,11 @@
         </p>
       </section>
       <section style="justify-self: end">
-        <img src="~assets/img/image 2.jpg" alt="makeup" class="lg:h-screen" />
+        <img
+          src="~assets/img/image 2.jpg"
+          alt="makeup"
+          class="max-w-xs lg:max-w-none lg:h-screen"
+        />
       </section>
     </div>
   </div>
@@ -23,7 +27,7 @@
 @screen lg {
   .c-grid {
     display: grid;
-    grid-template-columns: 2fr minmax(40rem, 1fr);
+    grid-template-columns: 2fr minmax(35rem, 1fr);
   }
 }
 </style>

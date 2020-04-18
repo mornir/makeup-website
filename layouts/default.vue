@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="fixed top-0 w-full">
+    <div class="absolute top-0 w-full">
       <AppNavBar />
     </div>
     <main>
