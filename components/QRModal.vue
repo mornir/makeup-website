@@ -4,7 +4,7 @@
     @click.self="close"
   >
     <div
-      class="w-full max-w-lg p-8 text-center bg-white border-4 shadow-lg border-primary"
+      class="w-full max-w-lg p-8 pb-16 text-center bg-white border-4 border-b-0 shadow-lg sm:pb-8 sm:border-b-4 border-primary"
     >
       <img src="@/assets/img/weixin_qr.jpeg" alt="Weixin QR code" />
     </div>
