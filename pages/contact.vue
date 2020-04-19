@@ -9,6 +9,7 @@
         target="_blank"
         rel="noopener"
         class="c-social-share"
+        aria-label="Check my Instragram"
       >
         <Instagram class="h-16 fill-current" />
       </a>
@@ -16,6 +17,7 @@
       <button
         class="col-start-2 row-start-2 c-social-share"
         @click="showQRModal = true"
+        aria-label="Show Weixin QR code"
       >
         <Weixin class="h-16 fill-current" />
       </button>
@@ -24,12 +26,14 @@
         target="_blank"
         rel="noopener"
         class="col-start-1 row-start-3 c-social-share md:col-start-3 md:row-start-1"
+        aria-label="Contact me per Whatsapp"
       >
         <Whatsapp class="h-16 fill-current" />
       </a>
       <button
         class="col-start-2 row-start-4 c-social-share md:col-start-4 md:row-start-2"
         @click="showMailGo = true"
+        aria-label="Send email"
       >
         <EmailIcon class="h-12 fill-current" />
       </button>

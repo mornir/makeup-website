@@ -3,7 +3,7 @@
     <h1
       class="absolute top-0 pl-4 text-5xl font-medium tracking-normal md:hidden"
     >
-      Soline Wang
+      Soline&nbsp;Wang
     </h1>
     <section class="flex items-end my-bg h-mobile md:h-screen" />
   </div>
