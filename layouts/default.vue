@@ -20,6 +20,16 @@ export default {
     AppNavBar: NavBar,
     BottomNav,
   },
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://www.solinewang.com' + this.$route.path,
+        },
+      ],
+    }
+  },
 }
 </script>
 

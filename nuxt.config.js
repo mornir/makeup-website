@@ -75,6 +75,7 @@ export default {
 
   router: {
     linkExactActiveClass: 'active-link',
+    trailingSlash: true,
   },
 
   /*
@@ -117,6 +118,7 @@ export default {
 
   sitemap: {
     hostname: SEO.url,
+    trailingSlash: true,
   },
   /*
    ** Build configuration
