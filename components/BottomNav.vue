@@ -1,6 +1,6 @@
 <template>
   <aside class="fixed bottom-0 w-full bg-primary-alt">
-    <nav class="grid justify-center grid-cols-4">
+    <nav class="grid justify-center grid-cols-4 divide-x divide-black">
       <BottomNavLink
         v-for="link in links"
         :key="link.linkPath"
