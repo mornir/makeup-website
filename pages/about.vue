@@ -2,7 +2,7 @@
   <div class="c-grid md:pt-32 lg:pt-0">
     <section class="self-center px-4 py-8 lg:pl-24">
       <TextHeading>About me</TextHeading>
-      <p class="text-lg leading-relaxed lg:text-xl">
+      <p class="max-w-xl text-lg leading-relaxed lg:text-xl">
         I am a Chinese makeup artist based in Switzerland. I master various
         techniques, show creativity and great passion. I immersed myself into
         the world of cosmetics ten years ago and I have kept the same passion. I
@@ -15,7 +15,7 @@
       <img
         src="@/assets/img/contact_bg.jpg"
         alt="makeup"
-        class="max-w-xs mx-auto lg:max-w-none lg:h-screen"
+        class="object-contain max-w-xs mx-auto lg:max-w-lg xl:max-w-none xl:h-screen"
       />
     </section>
   </div>
