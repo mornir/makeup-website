@@ -3,12 +3,7 @@
     <section class="self-center px-4 py-8 lg:pl-24">
       <TextHeading>About me</TextHeading>
       <p class="max-w-xl text-lg leading-relaxed lg:text-xl">
-        I am a Chinese makeup artist based in Switzerland. I master various
-        techniques, show creativity and great passion. I immersed myself into
-        the world of cosmetics ten years ago and I have kept the same passion. I
-        studied in Makeup school Studio B in Lausanne and acquired my diploma as
-        a professional makeup artist. I work for all occasions, but focus on
-        wedding makeup and pre-wedding shooting.
+        Hi, I’m Soline, a Chinese Makeup artist based in Switzerland and ready to travel in Europe if needed. Makeup to me is more than a job or a career, it is how I define myself as the way I want to be. It has become a motivation of my life to help others find their own beauty. After I graduated from the integral makeup course in Lausanne, I specialized in the field of makeup for weddings and pre-weddings. During these years I got chance to work with talented photographers who are famous for their works. It will be my pleasure to work for you, and I’m looking forward to discovering your unique beauty.
       </p>
     </section>
     <section style="justify-self: end">
