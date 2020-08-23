@@ -8,7 +8,14 @@ const SEO = {
 
 export default {
   mode: 'universal',
+  // https://nuxtjs.org/api/configuration-modern/
+  modern: process.env.NODE_ENV === 'production',
 
+  /*
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: 'static',
   /*
    ** Headers of the page
    */
@@ -90,10 +97,6 @@ export default {
    */
   css: [],
 
-  purgeCSS: {
-    whitelistPatternsChildren: [/^blueimp.+/],
-  },
-
   /*
    ** Plugins to load before mounting the App
    */
@@ -123,20 +126,5 @@ export default {
   /*
    ** Build configuration
    */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        })
-      }
-    },
-  },
+  build: {},
 }

@@ -1,4 +1,7 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     extend: {
       colors: {
@@ -14,4 +17,7 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  purge: {
+    whitelistPatternsChildren: [/^blueimp.+/],
+  },
 }
