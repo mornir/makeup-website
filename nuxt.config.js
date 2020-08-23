@@ -8,7 +8,14 @@ const SEO = {
 
 export default {
   mode: 'universal',
+  // https://nuxtjs.org/api/configuration-modern/
+  modern: process.env.NODE_ENV === 'production',
 
+  /*
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: 'static',
   /*
    ** Headers of the page
    */
