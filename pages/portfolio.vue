@@ -8,19 +8,22 @@
         <v-gallery :images="photoUrls" :index="index" @close="index = null" />
       </ClientOnly>
 
-      <v-lazy-image
+      <img
+        @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
-        :key="photo.id"
-        @click.native="index = imageIndex"
+        tabindex="0"
+        height="426"
+        width="426"
+        loading="lazy"
+        alt="Soline Wang Swiss Makeup Artist"
+        class="object-cover rounded-lg cursor-pointer hover:shadow-md"
         :src="
           urlFor(photo.asset)
             .width(426)
             .height(426)
             .url()
         "
-        :src-placeholder="photo.lqip"
-        class="object-cover w-full rounded-lg shadow-md cursor-pointer horizontal"
-        alt="Soline Wang Swiss Makeup Artist"
+        :key="photo.id"
       />
     </div>
   </section>
