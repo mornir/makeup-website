@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^2.4.0",
-    "@sanity/client": "^2.0.9",
     "@sanity/image-url": "^0.140.19",
     "nuxt": "^2.14.7",
+    "picosanity": "^2.1.2",
     "svg-to-vue-component": "^0.3.7",
     "v-lazy-image": "^1.3.2",
     "vue-gallery": "^2.0.1"
