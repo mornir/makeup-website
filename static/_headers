@@ -1,4 +1,4 @@
 /*
- X-Frame-Options: DENY
+ Content-Security-Policy: frame-ancestors https://*.sanity.studio;
  X-XSS-Protection: 1; mode=block
  X-Content-Type-Options: nosniff

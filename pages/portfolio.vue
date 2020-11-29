@@ -12,17 +12,12 @@
         @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
         tabindex="0"
-        height="426"
-        width="426"
+        height="512"
+        width="512"
         loading="lazy"
         alt="Soline Wang Swiss Makeup Artist"
         class="object-cover rounded-lg cursor-pointer hover:shadow-md"
-        :src="
-          urlFor(photo.asset)
-            .width(426)
-            .height(426)
-            .url()
-        "
+        :src="urlFor(photo.asset).size(512, 512)"
         :key="photo.id"
       />
     </div>
@@ -30,13 +25,16 @@
 </template>
 
 <script>
-import sanity from '@/sanity/sanityClient'
 import urlFor from '@/sanity/imgBuilder'
-const query = `*[_type == "photo"] {
+
+import sanity from '@/sanity/sanityClient'
+
+const query = /* groq */ `
+{
+  "photos": *[_type == "photo"] {
   "id": _id,
   "asset": photo,
-  "lqip": photo.asset->metadata.lqip,
-  "photoUrls": *[_type == "photo"].photo.asset->url
+  }
 }
 `
 
@@ -44,10 +42,8 @@ export default {
   name: 'Portfolio',
   data() {
     return {
-      photos: [],
-      // For gallery component
-      photoUrls: [],
       index: null,
+      photoUrls: [],
     }
   },
   methods: {
@@ -55,13 +51,11 @@ export default {
       return urlFor(src).auto('format')
     },
   },
-  async asyncData() {
-    try {
-      const photos = await sanity.fetch(query)
-      return { photos, photoUrls: photos[0].photoUrls }
-    } catch (error) {
-      console.log(error)
-    }
+  asyncData() {
+    return sanity.fetch(query)
+  },
+  mounted() {
+    this.photoUrls = this.photos.map(photo => urlFor(photo.asset).url())
   },
 }
 </script>
