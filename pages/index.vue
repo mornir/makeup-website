@@ -1,7 +1,9 @@
 <template>
   <section class="md:pt-32">
     <div class="lg:ml-24">
-      <h1 class="col-span-3 row-span-3 sr-only">Portfolio</h1>
+      <h1 class="sr-only">
+        Portfolio
+      </h1>
     </div>
 
     <ClientOnly>
