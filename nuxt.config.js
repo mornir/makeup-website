@@ -15,6 +15,10 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: 'static',
+
+  // https://nuxtjs.org/blog/improve-your-developer-experience-with-nuxt-components
+  components: true,
+
   /*
    ** Headers of the page
    */
@@ -99,11 +103,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '~plugins/v-lazy-image',
-    '~plugins/vue-gallery.client.js',
-    '~plugins/global.js',
-  ],
+  plugins: ['~plugins/vue-gallery.client.js'],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 

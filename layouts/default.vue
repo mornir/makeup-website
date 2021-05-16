@@ -3,7 +3,7 @@
     <div class="absolute top-0 w-full">
       <AppNavBar />
     </div>
-    <main class="min-h-screen pb-20 md:pb-0 bg-secondary">
+    <main class="min-h-screen pb-20 md:pb-0">
       <nuxt />
     </main>
 
@@ -36,14 +36,5 @@ export default {
 <style lang="postcss">
 body {
   font-family: 'Raleway', sans-serif;
-}
-
-.v-lazy-image {
-  filter: blur(10px);
-  transition: filter 0.2s;
-}
-
-.v-lazy-image-loaded {
-  filter: blur(0);
 }
 </style>

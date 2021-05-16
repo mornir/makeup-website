@@ -1,6 +1,6 @@
 <template>
   <header
-    class="items-center justify-between hidden px-2 md:flex md:16px lg:px-24"
+    class="items-center justify-between hidden px-2 py-8 md:flex md:16px lg:px-24"
   >
     <n-link to="/" class="no-underline text-pink-darkest ">
       <h1 class="text-5xl font-medium tracking-normal md:text-6xl">
@@ -33,14 +33,6 @@
 </template>
 
 <style lang="postcss" scoped>
-header {
-  background: linear-gradient(rgba(255, 255, 255, 0.4) 60%, transparent);
-}
-
-h1 {
-  font-family: 'Grand Hotel', cursive;
-}
-
 .nav-element {
   text-decoration: none;
   color: inherit;
