@@ -48,8 +48,6 @@ import EmailIcon from '@/assets/svg/email.svg'
 import Weixin from '@/assets/svg/weixin-brands.svg'
 import Instagram from '@/assets/svg/instagram-brands.svg'
 import Whatsapp from '@/assets/svg/whatsapp-brands.svg'
-import MailGo from '@/components/MailGo'
-import QRModal from '@/components/QRModal'
 
 export default {
   components: {
@@ -57,8 +55,6 @@ export default {
     Instagram,
     EmailIcon,
     Whatsapp,
-    MailGo,
-    QRModal,
   },
   data() {
     return {
