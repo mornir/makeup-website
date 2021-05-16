@@ -103,7 +103,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vue-gallery.client.js'],
+  plugins: ['~/plugins/tiny-box.client'],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 

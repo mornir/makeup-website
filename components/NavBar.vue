@@ -10,18 +10,18 @@
 
     <nav>
       <n-link
+        to="/"
+        class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
+      >
+        portfolio</n-link
+      >
+
+      <n-link
         to="/about/"
         class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
       >
         about me
       </n-link>
-
-      <n-link
-        to="/portfolio/"
-        class="mx-4 text-xl font-semibold uppercase desktop-link nav-element"
-      >
-        portfolio</n-link
-      >
 
       <n-link
         class="px-6 py-2 mx-4 text-xl font-semibold text-white uppercase transition-colors duration-200 bg-black hover:bg-primary hover:text-black"

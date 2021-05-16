@@ -1,25 +1,28 @@
 <template>
-  <section class="p-2 md:pt-32">
+  <section class="md:pt-32">
     <div class="lg:ml-24">
-      <h1 class="sr-only">Portfolio</h1>
+      <h1 class="col-span-3 row-span-3 sr-only">Portfolio</h1>
     </div>
-  
-    <div class="gallery-grid">
-      <!--   <ClientOnly>
-        <v-gallery :images="photoUrls" :index="index" @close="index = null" />
-      </ClientOnly> -->
 
+    <ClientOnly>
+      <Tinybox v-model="index" :images="photos" />
+    </ClientOnly>
+
+    <div class="gallery-grid">
       <img
         @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
-        tabindex="0"
-        height="512"
-        width="512"
         loading="lazy"
         alt="Soline Wang Swiss Makeup Artist"
-        class="object-cover cursor-pointer hover:shadow-md"
-        :src="urlFor(photo.asset).size(512, 512)"
-        :key="photo.id"
+        class="object-cover w-full h-full cursor-pointer hover:shadow-md"
+        :class="`col-span-${photo.sizeH} row-span-${photo.sizeV}`"
+        :src="
+          urlFor(photo.photo).size(
+            parseInt(photo.sizeH ? photo.sizeH : 1) * 200,
+            parseInt(photo.sizeV ? photo.sizeV : 1) * 200
+          )
+        "
+        :key="photo._id"
       />
     </div>
   </section>
@@ -32,9 +35,9 @@ import sanity from '@/sanity/sanityClient'
 
 const query = /* groq */ `
 {
-  "photos": *[_type == "photo"] {
-  "id": _id,
-  "asset": photo,
+  "photos": *[_type == "photo"] | order(order asc) {
+    ...,
+    "src": photo.asset->url
   }
 }
 `
@@ -44,7 +47,6 @@ export default {
   data() {
     return {
       index: null,
-      photoUrls: [],
     }
   },
   methods: {
@@ -55,16 +57,16 @@ export default {
   asyncData() {
     return sanity.fetch(query)
   },
-  mounted() {
-    this.photoUrls = this.photos.map(photo => urlFor(photo.asset).url())
-  },
 }
 </script>
 
 <style scoped lang="postcss">
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  gap: 1.5rem;
 }
 </style>
