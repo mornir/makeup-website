@@ -1,5 +1,5 @@
 <template>
-  <n-link
+  <nuxt-link
     :to="linkPath"
     class="py-2 text-center"
     active-class="bg-gray-400"
@@ -16,7 +16,7 @@
       <path :d="svgPath"></path>
     </svg>
     <span><slot /></span>
-  </n-link>
+  </nuxt-link>
 </template>
 
 <script>
