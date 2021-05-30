@@ -8,7 +8,7 @@
       >
         <Instagram class="fill-current w-9" />
       </a>
-      <button @click="showMailGo">
+      <button @click="isMailGoOpen = true">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-10"
@@ -41,7 +41,7 @@
         </svg>
       </button>
     </div>
-    <MailGo v-if="showMailGo" @close="showMailGo = false" />
+    <MailGo v-if="isMailGoOpen" @close="isMailGoOpen = false" />
   </footer>
 </template>
 
@@ -54,7 +54,7 @@ export default {
   },
   data() {
     return {
-      showMailGo: false,
+      isMailGoOpen: false,
     }
   },
 }
