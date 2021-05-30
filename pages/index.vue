@@ -69,4 +69,16 @@ export default {
   justify-content: center;
   gap: 1.5rem;
 }
+
+/* @screen sm {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+}
+
+@screen lg {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+} */
 </style>
