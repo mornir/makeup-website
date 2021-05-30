@@ -1,10 +1,8 @@
 <template>
   <section>
-    <div class="lg:ml-24">
-      <h1 class="sr-only">
-        Portfolio
-      </h1>
-    </div>
+    <h3 class="sr-only">
+      Portfolio
+    </h3>
 
     <ClientOnly>
       <Tinybox v-model="index" :images="photos" />
