@@ -1,5 +1,5 @@
 <template>
-  <section class="md:pt-32">
+  <section>
     <div class="lg:ml-24">
       <h1 class="sr-only">
         Portfolio

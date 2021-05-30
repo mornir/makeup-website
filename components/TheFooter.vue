@@ -1,18 +1,33 @@
-<template> </template>
+<template>
+  <footer>
+    <p>
+      <button>Give me a phone call</button> or
+      <button @click="showMailGo">send me an email</button>
+    </p>
+    <div>
+      <a
+        href="https://www.instagram.com/solinewangmua/"
+        target="_blank"
+        aria-label="Check my Instragram"
+      >
+        <Instagram class="w-8 fill-current" />
+      </a>
+    </div>
+    <MailGo v-if="showMailGo" @close="showMailGo = false" />
+  </footer>
+</template>
 
 <script>
-import Weixin from '@/assets/svg/weixin-brands.svg'
 import Instagram from '@/assets/svg/instagram-brands.svg'
-import EmailIcon from '@/assets/svg/email.svg'
-import Whatsapp from '@/assets/svg/whatsapp-brands.svg'
+
 export default {
   components: {
-    Weixin,
     Instagram,
-    EmailIcon,
-    Whatsapp,
+  },
+  data() {
+    return {
+      showMailGo: false,
+    }
   },
 }
 </script>
-
-<style></style>

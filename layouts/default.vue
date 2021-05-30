@@ -1,25 +1,15 @@
 <template>
   <div>
-    <div class="absolute top-0 w-full">
-      <AppNavBar />
-    </div>
-    <main class="min-h-screen pb-20 md:pb-0">
+    <TheHeader />
+    <main>
       <nuxt />
     </main>
-
-    <BottomNav class="md:hidden" />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import NavBar from '../components/NavBar'
-import BottomNav from '../components/BottomNav'
-
 export default {
-  components: {
-    AppNavBar: NavBar,
-    BottomNav,
-  },
   head() {
     return {
       link: [
