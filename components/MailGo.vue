@@ -1,41 +1,23 @@
 <template>
-  <div
-    class="fixed inset-0 z-10 flex items-end justify-center w-full h-screen sm:items-center bg-semi-75"
-    @click.self="close"
-  >
-    <div
-      class="w-full max-w-lg p-8 pb-32 text-center bg-white border-4 border-b-0 border-black shadow-lg sm:pb-8 sm:border-b-4"
-    >
-      <p class="mb-4 text-lg font-medium text-center">
-        {{ MailGoEmail }}
-      </p>
-      <p class="mb-2 font-medium">Send email with:</p>
-      <div class="flex flex-col items-center">
-        <button
-          class="px-2 py-1 mb-4 border border-black hover:border-primary hover:text-primary"
-          @click="openDefault"
-        >
-          Default program
-        </button>
-        <button
-          class="px-2 py-1 mb-4 border border-black hover:border-primary hover:text-primary"
-          @click="openGmail"
-        >
-          Gmail.com
-        </button>
-        <button
-          class="px-2 py-1 border border-black hover:border-primary hover:text-primary"
-          @click="openOutlook"
-        >
-          Outlook.com
-        </button>
-      </div>
+  <ModalGo :title="MailGoEmail" @close="close">
+    <p class="mb-2 font-medium">Send email with:</p>
+    <div class="flex flex-col items-center gap-y-4">
+      <button class="contact-button" @click="openDefault">
+        Default program
+      </button>
+      <button class="contact-button" @click="openGmail">
+        Gmail.com
+      </button>
+      <button class="contact-button" @click="openOutlook">
+        Outlook.com
+      </button>
     </div>
-  </div>
+  </ModalGo>
 </template>
 
 <script>
 export default {
+  name: 'MailGo',
   data() {
     return {
       MailGoEmail: 'solinefang@hotmail.com',

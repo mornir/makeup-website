@@ -23,7 +23,7 @@
       >
         <Instagram class="w-10 fill-current hover:text-primary" />
       </a>
-      <button>
+      <button @click="isPhoneGoOpen = true">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-10 stroke-current hover:text-primary"
@@ -40,6 +40,7 @@
       </button>
     </div>
     <MailGo v-if="isMailGoOpen" @close="isMailGoOpen = false" />
+    <PhoneGo v-if="isPhoneGoOpen" @close="isPhoneGoOpen = false" />
   </footer>
 </template>
 
@@ -53,6 +54,7 @@ export default {
   data() {
     return {
       isMailGoOpen: false,
+      isPhoneGoOpen: false,
     }
   },
 }
