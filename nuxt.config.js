@@ -97,7 +97,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/tiny-box.client'],
+  plugins: ['~/plugins/tiny-box.client', '~plugins/preview.client.js'],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 
