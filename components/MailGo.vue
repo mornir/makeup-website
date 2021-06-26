@@ -1,6 +1,6 @@
 <template>
   <ModalGo :title="MailGoEmail" @close="close">
-    <p class="mb-2 font-medium">Send email with:</p>
+    <p class="mb-2 font-medium">Send me an email</p>
     <div class="flex flex-col items-center gap-y-4">
       <button class="contact-button" @click="openDefault">
         Default program
