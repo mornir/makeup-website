@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="mt-16">
     <div class="flex justify-center gap-x-8">
       <button @click="isMailGoOpen = true">
         <svg
