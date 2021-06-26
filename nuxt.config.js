@@ -1,6 +1,6 @@
 const SEO = {
   title: 'Soline Wang',
-  description: 'Freelance Makeup Artist based in Switzerland',
+  description: 'Professional Makeup Artist based in Switzerland',
   keywords:
     'Swiss, MUA, Asian, makeup, wedding, Switzerland, pre-wedding, photography',
   url: 'https://www.solinewang.com',
@@ -44,7 +44,7 @@ export default {
       },
       {
         name: 'theme-color',
-        content: '#C49C56',
+        content: '#000000',
       },
       {
         property: 'og:title',
@@ -72,13 +72,12 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Grand+Hotel&text=SolineWang',
+        href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
       },
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap',
+          'https://fonts.googleapis.com/css2?family=Julius+Sans+One&text=SOLINEWANG',
       },
     ],
   },
@@ -94,11 +93,6 @@ export default {
   loading: {
     color: '#d1a66d',
   },
-
-  /*
-   ** Global CSS
-   */
-  css: [],
 
   /*
    ** Plugins to load before mounting the App
