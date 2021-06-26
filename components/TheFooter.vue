@@ -4,7 +4,7 @@
       <button @click="isMailGoOpen = true">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-10 text-black stroke-current"
+          class="w-10 text-black stroke-current hover:text-primary"
           viewBox="0 0 24 24"
           fill="none"
         >
@@ -21,12 +21,12 @@
         target="_blank"
         aria-label="Check my Instragram"
       >
-        <Instagram class="w-10 fill-current" />
+        <Instagram class="w-10 fill-current hover:text-primary" />
       </a>
       <button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="w-10 stroke-current"
+          class="w-10 stroke-current hover:text-primary"
           viewBox="0 0 24 24"
           fill="none"
         >
