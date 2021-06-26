@@ -1,34 +1,79 @@
 <template>
-  <div>
-    <h1
-      class="absolute top-0 pl-4 text-5xl font-medium tracking-normal md:hidden"
-    >
-      Soline&nbsp;Wang
-    </h1>
-    <section class="flex items-end my-bg h-mobile md:h-screen" />
-  </div>
+  <section>
+    <h3 class="sr-only">
+      Portfolio
+    </h3>
+
+    <ClientOnly>
+      <Tinybox v-model="index" :images="photos" />
+    </ClientOnly>
+
+    <div class="gallery-grid">
+      <img
+        @click="index = imageIndex"
+        v-for="(photo, imageIndex) in photos"
+        loading="lazy"
+        alt="Soline Wang Swiss Makeup Artist"
+        class="object-cover w-full h-full cursor-pointer hover:shadow-md"
+        :class="`col-span-${photo.sizeH} row-span-${photo.sizeV}`"
+        :src="
+          urlFor(photo.photo).size(
+            parseInt(photo.sizeH ? photo.sizeH : 1) * 200,
+            parseInt(photo.sizeV ? photo.sizeV : 1) * 200
+          )
+        "
+        :key="photo._id"
+      />
+    </div>
+  </section>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-}
-</script>
-<style lang="postcss" scoped>
-.my-bg {
-  background-image: url('~assets/img/homepage_bg.jpg');
-  background-size: cover;
-  background-position: 31% bottom;
-  background-repeat: no-repeat;
-}
+import urlFor from '@/sanity/imgBuilder'
 
-@screen md {
-  .my-bg {
-    background-position: center 75%;
+import sanity from '@/sanity/sanityClient'
+
+const query = /* groq */ `
+{
+  "photos": *[_type == "photo"] | order(order asc) {
+    ...,
+    "src": photo.asset->url
   }
 }
+`
 
-h1 {
-  font-family: 'Grand Hotel', cursive;
+export default {
+  name: 'Portfolio',
+  data() {
+    return {
+      index: null,
+    }
+  },
+  methods: {
+    urlFor(src) {
+      return urlFor(src).auto('format')
+    },
+  },
+  asyncData() {
+    return sanity.fetch(query)
+  },
+}
+</script>
+
+<style scoped lang="postcss">
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+@screen sm {
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 1.5rem;
+  }
 }
 </style>

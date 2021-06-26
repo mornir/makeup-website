@@ -13,19 +13,19 @@
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^2.4.0",
-    "@sanity/image-url": "^0.140.19",
-    "nuxt": "^2.14.7",
-    "picosanity": "^2.1.2",
+    "@sanity/image-url": "^0.140.22",
+    "nuxt": "^2.15.7",
+    "picosanity": "^3.0.1",
     "svg-to-vue-component": "^0.3.7",
-    "v-lazy-image": "^1.3.2",
-    "vue-gallery": "^2.0.1"
+    "vue-tinybox": "^1.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.2.0",
+    "@nuxtjs/tailwindcss": "^4.2.0",
     "babel-eslint": "^10.0.3",
-    "cross-env": "^7.0.2",
-    "eslint": "^7.14.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.29.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-vue": "^7.1.0"
+    "eslint-plugin-vue": "^7.12.1",
+    "postcss": "^8.3.5"
   }
 }

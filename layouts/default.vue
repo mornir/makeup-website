@@ -1,25 +1,15 @@
 <template>
   <div>
-    <div class="absolute top-0 w-full">
-      <AppNavBar />
-    </div>
-    <main class="min-h-screen pb-20 md:pb-0 bg-secondary">
+    <TheHeader />
+    <main>
       <nuxt />
     </main>
-
-    <BottomNav class="md:hidden" />
+    <TheFooter class="px-2 pt-12 pb-10" />
   </div>
 </template>
 
 <script>
-import NavBar from '../components/NavBar'
-import BottomNav from '../components/BottomNav'
-
 export default {
-  components: {
-    AppNavBar: NavBar,
-    BottomNav,
-  },
   head() {
     return {
       link: [
@@ -36,14 +26,5 @@ export default {
 <style lang="postcss">
 body {
   font-family: 'Raleway', sans-serif;
-}
-
-.v-lazy-image {
-  filter: blur(10px);
-  transition: filter 0.2s;
-}
-
-.v-lazy-image-loaded {
-  filter: blur(0);
 }
 </style>

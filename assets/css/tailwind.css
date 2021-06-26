@@ -1,3 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+  .contact-button {
+    @apply px-2 py-1 border border-black hover:border-primary hover:text-primary;
+  }
+}

@@ -8,5 +8,5 @@ const builder = imageUrlBuilder(myConfiguredSanityClient)
 // builder an image and returns the builder for you to specify additional
 // parameters:
 export default source => {
-  return builder.image(source)
+  return builder.image(source).auto('format')
 }

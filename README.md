@@ -1,6 +1,6 @@
 # solinewang.com
 
-> Website of my lovely wife, Soline Wang, freelance makeup artist.
+> Website of Soline Wang, freelance makeup artist.
 
 ## Build Setup
 
