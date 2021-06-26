@@ -63,22 +63,17 @@ export default {
 <style scoped lang="postcss">
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-auto-rows: 200px;
-  grid-auto-flow: dense;
+  grid-template-columns: 1fr;
   justify-content: center;
-  gap: 1.5rem;
 }
 
-/* @screen sm {
+@screen sm {
   .gallery-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 1.5rem;
   }
 }
-
-@screen lg {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, 200px);
-  }
-} */
 </style>
