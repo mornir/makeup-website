@@ -4,7 +4,7 @@
     @click.self="close"
   >
     <div
-      class="w-full max-w-lg p-8 pb-32 text-center bg-white border-4 border-b-0 shadow-lg sm:pb-8 border-primary sm:border-b-4"
+      class="w-full max-w-lg p-8 pb-32 text-center bg-white border-4 border-b-0 border-black shadow-lg sm:pb-8 sm:border-b-4"
     >
       <p class="mb-4 text-lg font-medium text-center">
         {{ MailGoEmail }}
@@ -12,22 +12,22 @@
       <p class="mb-2 font-medium">Send email with:</p>
       <div class="flex flex-col items-center">
         <button
-          class="px-2 py-1 mb-4 border border-black hover:bg-gray-200"
+          class="px-2 py-1 mb-4 border border-black hover:border-primary hover:text-primary"
           @click="openDefault"
         >
-          Open default
+          Default program
         </button>
         <button
-          class="px-2 py-1 mb-4 text-red-700 border border-red-700 hover:bg-red-100"
+          class="px-2 py-1 mb-4 border border-black hover:border-primary hover:text-primary"
           @click="openGmail"
         >
-          Open in Gmail
+          Gmail.com
         </button>
         <button
-          class="px-2 py-1 text-blue-600 border border-blue-600 hover:bg-blue-100"
+          class="px-2 py-1 border border-black hover:border-primary hover:text-primary"
           @click="openOutlook"
         >
-          Open in Outlook
+          Outlook.com
         </button>
       </div>
     </div>
