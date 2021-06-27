@@ -8,7 +8,7 @@
       <Tinybox v-model="index" :images="photos" />
     </ClientOnly>
 
-    <div class="gallery-grid">
+    <div class="min-h-screen gallery-grid">
       <img
         @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
@@ -33,13 +33,10 @@ import urlFor from '@/sanity/imgBuilder'
 
 import sanity from '@/sanity/sanityClient'
 
-const query = /* groq */ `
-{
-  "photos": *[_type == "photo"] | order(order asc) {
+const query = /* groq */ `*[_type == "photo"] | order(order asc) {
     ...,
     "src": photo.asset->url
   }
-}
 `
 
 export default {
@@ -47,6 +44,7 @@ export default {
   data() {
     return {
       index: null,
+      photos: [],
     }
   },
   methods: {
@@ -54,8 +52,8 @@ export default {
       return urlFor(src).auto('format')
     },
   },
-  asyncData() {
-    return sanity.fetch(query)
+  async mounted() {
+    this.photos = await sanity.fetch(query)
   },
 }
 </script>

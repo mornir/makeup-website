@@ -72,7 +72,7 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Raleway',
       },
       {
         rel: 'stylesheet',
@@ -97,7 +97,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/tiny-box.client', '~plugins/preview.client.js'],
+  plugins: ['~/plugins/tiny-box.client'],
 
   buildModules: ['@nuxtjs/tailwindcss', 'svg-to-vue-component/nuxt'],
 
