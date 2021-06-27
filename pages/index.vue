@@ -15,11 +15,11 @@
         loading="lazy"
         alt="Soline Wang Swiss Makeup Artist"
         class="object-cover w-full h-full cursor-pointer hover:shadow-md"
-        :class="`col-span-${photo.sizeH} row-span-${photo.sizeV}`"
+        :class="`sm:col-span-${photo.sizeH} sm:row-span-${photo.sizeV}`"
         :src="
           urlFor(photo.photo).size(
-            parseInt(photo.sizeH ? photo.sizeH : 1) * 200,
-            parseInt(photo.sizeV ? photo.sizeV : 1) * 200
+            parseInt(photo.sizeH ? photo.sizeH : 1) * 200 * 2,
+            parseInt(photo.sizeV ? photo.sizeV : 1) * 200 * 2
           )
         "
         :key="photo._id"
@@ -62,6 +62,7 @@ export default {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 350px;
   justify-content: center;
 }
 
