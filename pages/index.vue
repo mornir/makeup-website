@@ -5,7 +5,7 @@
     </h3>
 
     <ClientOnly>
-      <Tinybox v-model="index" :images="photos" />
+      <Tinybox v-model="index" :images="photos" class="hidden sm:block" />
     </ClientOnly>
 
     <div class="min-h-screen gallery-grid">
@@ -13,12 +13,12 @@
         @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
         :key="photo._id"
-        class="cursor-pointer hover:shadow-md"
+        class="sm:cursor-pointer"
         :class="`sm:col-span-${photo.sizeH} sm:row-span-${photo.sizeV}`"
       >
         <source
           media="(max-width: 640px)"
-          :srcset="urlFor(photo.photo).size(800, 450)"
+          :srcset="urlFor(photo.photo).width(800)"
         />
         <img
           loading="lazy"
@@ -70,8 +70,8 @@ export default {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 350px;
   justify-content: center;
+  row-gap: 1rem;
 }
 
 @screen sm {
