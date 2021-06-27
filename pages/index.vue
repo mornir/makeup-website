@@ -8,22 +8,30 @@
       <Tinybox v-model="index" :images="photos" />
     </ClientOnly>
 
-    <div class="gallery-grid">
-      <img
+    <div class="min-h-screen gallery-grid">
+      <picture
         @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
-        loading="lazy"
-        alt="Soline Wang Swiss Makeup Artist"
-        class="object-cover w-full h-full cursor-pointer hover:shadow-md"
-        :class="`col-span-${photo.sizeH} row-span-${photo.sizeV}`"
-        :src="
-          urlFor(photo.photo).size(
-            parseInt(photo.sizeH ? photo.sizeH : 1) * 200,
-            parseInt(photo.sizeV ? photo.sizeV : 1) * 200
-          )
-        "
         :key="photo._id"
-      />
+        class="cursor-pointer hover:shadow-md"
+        :class="`sm:col-span-${photo.sizeH} sm:row-span-${photo.sizeV}`"
+      >
+        <source
+          media="(max-width: 640px)"
+          :srcset="urlFor(photo.photo).size(800, 450)"
+        />
+        <img
+          loading="lazy"
+          alt="Soline Wang Swiss Makeup Artist"
+          class="object-cover w-full h-full "
+          :src="
+            urlFor(photo.photo).size(
+              parseInt(photo.sizeH ? photo.sizeH : 1) * 200 * 2,
+              parseInt(photo.sizeV ? photo.sizeV : 1) * 200 * 2
+            )
+          "
+        />
+      </picture>
     </div>
   </section>
 </template>
@@ -33,13 +41,10 @@ import urlFor from '@/sanity/imgBuilder'
 
 import sanity from '@/sanity/sanityClient'
 
-const query = /* groq */ `
-{
-  "photos": *[_type == "photo"] | order(order asc) {
+const query = /* groq */ `*[_type == "photo"] | order(order asc) {
     ...,
     "src": photo.asset->url
   }
-}
 `
 
 export default {
@@ -47,6 +52,7 @@ export default {
   data() {
     return {
       index: null,
+      photos: [],
     }
   },
   methods: {
@@ -54,8 +60,8 @@ export default {
       return urlFor(src).auto('format')
     },
   },
-  asyncData() {
-    return sanity.fetch(query)
+  async mounted() {
+    this.photos = await sanity.fetch(query)
   },
 }
 </script>
@@ -64,6 +70,7 @@ export default {
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 350px;
   justify-content: center;
 }
 
