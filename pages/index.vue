@@ -9,21 +9,29 @@
     </ClientOnly>
 
     <div class="min-h-screen gallery-grid">
-      <img
+      <picture
         @click="index = imageIndex"
         v-for="(photo, imageIndex) in photos"
-        loading="lazy"
-        alt="Soline Wang Swiss Makeup Artist"
-        class="object-cover w-full h-full cursor-pointer hover:shadow-md"
-        :class="`sm:col-span-${photo.sizeH} sm:row-span-${photo.sizeV}`"
-        :src="
-          urlFor(photo.photo).size(
-            parseInt(photo.sizeH ? photo.sizeH : 1) * 200 * 2,
-            parseInt(photo.sizeV ? photo.sizeV : 1) * 200 * 2
-          )
-        "
         :key="photo._id"
-      />
+        class="cursor-pointer hover:shadow-md"
+        :class="`sm:col-span-${photo.sizeH} sm:row-span-${photo.sizeV}`"
+      >
+        <source
+          media="(max-width: 640px)"
+          :srcset="urlFor(photo.photo).size(800, 450)"
+        />
+        <img
+          loading="lazy"
+          alt="Soline Wang Swiss Makeup Artist"
+          class="object-cover w-full h-full "
+          :src="
+            urlFor(photo.photo).size(
+              parseInt(photo.sizeH ? photo.sizeH : 1) * 200 * 2,
+              parseInt(photo.sizeV ? photo.sizeV : 1) * 200 * 2
+            )
+          "
+        />
+      </picture>
     </div>
   </section>
 </template>
